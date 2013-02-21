@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- META ----------------------------------------- -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Kung" />
+    <meta name="keywords" content="" />
+    
+<!-- TITLE ----------------------------------------- -->
+    <title>Knauf</title>
+    
+<!-- ESTILO ----------------------------------------- -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/estilo.css" />
+
+<!-- SCRIPT ----------------------------------------- -->
+
+</head>
+<body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+       $(document).ready(function(){
+               $('.radio').click(function(){  
+                     $('.radio').css('background-position','top');
+                     $(this).css('background-position','bottom'); 
+                     $('#valor').val($(this).attr('id'));
+               })
+        });
+</script>
+<div class="All upload">
+	<div class="content">
+		<div class="wrapper">
+			<h1 class="logo"><a href="#"><img src="img/logo.png" alt="" title="" width="260" height="186" /></a></h1>
+			<div class="top"><img src="img/topBar.png" alt="" title="" width="551" height="23" /></div>
+			<div class="title"><img src="img/txt_meusprojetos.png" width="234" height="26" alt="" title="" /></div>
+			<div class="top"><img src="img/bar2.png" alt="" title="" width="551" height="2" /></div>
+			<div class="Bcrumb">
+				<span>Olá Pedro Paulo |</span> <span>Meus Projetos |</span> <a href="#">Meu Cadastro |</a> <a href="#"> Logout</a>
+			</div>
+			<span class="infoBar">Você esta concorrendo na categoria:<b>Arquiteto.</b></span>
+			<hr class="bdr1" />
+            <div class="Boxer">
+            	<h2 class="title"><img src="img/txt_atencao.png" alt="" title="" width="123" height="34" /></h2>
+            	<ul class="list">
+            		<li>Você poderá inscrever até 3 projetos que já deverão estar prontos e ter autoria do escritório/arquiteto. Só serão aceitas soluções executadas a partir de janeiro de 2010 e integralmente concluídas até 04 de junho de 2013.<li>
+            		<li><b>Todos os campos deverão ser preenchidos obrigatoriamente.</b><li>
+            		<li>Poderão ser anexadas até <b>3 fotografias</b> por projeto no tamanho de 1 MB (um megabyte) por fotografia, em formato “jpeg” com resolução de 300 dpi, mostrando obrigatoriamente o “drywall” instalado na obra,<li>
+            		<li>Deverá ser anexado um <b>Descritivo do Projeto</b> por projeto, com descrições e defesas sobre os objetivos pretendidos e os resultados alcançados (baseados nos critérios do item 6.2.2 do Regulamento). Serão aceitos somente projetos em arquivos com extensão “<b>.cad</b> e “<b>.pdf</b>”.<li>
+            		<li>Deverá ser anexado o <b>Modelo de Autorização</b> preenchido para divulgação do projeto.<li>
+            		<li><b class="b1">O resultado será divulgado no site no dia 15 de agosto de 2013.</b><li>
+            	</ul>
+            	<a href="#" class="link"><img src="img/btVerreg.png" alt="" title="" width="195" height="30" /></a>
+            </div> 
+            <img src="img/txt_upload.png" alt="" title="" width="551" height="16" />  
+			<div class="Boxer2">
+            	<h2 class="title"><img src="img/txt_projeto.png" alt="" title="" width="130" height="31" /></h2>
+				<form action="#" method="#" class="form">
+					<span class="step"><img src="img/ico1.png" alt="" title="" width="" height="" /> <span class="txt">Faça o download do <b>Modelo de Autorização</b></span> <a href="#"><img src="img/btDonwload.png" alt="" title="" width="134" height="30"></a></span>
+					<hr class="bdr1" />
+					<span class="step"><img src="img/ico2.png" alt="" title="" width="" height="" /> <span class="txt">Preencha os dados da obra</span> </span>
+					<span class="lbl">
+						<label>Nome do imóvel:* </label>
+						<input type="text" value=" "  id="" class="inpt04" />
+						<span class="error"><b>X</b> Favor digitar bla bla bla</span>
+					</span>	
+					<span class="lbl">
+						<label>CEP: </label>
+						<input type="text" value=" "  id="" class="inpt03" />
+						<span class="link_ipt"><a href="#"><img src="img/seta1.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span>
+						<span class="error"><b>X</b> Favor digitar bla bla bla</span>
+					</span>
+					<span class="lbl">
+						<label>Endereço Comercial:* </label>
+						<input type="text" value=" "  id="" class="inpt05" />
+						<span class="error"><b>X</b> Favor digitar bla bla bla</span>
+					</span>	
+					<span class="lbl">
+						<label>Bairro: </label>
+						<input type="text" value=" "  id="" class="inpt04" />
+						<span class="error"><b>X</b> Favor digitar bla bla bla</span>
+					</span>			
+					<span class="lbl">
+						<label>Cidade: </label>
+						<input type="text" value=" "  id="" class="inpt04" />
+						<span class="error"><b>X</b> Favor digitar bla bla bla</span>
+					</span>	
+					<span class="lbl">
+						<label>Estado: </label>
+						<div class="styled-select">
+							<select class="inpt04Slc">
+								<option>Rio de Janeiro</option>
+								<option>Rio de Janeiro</option>
+								<option>Rio de Janeiro</option>
+							</select>
+						</div>
+						<span class="error"><b>X</b> Favor digitar bla bla bla</span>
+					</span>	
+					<span class="lbl">
+						<label>Telefone Fixo: </label>
+						<input type="text" value=" "  id="" class="inpt01" /><input type="text" value=" "  id="" class="inpt02" /><span class="error"><b>X</b> Favor digitar bla bla bla</span>
+					</span>	
+					<span class="lbl">
+						<label>Nome da pessoa de contato:* </label>
+						<input type="text" value=" "  id="" class="inpt04" />
+						<span class="error"><b>X</b> Favor digitar bla bla bla</span>
+					</span>	
+					<span class="info1">* Todos os campos são de preenchimento obrigatório.</span>																			
+					<hr class="bdr1" />		
+					<span class="step"><img src="img/ico3.png" alt="" title="" width="" height="" /> <span class="txt">Selecione até <b>3 fotografias</b> desse projeto:</span> </span>									
+					<span class="infoBar"><b>Atenção:</b> Cada fotografia deve possuir o tamanho de <b>1 MB</b> (um megabyte), em <b>formato “jpeg”</b> com resolução de <b>300</b> dpi.</span>
+					<span class="lbl">
+						<ul class="list">
+							<li class="block">
+								<label class="lbl2 file">
+							        <div id="div-input-file">
+							            <input type="file" size="400" id="file-original" name="fileOriginal">
+							        </div>
+								</label>							
+							</li>
+							<li class="none">
+								<label class="lbl2 file">
+							        <div id="div-input-file">
+							            <input type="file" size="400" id="file-original" name="fileOriginal">
+							        </div>
+								</label>							
+							</li>
+							<li class="none">
+								<label class="lbl2 file">
+							        <div id="div-input-file">
+							            <input type="file" size="400" id="file-original" name="fileOriginal">
+							        </div>
+								</label>							
+							</li>															
+						</ul>
+						<span class="linkAdd clr"><img src="img/icomais.png" alt="" title="" width="" height="" /><a href="#">Adcionar mais fotografias</a></span>	
+					</span>
+					<hr class="bdr1" />
+					<span class="step"><img src="img/ico4.png" alt="" title="" width="" height="" /> <span class="txt">Selecione até <b>3 fotografias</b> desse projeto:</span> </span>			
+					<span class="infoBar"><b>Atenção:</b> Serão aceitos somente projetos em arquivos com extensão  <b>“.cad” e “.pdf”.</b></span>
+					<span class="lbl">
+						<label class="lbl2 file">
+					        <div id="div-input-file">
+					            <input type="file" size="400" id="file-original" name="fileOriginal">
+					        </div>
+						</label>							
+					</span>		
+					<hr class="bdr1 clr" />
+					<span class="step"><img src="img/ico5.png" alt="" title="" width="" height="" /> <span class="txt">Selecione até <b>3 fotografias</b> desse projeto:</span> </span>			
+					<span class="infoBar">Faça o upload do <b>Modelo de Autorização</b> preenchido:</span>
+					<span class="lbl">
+						<label class="lbl2 file">
+					        <div id="div-input-file">
+					            <input type="file" size="400" id="file-original" name="fileOriginal">
+					        </div>
+						</label>							
+					</span>											
+				</form>
+				<div class="linksPreFooter">
+					<hr class="bdr2 clr" />								
+					<span class="info1">Certificado de Autorização Caixa n 3-0054/2013</span>
+				</div>					
+			</div>
+
+		</div>		
+	</div>	
+	<div class="footer">
+		<img src="img/logo2.png" alt="" title="" width="240" height="78" />
+		<ul class="list">
+			<li><a href="#">Regulamento</a></li>	
+			<li class="last"><a href="#">Fale Conosco</a></li>	
+		</ul>
+	</div>
+</div>
+
+</body>	
+</html>
