@@ -1,6 +1,6 @@
 
 
-body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: arial;}
+body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: arial;font-size:14px;}
 .All{width:100%;height:auto;}
 .footer{width:100%;background:#fff;height:200px;clear: both;overflow:hidden;}
 .content{width:695px;min-height:600px;background:url(../img/bgContent.png) center top repeat-y;margin:0 auto;margin-top:143px;position:relative;}
@@ -83,3 +83,45 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .faleConosco .infoBar{background:none;padding:0;color:#000;font-size: 18px}
 .faleConosco .infoBar b{font-weight: bold;}
 .faleConosco .linksPreFooter{bottom:0;position:relative;margin:;}
+
+
+/* upload */
+
+.upload .Bcrumb{color:#719eb3;}
+.upload .Bcrumb a{color:#879198;text-decoration: none !important}
+.upload .Bcrumb span{margin:0 0 0 0;}
+.upload .Bcrumb span,.upload .Bcrumb a{position:relative;top:2px;left:-6px;}
+.upload .infoBar{background:none;padding:0;color:#000;font-weight: normal;font-size: 18px;}
+.upload .infoBar b{font-weight: bold}
+
+.upload .Boxer{width:auto;height:402px;padding:20px;background:#CEE5ED;margin-top:40px;margin-bottom:30px;}
+.upload .Boxer .title{margin-bottom: -20px;position:relative;top:-45px;}
+.upload .Boxer .list li{background:url(../img/seta3.png) no-repeat;padding-left: 20px;color:#000;display:block;margin-bottom:25px;}
+.upload .Boxer b{font-weight: bold;}
+.upload .Boxer .b1{font-weight: bold;color:#00ADEF;}
+.upload .Boxer .link img{margin:0 auto;display:block;}
+
+
+.upload .Boxer2{width:auto;height:auto;padding:20px;background:#fff;margin-top:40px;margin-bottom:30px;}
+.upload .Boxer2 .title{margin-bottom: -20px;position:relative;top:-45px;}
+.upload .Boxer2 .form .step{overflow:hidden;display:block;margin-bottom: 25px;}
+.upload .Boxer2 .form .step img,.upload .Boxer2 .form .step a,.upload .Boxer2 .form .step .txt{display:inline-block;}
+.upload .Boxer2 .form .step .txt{vertical-align: top;padding-top:10px;margin-left: 10px;margin-right: 20px;}
+.upload .Boxer2 .form .bdr1{width:600px;margin-left: -20px}
+.upload .Boxer2 .infoBar{background:#BFDCE9;color:#000;width:451px;height:20px;padding:10px 30px 20px;font-size: 14px;}
+
+.upload .linksPreFooter{position:relative;bottom:0;clear:both;}
+.upload .form .error{margin-right: -90px;}
+.upload .form .form .file {background: none repeat scroll 0 0 #FFFFFF;clear: both;margin-top: 5px;padding: 3px;position: relative;width: 437px;}
+.upload .form label.lbl2.file {width:auto;float:right;margin-bottom: 20px;}
+.upload .form #div-input-file {background: url("../img/btSelcArq.png") no-repeat scroll 100% 1px transparent;height: 33px;margin: 0;width: 440px;overflow:hidden;}
+.upload .form #div-input-file #file-original {font-size: 18px;opacity: 0;position: relative;width: 440px;z-index: 10;overflow:hidden;}
+
+
+.upload .form .list{overflow:hidden;margin-bottom:20px;}
+.upload .form .list .block{display:block;}
+.upload .form .list .none{display:none;}
+.upload .form .list .lbl2.file{margin-bottom:10px;}
+.upload .form .linkAdd{color:#719DB3;text-align: center;display:block;}
+.upload .form .linkAdd a{color:#719DB3;text-decoration: underline;}
+.upload .form .linkAdd img{display:inline-block;vertical-align: bottom;margin-right: 5px}
