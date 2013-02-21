@@ -82,4 +82,4 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 /* fale conosco*/
 .faleConosco .infoBar{background:none;padding:0;color:#000;font-size: 18px}
 .faleConosco .infoBar b{font-weight: bold;}
-.faleConosco .linksPreFooter{bottom:0;position:relative;}
+.faleConosco .linksPreFooter{bottom:0;position:relative;margin:;}
