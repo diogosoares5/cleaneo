@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- META ----------------------------------------- -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Kung" />
+    <meta name="keywords" content="" />
+    
+<!-- TITLE ----------------------------------------- -->
+    <title>Knauf</title>
+    
+<!-- ESTILO ----------------------------------------- -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/estilo.css" />
+
+<!-- SCRIPT ----------------------------------------- -->
+
+</head>
+<body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+       $(document).ready(function(){
+               $('.radio').click(function(){  
+                     $('.radio').css('background-position','top');
+                     $(this).css('background-position','bottom'); 
+                     $('#valor').val($(this).attr('id'));
+               })
+        });
+</script>
+<div class="All faleConosco">
+	<div class="content">
+		<div class="wrapper">
+			<h1 class="logo"><a href="#"><img src="img/logo.png" alt="" title="" width="260" height="186" /></a></h1>
+			<div class="top"><img src="img/topBar.png" alt="" title="" width="551" height="23" /></div>
+			<div class="title"><img src="img/txt_faleC.png" width="222" height="19" alt="" title="" /></div>
+			<div class="top"><img src="img/bar2.png" alt="" title="" width="551" height="2" /></div>
+			
+	
+			<form action="#" method="#" class="form">
+				<span class="infoBar"><b>Tem alguma dúvida?</b> Entre em contato.</span>
+				<span class="lbl">
+					<label>Nome completo:</label>
+					<input type="text" title="Nome completo:" value="Nome completo:" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue" id="" class="inpt05 errorInpt" />
+					<span class="error"><b>X</b> Favor digitar bla bla bla</span>
+				</span>	
+				<span class="lbl">
+					<label>E-mail: </label>
+					<input type="text" title="E-mail" value="E-mail" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue" id="" class="inpt04" />
+					<span class="error"><b>X</b> Favor digitar bla bla bla.</span>
+				</span>
+				<span class="lbl">
+					<label>Telefone celular: </label>
+					<input type="text" title="ddd" value="ddd" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue" id="" class="inpt01" /><input type="text" title="Telefone celular:" value="Telefone celular:" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue" id="" class="inpt02" /><span class="error"><b>X</b> Favor digitar bla bla bla</span>
+				</span>	
+				<span class="lbl">
+					<label>Mensagem: </label>
+					<textarea class="inpt05tArea errorInpt" type="text" title="Mensagem" value="Mensagem" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue">Mensagem:</textarea>
+					<span class="error"><b>X</b> Favor digitar bla bla bla.</span>
+				</span>					
+				<input type="submit" value=" " name="" id="" class="btEnviar rt" />	
+				<a href="mailto:sac@knauf.com.br"><img src="img/img_sac.png" alt="" title="" width="551" height="118" /></a>
+				<div class="linksPreFooter">
+					<a href="#" class="link lf"><img src="img/seta2.png" alt="" title="" width="9" height="11" /> voltar</a>									
+					<hr class="bdr2 clr" />								
+					<span class="info1">Certificado de Autorização Caixa n 3-0054/2013</span>
+				</div>												
+			</form>
+		</div>		
+	</div>	
+	<div class="footer">
+		<img src="img/logo2.png" alt="" title="" width="240" height="78" />
+		<ul class="list">
+			<li><a href="#">Regulamento</a></li>	
+			<li class="last"><a href="#">Fale Conosco</a></li>	
+		</ul>
+	</div>
+</div>
+
+</body>	
+</html>

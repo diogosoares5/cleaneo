@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteBase /Knauf/cleaneo
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#Regras
+RewriteRule ^([^/]*)/?$ $1.php [L]
+RewriteRule ^cadastro/([^/]*)/?$ cadastro.php?c=$1 [L]
+#RewriteRule ^reset-pass/([^/]*)/?$ reset-pass.php?h=$1 [L]
+
+</IfModule>
