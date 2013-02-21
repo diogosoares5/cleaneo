@@ -3,7 +3,7 @@
 body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: arial;font-size:14px;}
 .All{width:100%;height:auto;}
 .footer{width:100%;background:#fff;height:200px;clear: both;overflow:hidden;}
-.content{width:695px;min-height:600px;background:url(../img/bgContent.png) center top repeat-y;margin:0 auto;margin-top:143px;position:relative;}
+.content{width:695px;min-height:600px;background:url(../img/bgContent.png) center bottom repeat-y;margin:0 auto;margin-top:143px;position:relative;}
 .content .wrapper{width:551px;margin:0 auto;}
 
 .logo{overflow:hidden;position: relative;top:-120px;margin-bottom: -90px}
@@ -18,6 +18,7 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .rt{float:right;}
 .lf{float:left;}
 .clr{clear:both;}
+.clr2{display:block;}
 .link{color:#719eb3;text-decoration: none}
 .bdr1{width:552px;height:2px;background:url(../img/bar1.png) no-repeat;}
 .bdr2{width:551px;height:2px;background:url(../img/bar2.png) no-repeat;}
@@ -26,6 +27,8 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .Bcrumb{color:#879198;font-size:14px;margin: 5px;}
 .Bcrumb a{color:#719eb3;text-decoration: underline;}
 .btEnviar{width:100px;height:30px !important;background:url(../img/btEnviar.jpg) no-repeat !important;cursor:pointer;border:none;}
+.btEnviarP{width:172px;height:30px !important;background:url(../img/btEnviarP.png) no-repeat !important;cursor:pointer;border:none;}
+.btSalvar{width:170px;height:30px !important;background:url(../img/btSalvar.png) no-repeat !important;cursor:pointer;border:none;}
 .infoBar{background:#00aeef;width:531px;color:#fff;font-weight: bold;display:block;padding:10px;margin:20px 0;text-align: center;}
 .info1{color:#000;font-size: 11px;}
 .errorInpt{border:1px solid red !important;border-top:2px solid red !important;color:red !important;background:url(../img/bgInputEr.png) repeat-x !important;}
@@ -36,7 +39,7 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .linksPreFooter .bdr2{margin-bottom:20px;display:block;}
 .linksPreFooter .info1{margin-bottom:10px;display:block;}
 
-.form{font-size: 14px}
+.form{position:relative;}
 .form input{background:url(../img/bgInput.png) repeat-x;color:#231f20;font-size:12px;font-family: arial;height:26px;border:1px solid #84b8d0;margin-left:10px;padding-left: 3px;}
 .form select{background:url(../img/bgInput.png) repeat-x;color:#231f20;font-size:13px;font-family: arial;height:26px;border:1px solid #84b8d0;}
 .form label{float:left;width:210px;color:#231f20;font-size:14px;font-family: arial;font-weight: bold;position:relative;top:9px;display:inline-block;vertical-align: top;text-align: right;}
@@ -118,26 +121,33 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .upload .Boxer .link img{margin:0 auto;display:block;}
 
 
-.upload .Boxer2{width:auto;height:auto;padding:20px;background:#fff;margin-top:40px;margin-bottom:30px;}
-.upload .Boxer2 .title{margin-bottom: -20px;position:relative;top:-45px;}
-.upload .Boxer2 .form .step{overflow:hidden;display:block;margin-bottom: 25px;}
-.upload .Boxer2 .form .step img,.upload .Boxer2 .form .step a,.upload .Boxer2 .form .step .txt{display:inline-block;}
-.upload .Boxer2 .form .step .txt{vertical-align: top;padding-top:10px;margin-left: 10px;margin-right: 20px;}
-.upload .Boxer2 .form .bdr1{width:600px;margin-left: -20px}
-.upload .Boxer2 .infoBar{background:#BFDCE9;color:#000;width:451px;height:20px;padding:10px 30px 20px;font-size: 14px;}
+.upload .form .Boxer2{width:auto;height:auto;padding:50px 20px 20px;background:#fff;margin-top:40px;margin-bottom:30px;overflow:hidden;}
+.upload .form .Boxer2 .title{margin-bottom: -20px;position:absolute;top:-28px;left:200px;}
+.upload .form .Boxer2 .step{overflow:hidden;display:block;}
+.upload .form .Boxer2 .step img,.upload .form .Boxer2 .step a,.upload .form .Boxer2 .step .txt{display:inline-block;}
+.upload .form .Boxer2 .step .txt{vertical-align: top;padding-top:10px;margin-left: 10px;margin-right: 20px;}
+.upload .form .Boxer2 .bdr1{width:600px;margin-left: -20px}
+.upload .Boxer2 .infoBar{background:#BFDCE9;color:#000;width:451px;height:20px;padding:10px 30px 20px;font-size: 14px;margin:10px 0;}
 
-.upload .linksPreFooter{position:relative;bottom:0;clear:both;}
-.upload .form .error{margin-right: -90px;}
-.upload .form .form .file {background: none repeat scroll 0 0 #FFFFFF;clear: both;margin-top: 5px;padding: 3px;position: relative;width: 437px;}
-.upload .form label.lbl2.file {width:auto;float:right;margin-bottom: 20px;}
-.upload .form #div-input-file {background: url("../img/btSelcArq.png") no-repeat scroll 100% 1px transparent;height: 33px;margin: 0;width: 440px;overflow:hidden;}
-.upload .form #div-input-file #file-original {font-size: 18px;opacity: 0;position: relative;width: 440px;z-index: 10;overflow:hidden;}
+.upload .linksPreFooter{position:relative;bottom:0;clear:both;padding-bottom: 20px;}
+.upload .form .Boxer2 .lbl2{margin-bottom:0;display:block;overflow:hidden;}
+.upload .form .Boxer2 .error{margin-right: -90px;margin-bottom: 10px;}
+.upload .form .Boxer2 .file {background: none repeat scroll 0 0 #FFFFFF;clear: both;margin-top: 5px;padding: 3px;position: relative;width: 437px;}
+.upload .form .Boxer2 label.lbl3.file {width:auto;float:right;margin-bottom: 20px;top:0;}
+.upload .form .Boxer2 #div-input-file {background: url("../img/btSelcArq.png") no-repeat scroll 100% 1px transparent;height: 33px;margin: 0;width: 440px;overflow:hidden;}
+.upload .form .Boxer2 #div-input-file #file-original {font-size: 18px;opacity: 0;position: relative;width: 440px;z-index: 10;overflow:hidden;}
 
 
-.upload .form .list{overflow:hidden;margin-bottom:20px;}
-.upload .form .list .block{display:block;}
-.upload .form .list .none{display:none;}
-.upload .form .list .lbl2.file{margin-bottom:10px;}
-.upload .form .linkAdd{color:#719DB3;text-align: center;display:block;}
-.upload .form .linkAdd a{color:#719DB3;text-decoration: underline;}
-.upload .form .linkAdd img{display:inline-block;vertical-align: bottom;margin-right: 5px}
+.upload .form .Boxer2 .list{overflow:hidden;}
+.upload .form .Boxer2.block,.upload .form .Boxer2 .list .block{display:block;}
+.upload .form .Boxer2.none,.upload .form .Boxer2 .list .none{display:none;}
+.upload .form .Boxer2 .list .lbl2.file{margin-bottom:10px;}
+.upload .form .Boxer2 .linkAdd{color:#719DB3;text-align: center;display:block;margin-bottom: 10px}
+.upload .form .Boxer2 .linkAdd a{color:#719DB3;text-decoration: underline;}
+.upload .form .Boxer2 .linkAdd img{display:inline-block;vertical-align: bottom;margin-right: 5px}
+
+
+.upload .form .Boxer2 .concluido img{border:2px solid #a6cdde;margin-right: 30px}
+.upload .form .Boxer2 .concluido .title2{border-bottom:1px solid #ccc;padding-bottom: 10px;display:inline-block;clear:both;}
+.upload .form .Boxer2 .concluido a{ display:inline-block;color:#719eb3;text-decoration: underline}
+.upload .form .Boxer2 .concluido a,.upload .form .Boxer2 .concluido input{position:relative;bottom:-70px;}
