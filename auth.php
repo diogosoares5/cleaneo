@@ -19,7 +19,7 @@ Selecione o tipo de cadastro:
 else:
 ?>
 <a href="<?php echo HHtml::Link('cadastro/arquiteto'); ?>">ARQUITETO</a>
-<a href="<?php echo HHtml::Link('cadastro/instalador'); ?>">INSTALADOR</a>
+<a href="<?php echo HHtml::Link('cadastro/instalador'); ?>">INSTALADORRRRR</a>
 <?php
 endif;
 ?>
