@@ -32,6 +32,7 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .btEnviarP{width:172px;height:30px !important;background:url(../img/btEnviarP.png) no-repeat !important;cursor:pointer;border:none;}
 .btSalvar{width:170px;height:30px !important;background:url(../img/btSalvar.png) no-repeat !important;cursor:pointer;border:none;}
 .btProjOk{width:172px;height:30px !important;background:url(../img/btProjOk.png) no-repeat !important;cursor:pointer;border:none;}
+.btCont{width:130px;height:30px !important;background:url(../img/btCont.png) no-repeat !important;cursor:pointer;border:none;}
 .infoBar{background:#00aeef;width:531px;color:#fff;font-weight: bold;display:block;padding:10px;margin:20px 0;text-align: center;}
 .info1{color:#000;font-size: 11px;}
 .errorInpt{border:1px solid red !important;border-top:2px solid red !important;color:red !important;background:url(../img/bgInputEr.png) repeat-x !important;}
@@ -42,6 +43,18 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .linksPreFooter .link{margin-bottom:40px;display:block;text-decoration: underline;}
 .linksPreFooter .bdr2{margin-bottom:20px;display:block;}
 .linksPreFooter .info1{margin-bottom:10px;display:block;}
+
+.Home .form{margin-bottom: 20px;}
+.Home .linksPreFooter{position:relative;bottom:0;}
+.Home .link{margin:20px;display:block;}
+.Home .link2{color:#719EB3;text-decoration: underline;padding-bottom: 3px;display:block;text-align: center;font-size: 20px}
+.Home .txt{margin:20px; display:block;}
+.Home .form .Boxer .lbl{ display:inline-block;margin-right: 5px;}
+.Home .Boxer{width:551px;height:auto;padding:20px;background:#CEE5ED;margin-top:40px;margin-bottom:30px;min-height:80px;}
+.Home .Boxer .title{margin-bottom: -20px;position: relative;top: -42px;}
+.Home .form .Boxer .lbl label{width:auto;}
+.Home .form .Boxer .lbl .link_ipt{display:block;position:absolute;right:42px;}
+
 
 .form{position:relative;}
 .form input{background:url(../img/bgInput.png) repeat-x;color:#231f20;font-size:12px;font-family: arial;height:26px;border:1px solid #84b8d0;margin-left:10px;padding-left: 3px;}
@@ -86,12 +99,17 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .etapa3 .B1{color:#000;font-weight: bold;}
 .etapa3 .infoBar{font-size:14px;color:#fff;}
 
+.etapa4 .form{text-align: center;}
+.etapa4 .form input{height:auto;}
+.etapa4 .form .checkbox{position:relative;top:1px;}
 .etapa4 p {text-align: center;margin:20px 0 30px 0 ;}
 .etapa4 p b{font-weight: bold;}
 .etapa4 .contrato {background:#fff;overflow:auto;height:480px;padding:20px;margin-bottom: 50px;clear:both;}
 .etapa4 .contrato p{margin:10px 0 20px 0;text-align: left;}
 .etapa4 .contrato b{font-weight: bold;}
-.etapa4 .linksPreFooter{position:relative;}
+.etapa4 .linksPreFooter{position:relative;bottom:0;}
+
+
 
 .etapa4 #scrollbar3 { width: auto;  margin: 20px 0 10px; }
 .etapa4 #scrollbar3 .viewport { width: 479px; height: 400px; overflow: hidden; position: relative; }
@@ -114,7 +132,7 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .upload .Bcrumb span{margin:0 0 0 0;}
 .upload .Bcrumb span,.upload .Bcrumb a{position:relative;top:2px;left:-6px;}
 .upload .infoBar{background:none;padding:0;color:#000;font-weight: normal;font-size: 18px;}
-.upload .infoBar b{font-weight: bold}
+.upload .infoBar b{font-weight: bold;}
 .upload .infoBar2 {background:#00aeef;color:#fff;width:531px;padding:10px;font-size: 14px;margin:10px 0;display:block;text-align: center;font-weight: bold}
 .upload .infoBar2 .b1{font-size: 18px;}
 
