@@ -36,7 +36,6 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .infoBar{background:#00aeef;width:531px;color:#fff;font-weight: bold;display:block;padding:10px;margin:20px 0;text-align: center;}
 .info1{color:#000;font-size: 11px;}
 .errorInpt{border:1px solid red !important;border-top:2px solid red !important;color:red !important;background:url(../img/bgInputEr.png) repeat-x !important;}
-<<<<<<< Updated upstream
 .error{color:red;display:block;margin-right:-51px;margin-top:2px;text-align: center;}
 .error b{font-weight: bold;}
 
@@ -50,7 +49,6 @@ margin-left: 220px !important;
 text-align: left !important;
 width: auto !important;}
 label.error b{font-weight: bold !important;}
->>>>>>> Stashed changes
 .linksPreFooter{overflow:hidden;bottom:30px;position:absolute;}
 .linksPreFooter .link{margin-bottom:40px;display:block;text-decoration: underline;}
 .linksPreFooter .bdr2{margin-bottom:20px;display:block;}
