@@ -4,7 +4,7 @@ require("config.php");
 include_once("components/function.php");
 include_once("behavior/utils.php");
 
-function Head($pageTitle=NULL, $arrayScripts = NULL){
+function Head($pageTitle=NULL, $arrayScripts = NULL, $bodyclass = NULL){
 	$h = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,14 +15,17 @@ $h .='</title>
 <link rel="stylesheet" type="text/css" href="'.ROOT.'/css/reset.css">
 <link rel="stylesheet" type="text/css" href="'.ROOT.'/css/style.css">
 <script type="text/javascript" src="'.ROOT.'/assets/js/jquery.js"></script>
+<script type="text/javascript" src="'.ROOT.'/assets/js/jquery.tinyscrollbar.min.js"></script>
+<script type="text/javascript" src="'.ROOT.'/assets/js/ajaxFileUpload.js"></script>
+<script type="text/javascript" src="'.ROOT.'/assets/js/jquery.validate.js"></script>
 ';
-if(isset($arrayScripts)):
-echo includeScripts($arrayScripts);
+if(isset($arrayScripts) and !empty($arrayScripts)):
+$h .= includeScripts($arrayScripts);
 endif;
 $h .='
 <script type="text/javascript" src="'.ROOT.'/assets/js/scripts.js"></script>
 </head><body>
-	<div class="All '.HGetCss::getClass($_SERVER['REQUEST_URI'],array("/knauf/cleaneo/cadastro"=>"etapa1","/knauf/cleaneo/cadastro/arquiteto"=>"cadastro","/knauf/cleaneo/cadastro/instalador"=>"cadastro","/knauf/cleaneo/contato"=>"faleconosco")).'">
+	<div class="All '.$bodyclass.'">
 	<div class="content">
 		<div class="wrapper">
 		<h1 class="logo"><a href="'.ROOT.'"><img src="'.ROOT.'/assets/images/logo.png" alt="" title="" width="260" height="186" /></a></h1>
