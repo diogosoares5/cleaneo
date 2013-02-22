@@ -27,7 +27,7 @@ $customer->set($checked);
             	<a href="#" class="link"><img src="<?php echo ROOT; ?>/assets/images/btVerreg.png" alt="" title="" width="195" height="30" /></a>
             </div> 
             <img src="<?php echo ROOT; ?>/assets/images/txt_upload.png" alt="" title="" width="551" height="16" />  
-			<form action="#" method="#" class="form">
+			<form action="<?php echo ROOT; ?>/projeto" method="post" class="form" id="projectForm" enctype="multipart/form-data">
 				<div class="Boxer2">
 					<h2 class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_projeto.png" alt="" title="" width="130" height="31" /></h2>	
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico1.png" alt="" title="" width="" height="" /> <span class="txt">Fa&ccedil;a o download do <b>Modelo de Autoriza&ccedil;&atilde;o</b></span> <a href="<?php echo ROOT; ?>/download"><img src="<?php echo ROOT; ?>/assets/images/btDonwload.png" alt="" title="" width="134" height="30"></a></span>

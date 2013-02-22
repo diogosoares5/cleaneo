@@ -29,23 +29,27 @@ if(isset($_POST['cnpj'])): $cnpj = $_POST['cnpj']; else: $cnpj = NULL; endif;
 
 $customer = new Customer();
 
-if($customer->authUser($email,md5($pass))):
+if($customer->authUser($email,$pass)):
 	$_SESSION['warn'] = "Este usu&aacute;rio j&aacute; se encontra cadastrado neste concurso";
 else:
 //criando usuario
 $createCustomer = $customer->sign($categoria, $pessoa, $email, $pass, $nome, $cpf, $profissao, $cep, $endereco, $complemento, $bairro, $cidade, $estado, $tel, $cel, $razao, $fantasia, $cnpj);
 	if($createCustomer == true):
 		$lastUser = $customer->show(array("email = '".$email."'"));
-		$send = $customer->sendEmail($lastUser[0]['id'],'ativacao');
-		if($send==true):
+		
+		$send = $customer->sendEmail($lastUser['id'],'ativacao');
+		
+		if($send==true): 
+			$_SESSION['success'] = $lastUser['email'];
 			header('Location: '.ROOT.'/auth');
-			exit();
 		else:
 			$_SESSION['warn'] = "Usuario criado com sucesso em breve lhe enviaremos um email com seu link de confirmacao";
+			header('Location: '.ROOT.'/cadastro');
 		endif;
 	else:
 	$_SESSION['warn'] = "Erro ao criar usuario";
+	header('Location: '.ROOT.'/cadastro');
 	endif;
 endif;
-//header('Location: '.ROOT.'/cadastro');
+
 ?>

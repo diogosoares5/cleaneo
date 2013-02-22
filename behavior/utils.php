@@ -24,8 +24,8 @@
 			endforeach;
 			echo '</select>';
 		}
-		function Button($type, $value=NULL){
-			echo '<input  type="'.$type.'" value="'.$value.'">';
+		function Button($type, $value=NULL, $id = NULL, $class = NULL){
+			echo '<input  type="'.$type.'" value="'.$value.'" id="'.$id.'" class="'.$class.'">';
 		}
 		function Radio($name, $arr_options){
 			foreach($arr_options as $key=>$option):

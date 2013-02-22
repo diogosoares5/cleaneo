@@ -2,18 +2,21 @@
 	require("../../config.php");
 	include('class.upload.php');
 	
-	$f = $_FILES['file'];
-	$p = $_POST['project_id'];
-	$c = $_POST['customer_id'];
+	$error = "";
+	$msg = "";
+	$fileElementName = 'file-original1';
+	$f = $_FILES['file-original1'];
+	//$p = $_POST['project_id'];
+//	$c = $_POST['customer_id'];
 	
 	
 	$image = new Upload($f);
 	$image->allowed = array('image/jpg');
-	$image->Proccess('../../archives');
+	$image->Proccess(ROOT.'/archives');
 	if($image->processed): 
-		echo 'Imagem incluida com sucesso';
+		$msg = 'Imagem incluida com sucesso';
 	else: 
-		echo 'Erro ao incluir imagem: '.$image->error; 
+		$error =  'Erro ao incluir imagem: '.$image->error; 
 	endif;
 	$image->file_name_body_pre  = 'thumb_'
 	$image->image_resize          = true;
