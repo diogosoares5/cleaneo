@@ -106,7 +106,7 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .faleConosco .infoBar{background:none;padding:0;color:#000;font-size: 18px}
 .faleConosco .infoBar b{font-weight: bold;}
 .faleConosco .linksPreFooter{bottom:0;position:relative;margin:;}
-
+.faleConosco .form {padding-bottom:10px;}
 
 /* upload */
 .upload .Bcrumb{color:#719eb3;}
@@ -144,10 +144,10 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .upload .form .Boxer2 #div-input-file{background:url(../img/btSelcArq.png) no-repeat 100% 1px;height:40px;width:440px;margin:0px;}
 .upload .form .Boxer2 #div-input-file #file-original{opacity: 0.0;-moz-opacity: 0.0;filter: alpha(opacity=00);font-size:14px;background:none !important;border:none !important;}
 .upload .form .Boxer2 #div-input-falso{margin-top:-28px;width:190px;overflow:hidden;}
-.upload .form .Boxer2 #div-input-falso #file-falso{width:440px;height:30px;font-size:14px;font-family: Verdana;background:none !important;border:none !important;}
+.upload .form .Boxer2 #div-input-falso #file-falso,.upload .form .Boxer2 #div-input-falso #file-falso2{width:440px;height:30px;font-size:14px;font-family: Verdana;background:none !important;border:none !important;}
 
 .upload .form .Boxer2 .list{overflow:hidden;}
-.upload .form .Boxer2.block,.upload .form .Boxer2 .list .block{display:block;}
+.upload .form .Boxer2.block,.upload .form .Boxer2 .list .block{display:block !important;}
 .upload .form .Boxer2.none,.upload .form .Boxer2 .list .none{display:none;}
 .upload .form .Boxer2 .list .lbl2.file{margin-bottom:10px;}
 .upload .form .Boxer2 .linkAdd{color:#719DB3;text-align: center;display:block;margin-bottom: 10px}
