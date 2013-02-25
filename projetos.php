@@ -148,7 +148,7 @@ $projeto = new Projeto();
 						<input type="text" value=" " name="endereco"  id="enderco" class="inpt05" />
 						
 					</span>	
-					<span class="lb2l">
+					<span class="lbl2">
 						<label>Bairro: </label>
 						<input type="text" value=" " name="bairro"  id="bairro" class="inpt04" />
 						
