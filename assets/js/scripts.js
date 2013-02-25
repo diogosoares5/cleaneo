@@ -243,9 +243,18 @@ $(document).ready(function(){
 			 $('#projectForm').slideUp();  
 		}
 	);
-	$('.editProject').click(function(){
-										 
-	});
+	//$('.editProject').click(function(){
+//		var pid = $(this).attr('projId');
+//		
+//		$.ajax({
+//			type:"POST",
+//			data: {pid:pid},
+//			url: TEMPLATE_URL+'assets/ajax/projeto_editar.php',
+//			success: function(results){
+//				$(this).parent('Boxer2').prepend( results );
+//			}	
+//		});								 
+//	});
 	$('#authForm').validate({
 		rules:{
 			checkIn:{
