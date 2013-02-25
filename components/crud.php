@@ -68,8 +68,10 @@ class Crud {
 		else:
 			$sql = "SELECT  * FROM ".$table;
 		endif;
+		
 		$query = mysql_query($sql);
 		$num = mysql_num_rows($query);
+		
 		return $num;
 		}
 	function serial($arr, $char=NULL){

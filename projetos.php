@@ -21,6 +21,7 @@ $projeto = new Projeto();
 				echo '<span class="infoBar2">'.$_SESSION['flash'].'</span>';
 				unset($_SESSION['flash']);
 			else:
+			
 				if($projeto->counter($customer->id) >= 1):
 					echo '<span class="infoBar2">Voc&ecirc; tem ';
 					
@@ -30,15 +31,19 @@ $projeto = new Projeto();
 						else:
 							echo $projeto->counter($customer->id,1).' projeto salvo';
 						endif;
-					elseif($projeto->counter($customer->id,1) and $projeto->counter($customer->id,2)):
+					endif;
+					if($projeto->counter($customer->id,1) and $projeto->counter($customer->id,2)):
 						echo ' e ';
-					elseif($projeto->counter($customer->id,2)):
+					endif;
+					
+					if($projeto->counter($customer->id,2)):
 						if($projeto->counter($customer->id,2) > 1):
 							echo $projeto->counter($customer->id,2).' projetos enviados';
 						else:
 							echo $projeto->counter($customer->id,2).' projeto enviado';
 						endif;
 					endif;
+					
 					echo '.</span>';
 				endif;
 			endif; ?>
