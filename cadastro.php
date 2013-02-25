@@ -26,7 +26,17 @@ else:
 ?>
 <p>Em qual categoria deseja concorrer?</p>
 			<a href="<?php echo HHtml::Link('cadastro/arquiteto'); ?>" class="lf"><img src="<?php echo ROOT; ?>/assets/images/btArqt.png" alt="" title="" width="264" height="45" /></a>
-			<a href="<?php echo HHtml::Link('cadastro/instalador'); ?>" class="rt"><img src="<?php echo ROOT; ?>/assets/images/btInst.png" alt="" title="" width="264" height="45" /></a>			
+			<a href="<?php echo HHtml::Link('cadastro/instalador'); ?>" class="rt"><img src="<?php echo ROOT; ?>/assets/images/btInst.png" alt="" title="" width="264" height="45" /></a>	
+            <div class="Boxer">
+            	<h2 class="title"><img src="img/txt_atencao.png" alt="" title="" width="123" height="34" /></h2>
+            	<ul class="list">
+            		<li>Só serão aceitos projetos e obras que foram <b>executadas exclusivamente</b> com o sistema Knauf Cleaneo Acústico. </li>
+            		<li>As obras e projetos inscritos devem ter sido executadas a partir de <b>janeiro de 2010 e integralmente concluídas até 04 de junho de 2013.</b></li>
+					<li>Podem participar do concurso pessoas físicas e jurídicas, nas duas categorias acima: Arquiteto – devidamente registrado no CAU – e Instaladores de sistema Drywall. </li>	
+					<li>Os participantes são responsáveis exclusivos pela manutenção das informações cadastradas no site do concurso.</li>	
+					<li>Qualquer projeto ou obra que não cumpra, de maneira válida, qualquer dos requisitos para inscrição será excluído do concurso sem aviso prévio.</li>	
+            	</ul>
+            </div> 			
 <?php
 endif;
 if(isset($_SESSION['warn'])):

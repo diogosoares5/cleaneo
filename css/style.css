@@ -9,6 +9,7 @@ body{background:#daecf2 url(../assets/images/bg1.jpg) center top  no-repeat;font
 .logo{overflow:hidden;position: relative;top:-120px;margin-bottom: -90px}
 .logo img{margin:0 auto;display:block;}
 
+.footer {min-width:990px;display:block;margin:0 auto 0 auto;padding-top: 10px;}
 .footer img{display:block;margin:30px auto 10px auto;}
 .footer .list{width:170px;margin:0 auto;padding-left: 30px;}
 .footer .list li{float:left;background:url(../assets/images/barra.png) no-repeat right 0;padding-right:5px;margin-left:5px;font-size: 11px;}
@@ -28,6 +29,7 @@ body{background:#daecf2 url(../assets/images/bg1.jpg) center top  no-repeat;font
 .link_ipt a{color:#719eb3;text-decoration: none;}
 .Bcrumb{color:#879198;font-size:14px;margin: 5px;}
 .Bcrumb a{color:#719eb3;text-decoration: underline;}
+.btEntrar{width:31px;height:30px !important;background:url(../assets/images/seta5.png) no-repeat !important;cursor:pointer;border:none !important;margin:0 !important;padding:0 !important;}
 .btEnviar{width:100px;height:30px !important;background:url(../assets/images/btEnviar.jpg) no-repeat !important;cursor:pointer;border:none;}
 .btEnviarP{width:172px;height:30px !important;background:url(../assets/images/btEnviarP.png) no-repeat !important;cursor:pointer;border:none;}
 .btSalvar{width:170px;height:30px !important;background:url(../assets/images/btSalvar.png) no-repeat !important;cursor:pointer;border:none;}
@@ -62,11 +64,12 @@ label.error b{font-weight: bold !important;}
 .Home .Boxer{width:551px;height:auto;padding:20px;background:#CEE5ED;margin-top:40px;margin-bottom:30px;min-height:80px;}
 .Home .Boxer .title{margin-bottom: -20px;position: relative;top: -42px;}
 .Home .form .Boxer .lbl label{width:auto;}
-.Home .form .Boxer .lbl .link_ipt{display:block;position:absolute;right:42px;}
-
+.Home .form .Boxer .lbl .link_ipt{display:block;position:absolute;right:68px;}
+.Home .form .Boxer .lbl .link_ipt a{text-decoration: underline}
+.Home .form .inpt04{width:190px;}
 
 .form{position:relative;}
-.form input{background:url(../assets/images/bgInput.png) repeat-x;color:#231f20;font-size:12px;font-family: arial;height:26px;border:1px solid #84b8d0;margin-left:10px;padding-left: 3px;}
+.form input{background:url(../assets/images/bgInput.png) repeat-x;color:#231f20;font-size:12px;font-family: arial;height:26px;border:1px solid #84b8d0;margin-left:10px;padding-left: 3px;text-indent:-9999px;}
 .form select{background:url(../assets/images/bgInput.png) repeat-x;color:#231f20;font-size:13px;font-family: arial;height:26px;border:1px solid #84b8d0;}
 .form label{float:left;width:210px;color:#231f20;font-size:14px;font-family: arial;font-weight: bold;position:relative;top:9px;display:inline-block;vertical-align: top;text-align: right;}
 .form textarea{color:#231f20;font-size:12px;font-family: arial;border:1px solid #84b8d0;margin-left:10px;padding-left: 3px;}
@@ -98,12 +101,20 @@ label.error b{font-weight: bold !important;}
 
 /* Ccadastro*/
 .cadastro .content{min-height: 1232px;}
-
+.cadastro .lbl .lbl2{top:-5px;position:relative;}
+.cadastro .lbl .lbl2 + .inpt04 + .error{margin-right: 158px;}
 
 /* Etapas*/
 .etapa1 p {text-align: center;margin:10px 0;font-weight: bold}
+.etapa1 .Boxer{width:auto;height:auto;padding:20px;background:#CEE5ED;margin-top:100px;margin-bottom:50px;}
+.etapa1 .Boxer .title{margin-bottom: -20px;position:relative;top:-45px;}
+.etapa1 .Boxer .list li{background:url(../img/seta3.png) no-repeat;padding-left: 20px;color:#000;display:block;margin-bottom:25px;}
+.etapa1 .Boxer b{font-weight: bold;}
+.etapa1 .Boxer .b1{font-weight: bold;color:#00ADEF;}
+.etapa1 .Boxer .link img{margin:0 auto;display:block;}
+.etapa1 .linksPreFooter{position:relative;}
 
-.etapa3 p{margin-top:30px;color:#000;font-size:18px;line-height: 19px;text-align:center; }
+.etapa3 p{margin-top:30px;color:#000;font-size:18px;line-height: 19px;text-align:center;}
 .etapa3 p a{color:#719eb3;}
 .etapa3 .B1{color:#000;font-weight: bold;}
 .etapa3 .infoBar{font-size:14px;color:#fff;}
@@ -121,7 +132,7 @@ label.error b{font-weight: bold !important;}
 
 /* scroll*/
 #scrollbar3 { width: auto;  margin: 20px 0 10px; }
-#scrollbar3 .viewport { width: 479px; height: 400px; overflow: hidden; position: relative; }
+#scrollbar3 .viewport { width: 479px; height: 486px; overflow: hidden; position: relative; }
 #scrollbar3 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
 #scrollbar3 .scrollbar{ background: transparent url(../assets/images/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 15px; }
 #scrollbar3 .track { background: transparent url(../assets/images/bg-scrollbar-trackend-y.png) no-repeat 0 100%; height: 100%; width:15px; position: relative; }
@@ -152,12 +163,13 @@ label.error b{font-weight: bold !important;}
 .upload .Boxer .b1{font-weight: bold;color:#00ADEF;}
 .upload .Boxer .link img{margin:0 auto;display:block;}
 
-.upload .Boxer2{width:auto;height:auto;min-height:116px;padding:40px 20px 20px;background:#fff;margin-top:40px;margin-bottom:30px;position:relative;}
-.upload .Boxer2 .title{margin-bottom: -20px;position:absolute;top:-28px;left:200px;}
-.upload .Boxer2 .step{overflow:hidden;display:block;}
-.upload .Boxer2 .step img,.upload .Boxer2 .step a,.upload .Boxer2 .step .txt{display:inline-block;}
-.upload .Boxer2 .step .txt{vertical-align: top;padding-top:10px;margin-left: 10px;margin-right: 20px;}
-.upload .Boxer2 .bdr1{width:600px;margin-left: -20px}
+.upload .form .Boxer2{width:auto;height:auto;min-height:116px;padding:40px 20px 10px;background:#fff;margin-top:40px;margin-bottom:30px;position:relative;}
+.upload .form .Boxer2 .title{margin-bottom: -20px;position:absolute;top:-28px;left:200px;}
+.upload .form .Boxer2 .step{overflow:hidden;display:block;}
+.upload .form .Boxer2 .step img,.upload .form .Boxer2 .step a,.upload .form .Boxer2 .step .txt{display:inline-block;}
+.upload .form .Boxer2 .step .txt{vertical-align: top;padding-top:10px;margin-left: 10px;margin-right: 20px;}
+.upload .form .Boxer2 .step .txt b{font-weight: bold;}
+.upload .form .Boxer2 .bdr1{width:600px;margin-left: -20px}
 .upload .Boxer2 .infoBar{background:#BFDCE9;color:#000;width:451px;height:20px;padding:10px 30px 20px;font-size: 14px;margin:10px 0;}
 
 
@@ -185,10 +197,11 @@ label.error b{font-weight: bold !important;}
 .upload .form .Boxer2 .concluido .none{display:none;}
 .upload .form .Boxer2 .concluido .links{color:#719eb3;overflow:hidden;position:relative;bottom:-40px;}
 .upload .form .Boxer2 .concluido img{border:2px solid #a6cdde;margin-right: 30px}
+.upload .form .Boxer2 .concluido .info .bdr2{width:365px;margin:0 0 5px 0;}
 .upload .form .Boxer2 .concluido a img{border:none;margin:0 3px 0 0;}
-.upload .form .Boxer2 .concluido .title2{border-bottom:1px solid #879198;padding-bottom: 10px;margin-bottom:10px;display:inline-block;clear:both;font-weight: bold;}
+.upload .form .Boxer2 .concluido .title2{padding-bottom: 5px;display:inline-block;clear:both;font-weight: bold;}
 .upload .form .Boxer2 .concluido .SubTitle2{font-weight: bold;}
-.upload .form .Boxer2 .concluido a{display:inline-block;color:#719eb3;text-decoration:underline;padding-top:15px;}
+.upload .form .Boxer2 .concluido a{display:inline-block;color:#719eb3;text-decoration:underline;padding-top:12px;}
 .upload .form .add img{display:block;margin:0 auto;}
 
 /* fim upload*/
@@ -196,11 +209,18 @@ label.error b{font-weight: bold !important;}
 
 /* editat */
 .editar{overflow:hidden;margin-top: 100px;}
-
+.editar .listThumb{display:block;margin-top:10px;margin-bottom: 20px;overflow:hidden;}
+.editar .listThumb li{ border-right:1px solid #719eb3;float:left;padding-right: 10px;padding-left: 10px;padding-bottom: 10px;}
+.editar .listThumb .last{border:none;}
+.editar .listThumb img,.editar .listThumb a{display:block;}
+.editar .listThumb .link {margin:5px 0!important}
+.editar .listThumb .link img{display:inline-block;}
+.editar label.lbl3 .link{margin:151px !important;top:0 !important;}
+.editar label.lbl3{top:0;}
 
 /* Regulamento*/
 
-.Regulamento .contrato {background:none;overflow:auto;height:480px;padding:20px;margin-bottom: 50px;clear:both;}
+.Regulamento .contrato {background:none;overflow:auto;height:auto;padding:20px;margin-bottom: 50px;clear:both;}
 .Regulamento .contrato p{margin:10px 0 20px 0;text-align: left;}
 .Regulamento .contrato b{font-weight: bold;}
 .Regulamento .linksPreFooter{position:relative;bottom:0;}

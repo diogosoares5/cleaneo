@@ -106,6 +106,13 @@ label.error b{font-weight: bold !important;}
 
 /* Etapas*/
 .etapa1 p {text-align: center;margin:10px 0;font-weight: bold}
+.etapa1 .Boxer{width:auto;height:auto;padding:20px;background:#CEE5ED;margin-top:100px;margin-bottom:50px;}
+.etapa1 .Boxer .title{margin-bottom: -20px;position:relative;top:-45px;}
+.etapa1 .Boxer .list li{background:url(../img/seta3.png) no-repeat;padding-left: 20px;color:#000;display:block;margin-bottom:25px;}
+.etapa1 .Boxer b{font-weight: bold;}
+.etapa1 .Boxer .b1{font-weight: bold;color:#00ADEF;}
+.etapa1 .Boxer .link img{margin:0 auto;display:block;}
+.etapa1 .linksPreFooter{position:relative;}
 
 .etapa3 p{margin-top:30px;color:#000;font-size:18px;line-height: 19px;text-align:center;}
 .etapa3 p a{color:#719eb3;}
