@@ -29,6 +29,7 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .link_ipt a{color:#719eb3;text-decoration: none;}
 .Bcrumb{color:#879198;font-size:14px;margin: 5px;}
 .Bcrumb a{color:#719eb3;text-decoration: underline;}
+.btEntrar{width:31px;height:30px !important;background:url(../img/seta5.png) no-repeat !important;cursor:pointer;border:none !important;margin:0 !important;padding:0 !important;}
 .btEnviar{width:100px;height:30px !important;background:url(../img/btEnviar.jpg) no-repeat !important;cursor:pointer;border:none;}
 .btEnviarP{width:172px;height:30px !important;background:url(../img/btEnviarP.png) no-repeat !important;cursor:pointer;border:none;}
 .btSalvar{width:170px;height:30px !important;background:url(../img/btSalvar.png) no-repeat !important;cursor:pointer;border:none;}
@@ -63,8 +64,9 @@ label.error b{font-weight: bold !important;}
 .Home .Boxer{width:551px;height:auto;padding:20px;background:#CEE5ED;margin-top:40px;margin-bottom:30px;min-height:80px;}
 .Home .Boxer .title{margin-bottom: -20px;position: relative;top: -42px;}
 .Home .form .Boxer .lbl label{width:auto;}
-.Home .form .Boxer .lbl .link_ipt{display:block;position:absolute;right:42px;}
-
+.Home .form .Boxer .lbl .link_ipt{display:block;position:absolute;right:68px;}
+.Home .form .Boxer .lbl .link_ipt a{text-decoration: underline}
+.Home .form .inpt04{width:190px;}
 
 .form{position:relative;}
 .form input{background:url(../img/bgInput.png) repeat-x;color:#231f20;font-size:12px;font-family: arial;height:26px;border:1px solid #84b8d0;margin-left:10px;padding-left: 3px;}
