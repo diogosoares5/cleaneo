@@ -43,11 +43,17 @@
 			if(isset($res->id)): return true; else: return false; endif;
 		}
 		function getThumb($id){
-			$q = Crud::_read("archives",array('id_project = "'.$id.'" ORDER BY id DESC LIMIT 1'));
+			$q = Crud::_read("archives",array('id_project = "'.$id.'" and id_type = "1" ORDER BY id DESC LIMIT 1'));
 			$t = mysql_fetch_array($q);
 			return $t;
 		}
-		
+		function getThumbs($id){
+			$q = Crud::_read("archives",array('id_project = "'.$id.'" and id_type = "1" '));
+			while($t = mysql_fetch_array($q)):
+				$arr_thumb[] = $t;
+			endwhile;
+			return $arr_thumb;
+		}
 		function serial($arr, $char=NULL){
 		if(isset($char)):
 		$r = implode($char,$arr);
