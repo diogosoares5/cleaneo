@@ -13,7 +13,7 @@ if(isset($_SESSION['customer'])): header('Location:'.ROOT.'/projetos'); endif;
 			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_knaufBrasil.png" alt="" title="" width="551" height="85" />
 			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_concursoDestinado.png" alt="" title="" width="551" height="93" />
 			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_todosProf.png" alt="" title="" width="551" height="70" />
-			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_naofique.png" alt="" title="" width="551" height="39" />
+			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_naofique.png" alt="" title="" width="551" height="48" />
 			<a href="<?php echo HHtml::Link('cadastro'); ?>" class="link"><img src="<?php echo ROOT; ?>/assets/images/btCliqueePart.png" alt="" title="" width="551" height="54" /></a>
 			<a href="regulamento.php" class="link2"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" /> Ver regulamento</a>
 			<hr class="bdr2 clr" />	
