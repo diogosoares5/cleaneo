@@ -10,10 +10,12 @@ if(isset($_SESSION['customer'])): header('Location:'.ROOT.'/projetos'); endif;
 
 			<div class="infoBar">Todos os profissionais que usaram Knauf Cleaneo em seus projetos e obras podem participar. E os vencedores conhecerão a fábrica da Knauf na Alemanha e as maiores inovações no mundo do Drywall.</div>				
 			
-			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_arqEinst.png" alt="" title="" width="551" height="75" />
+			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_knaufBrasil.png" alt="" title="" width="551" height="85" />
+			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_concursoDestinado.png" alt="" title="" width="551" height="93" />
+			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_todosProf.png" alt="" title="" width="551" height="70" />
 			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_naofique.png" alt="" title="" width="551" height="39" />
 			<a href="<?php echo HHtml::Link('cadastro'); ?>" class="link"><img src="<?php echo ROOT; ?>/assets/images/btCliqueePart.png" alt="" title="" width="551" height="54" /></a>
-			<a href="#" class="link2"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" /> Ver regulamento</a>
+			<a href="regulamento.php" class="link2"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" /> Ver regulamento</a>
 			<hr class="bdr2 clr" />	
 
 			<form class="form" action="<?php echo ROOT; ?>/login" method="post">

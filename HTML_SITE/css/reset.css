@@ -42,4 +42,5 @@ table {
 	border-spacing: 0;
 }
 hr{border:none;}
-a{text-decoration: none;img:active{border:none!important;}a{outline:none!important;}}
+a{text-decoration: none;img:active{border:none!important;}
+a{outline:none!important;}
