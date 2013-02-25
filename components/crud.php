@@ -55,10 +55,11 @@ class Crud {
 	}	
 	function _delete($table,$params=NULL){
 		if(isset($params)):
-			$sql = "DELETE * FROM ".$table." WHERE ".$this->serial($params)." ";	
+			$sql = "DELETE FROM ".$table." WHERE ".$this->serial($params)." ";	
 		else:
-			$sql = "DELETE * FROM ".$table;
+			$sql = "DELETE FROM ".$table;
 		endif;
+		echo $sql;
 		$query = mysql_query($sql);
 		return $query;
 	}

@@ -243,8 +243,27 @@ $(document).ready(function(){
 			 $('#projectForm').slideUp();  
 		}
 	);
-	$('.editProject').click(function(){
-										 
+	$('.editProject').toggle(
+		function(){
+			var PID = $(this).attr('projID');
+			$('#editar_'+PID).slideDown();					 
+		},
+		function(){
+			var PID = $(this).attr('projID');
+			$('#editar_'+PID).slideUp();	
+		}
+	);
+	$('.delImage').click(function(){
+		var valor = $(this).attr('thumbID');
+		//alert(valor);
+		$.ajax({
+			type:"POST",
+			url:TEMPLATE_URL+"delete_image.php",
+			data:{tid:valor},
+			success: function(results){
+				$('#msgImage').html(results);	
+			}
+		});
 	});
 	$('#authForm').validate({
 		rules:{
@@ -258,6 +277,7 @@ $(document).ready(function(){
 			}	
 		}						
 	});
+	
 	$('#projectForm').validate({
 		rules:{
 			nome:{required:true},

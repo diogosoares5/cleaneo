@@ -1,8 +1,9 @@
 <?php 
-	include("../../controller/projectController.php");
+	require("../../config.php");
+	//include("../../controller/projectController.php");
 	$pid = $_POST['pid'];
 ?>
-
+<div class="editar">	
 						<hr class="bdr2" />
 						<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico1.png" alt="" title="" width="" height="" /> <span class="txt">Faça o download do <b>Modelo de Autorização</b></span> <a href="#"><img src="<?php echo ROOT; ?>/assets/images/btDonwload.png" alt="" title="" width="134" height="30"></a></span>
 						<hr class="bdr1" />
@@ -132,5 +133,5 @@
 						<span class="lbl2">
 							<input type="submit" value=" " name="" id="" class="btSalvar rt" />	
 						</span>	
-
+</div>
 					
