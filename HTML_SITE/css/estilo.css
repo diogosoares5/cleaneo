@@ -9,6 +9,7 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .logo{overflow:hidden;position: relative;top:-120px;margin-bottom: -90px}
 .logo img{margin:0 auto;display:block;}
 
+.footer {min-width:990px;display:block;margin:0 auto 0 auto;padding-top: 10px;}
 .footer img{display:block;margin:30px auto 10px auto;}
 .footer .list{width:170px;margin:0 auto;padding-left: 30px;}
 .footer .list li{float:left;background:url(../img/barra.png) no-repeat right 0;padding-right:5px;margin-left:5px;font-size: 11px;}
@@ -98,12 +99,13 @@ label.error b{font-weight: bold !important;}
 
 /* Ccadastro*/
 .cadastro .content{min-height: 1232px;}
-
+.cadastro .lbl .lbl2{top:-5px;position:relative;}
+.cadastro .lbl .lbl2 + .inpt04 + .error{margin-right: 158px;}
 
 /* Etapas*/
 .etapa1 p {text-align: center;margin:10px 0;font-weight: bold}
 
-.etapa3 p{margin-top:30px;color:#000;font-size:18px;line-height: 19px;text-align:center; }
+.etapa3 p{margin-top:30px;color:#000;font-size:18px;line-height: 19px;text-align:center;}
 .etapa3 p a{color:#719eb3;}
 .etapa3 .B1{color:#000;font-weight: bold;}
 .etapa3 .infoBar{font-size:14px;color:#fff;}
@@ -121,7 +123,7 @@ label.error b{font-weight: bold !important;}
 
 /* scroll*/
 #scrollbar3 { width: auto;  margin: 20px 0 10px; }
-#scrollbar3 .viewport { width: 479px; height: 400px; overflow: hidden; position: relative; }
+#scrollbar3 .viewport { width: 479px; height: 486px; overflow: hidden; position: relative; }
 #scrollbar3 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
 #scrollbar3 .scrollbar{ background: transparent url(../img/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 15px; }
 #scrollbar3 .track { background: transparent url(../img/bg-scrollbar-trackend-y.png) no-repeat 0 100%; height: 100%; width:15px; position: relative; }
@@ -152,11 +154,12 @@ label.error b{font-weight: bold !important;}
 .upload .Boxer .b1{font-weight: bold;color:#00ADEF;}
 .upload .Boxer .link img{margin:0 auto;display:block;}
 
-.upload .form .Boxer2{width:auto;height:auto;min-height:116px;padding:40px 20px 20px;background:#fff;margin-top:40px;margin-bottom:30px;position:relative;}
+.upload .form .Boxer2{width:auto;height:auto;min-height:116px;padding:40px 20px 10px;background:#fff;margin-top:40px;margin-bottom:30px;position:relative;}
 .upload .form .Boxer2 .title{margin-bottom: -20px;position:absolute;top:-28px;left:200px;}
 .upload .form .Boxer2 .step{overflow:hidden;display:block;}
 .upload .form .Boxer2 .step img,.upload .form .Boxer2 .step a,.upload .form .Boxer2 .step .txt{display:inline-block;}
 .upload .form .Boxer2 .step .txt{vertical-align: top;padding-top:10px;margin-left: 10px;margin-right: 20px;}
+.upload .form .Boxer2 .step .txt b{font-weight: bold;}
 .upload .form .Boxer2 .bdr1{width:600px;margin-left: -20px}
 .upload .Boxer2 .infoBar{background:#BFDCE9;color:#000;width:451px;height:20px;padding:10px 30px 20px;font-size: 14px;margin:10px 0;}
 
@@ -185,10 +188,11 @@ label.error b{font-weight: bold !important;}
 .upload .form .Boxer2 .concluido .none{display:none;}
 .upload .form .Boxer2 .concluido .links{color:#719eb3;overflow:hidden;position:relative;bottom:-40px;}
 .upload .form .Boxer2 .concluido img{border:2px solid #a6cdde;margin-right: 30px}
+.upload .form .Boxer2 .concluido .info .bdr2{width:365px;margin:0 0 5px 0;}
 .upload .form .Boxer2 .concluido a img{border:none;margin:0 3px 0 0;}
-.upload .form .Boxer2 .concluido .title2{border-bottom:1px solid #879198;padding-bottom: 10px;margin-bottom:10px;display:inline-block;clear:both;font-weight: bold;}
+.upload .form .Boxer2 .concluido .title2{padding-bottom: 5px;display:inline-block;clear:both;font-weight: bold;}
 .upload .form .Boxer2 .concluido .SubTitle2{font-weight: bold;}
-.upload .form .Boxer2 .concluido a{display:inline-block;color:#719eb3;text-decoration:underline;padding-top:15px;}
+.upload .form .Boxer2 .concluido a{display:inline-block;color:#719eb3;text-decoration:underline;padding-top:12px;}
 .upload .form .add img{display:block;margin:0 auto;}
 
 /* fim upload*/
