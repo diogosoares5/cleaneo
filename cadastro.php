@@ -79,37 +79,37 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('CEP:','cep'); ?>
-<?php HForm::Input('cep','text','cep'); ?>
+<?php HForm::Input('cep','text','cep','inpt03'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Endere&ccedil;o:','endereco'); ?>
-<?php HForm::Input('endereco','text','endereco'); ?>
+<?php HForm::Input('endereco','text','endereco','inpt05'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Complemento:','complemento'); ?>
-<?php HForm::Input('complemento','text','complemento'); ?>
+<?php HForm::Input('complemento','text','complemento','inpt04'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Bairro:','bairro'); ?>
-<?php HForm::Input('bairro','text','bairro'); ?>
+<?php HForm::Input('bairro','text','bairro','inpt04'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Cidade:','cidade'); ?>
-<?php HForm::Input('cidade','text','cidade'); ?>
+<?php HForm::Input('cidade','text','cidade','inpt04'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Estado:','estado'); ?>
-<?php HForm::Select('estado',array("RJ"=>"Rio de janeiro","SP"=>"S&atilde;o Paulo"),'Selecione Estado'); ?>
+<?php HForm::Select('estado',array("RJ"=>"Rio de janeiro","SP"=>"S&atilde;o Paulo"),'Selecione Estado','inpt04Slc'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Telefone Fixo:','tel'); ?>
-<?php HForm::Input('dddtel','text','dddtel'); ?>
-<?php HForm::Input('tel','text','tel'); ?>
+<?php HForm::Label('Telefone Fixo:','tel','inpt01'); ?>
+<?php HForm::Input('dddtel','text','dddtel','inpt02'); ?>
+<?php HForm::Input('tel','text','tel','inpt04'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Telefone Celular:','cel'); ?>
-<?php HForm::Input('dddcel','text','dddcel'); ?>
-<?php HForm::Input('cel','text','cel'); ?>
+<?php HForm::Label('Telefone Celular:','cel','inpt01'); ?>
+<?php HForm::Input('dddcel','text','dddcel','inpt02'); ?>
+<?php HForm::Input('cel','text','cel','inpt04'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Button('submit','','','btEnviar rt'); ?>
