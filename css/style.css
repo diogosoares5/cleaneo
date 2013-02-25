@@ -164,7 +164,6 @@ label.error b{font-weight: bold !important;}
 .upload .Boxer .b1{font-weight: bold;color:#00ADEF;}
 .upload .Boxer .link img{margin:0 auto;display:block;}
 
-<<<<<<< HEAD
 .upload  .Boxer2{width:auto;height:auto;min-height:116px;padding:40px 20px 10px;background:#fff;margin-top:40px;margin-bottom:30px;position:relative;}
 .upload .Boxer2 .title{margin-bottom: -20px;position:absolute;top:-28px;left:200px;}
 .upload  .Boxer2 .step{overflow:hidden;display:block;}
@@ -172,7 +171,7 @@ label.error b{font-weight: bold !important;}
 .upload  .Boxer2 .step .txt{vertical-align: top;padding-top:10px;margin-left: 10px;margin-right: 20px;}
 .upload  .Boxer2 .step .txt b{font-weight: bold;}
 .upload  .Boxer2 .bdr1{width:600px;margin-left: -20px}
-=======
+
 .upload .Boxer2{width:auto;height:auto;min-height:116px;padding:40px 20px 10px;background:#fff;margin-top:40px;margin-bottom:30px;position:relative;}
 .upload .Boxer2 .title{margin-bottom: -20px;position:absolute;top:-28px;left:200px;}
 .upload .Boxer2 .step{overflow:hidden;display:block;}
@@ -180,12 +179,10 @@ label.error b{font-weight: bold !important;}
 .upload .Boxer2 .step .txt{vertical-align: top;padding-top:10px;margin-left: 10px;margin-right: 20px;}
 .upload .Boxer2 .step .txt b{font-weight: bold;}
 .upload .Boxer2 .bdr1{width:600px;margin-left: -20px}
->>>>>>> 45f86b69c4cafd4029c45cb92106a6a9f350c7b7
 .upload .Boxer2 .infoBar{background:#BFDCE9;color:#000;width:451px;height:20px;padding:10px 30px 20px;font-size: 14px;margin:10px 0;}
 
 
 .upload .linksPreFooter{position:relative;bottom:0;clear:both;padding-bottom: 20px;}
-<<<<<<< HEAD
 .upload  .Boxer2 .lbl2{margin-bottom:15px;display:block;overflow:hidden;}
 .upload  .Boxer2 .error{margin-right: -90px;}
 
@@ -215,7 +212,6 @@ label.error b{font-weight: bold !important;}
 .upload .form .Boxer2 .concluido .SubTitle2{font-weight: bold;}
 .upload .form .Boxer2 .concluido a{display:inline-block;color:#719eb3;text-decoration:underline;padding-top:12px;}
 .upload .form .add img{display:block;margin:0 auto;}
-=======
 .upload .Boxer2 .lbl2{margin-bottom:15px;display:block;overflow:hidden;}
 .upload .Boxer2 .error{margin-right: -90px;}
 
@@ -246,7 +242,7 @@ label.error b{font-weight: bold !important;}
 .upload .Boxer2 .concluido .SubTitle2{font-weight: bold;}
 .upload .Boxer2 .concluido a{display:inline-block;color:#719eb3;text-decoration:underline;padding-top:12px;}
 .upload .add img{display:block;margin:0 auto;}
->>>>>>> 45f86b69c4cafd4029c45cb92106a6a9f350c7b7
+
 
 /* fim upload*/
 
