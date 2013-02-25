@@ -211,7 +211,7 @@ label.error b{font-weight: bold !important;}
 
 /* Regulamento*/
 
-.Regulamento .contrato {background:none;overflow:auto;height:480px;padding:20px;margin-bottom: 50px;clear:both;}
+.Regulamento .contrato {background:none;overflow:auto;height:auto;padding:20px;margin-bottom: 50px;clear:both;}
 .Regulamento .contrato p{margin:10px 0 20px 0;text-align: left;}
 .Regulamento .contrato b{font-weight: bold;}
 .Regulamento .linksPreFooter{position:relative;bottom:0;}
