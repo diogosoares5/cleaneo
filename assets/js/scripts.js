@@ -175,6 +175,9 @@ jQuery.validator.addMethod("nomeCompleto", function(nome, element){
 		return false;	
 	}
 },"Nome completo");
+jQuery.validator.addMethod('validateCheckbox', function(value, element) {
+  return ($('#checkIn:checked').length > 0);
+});
 $(document).ready(function(){
 						     
 	$('.radio').click(function(){  
@@ -218,51 +221,7 @@ $(document).ready(function(){
 //	}
 //}); 
 //
-//});       
-$('.file-original').change(function(){
-	var file = $(this).val();
-	var id =$(this).attr("id");
-	alert(id);
-		//$("#loading")
-//		.ajaxStart(function(){
-//			$(this).show();
-//		})
-//		.ajaxComplete(function(){
-//			$(this).hide();
-//		});
-
-		$.ajaxFileUpload
-		(
-			{
-				url: TEMPLATE_URL+'vendors/uploads/upload.php',
-				secureuri:false,
-				fileElementId:id,
-				dataType: 'json',
-				data:{id:id},
-				success: function (data, status)
-				{
-					if(typeof(data.error) != 'undefined')
-					{
-						if(data.error != '')
-						{
-							alert(data.error);
-						}else
-						{
-							alert(data.msg);
-						}
-					}
-				},
-				error: function (data, status, e)
-				{
-					alert(e);
-				}
-			}
-		)
-		
-		return false;
-
-	
-});
+//});      
 
 	$('#scrollbar3').tinyscrollbar({ size: 480 });
 	
@@ -278,7 +237,40 @@ $('.file-original').change(function(){
 			$('#box_cadastro_fisica').hide();
 		}			 
 	});
-	
+	$('#authForm').validate({
+		rules:{
+			checkIn:{
+				validateCheckbox:true
+			}	
+		},
+		messages:{
+			checkIn:{
+				validateCheckbox:"Por favor marque se concorda com os termos de regulamento"
+			}	
+		}						
+	});
+	$('#projectForm').validate({
+		rules:{
+			nome:{required:true},
+			cep:{required:true},
+			endereco:{required:true},
+			bairro:{required:true},
+			cidade:{required:true},
+			estado:{required:true},
+			tel:{required:true},
+			contato:{required:true}
+		},
+		messages:{
+			nome:{required:"Preencha o campo Nome"},
+			cep:{required:"Preencha o campo CEP"},
+			endereco:{required:"Preencha o campo Endere&ccedil;o"},
+			bairro:{required:"Preencha o campo Bairro"},
+			cidade:{required:"Preencha o campo Cidade"},
+			estado:{required:"Preencha o campo Estado"},
+			tel:{required:"Preencha o campo Tel"},
+			contato:{required:"Preencha o campo Contato"}
+		}						   
+	});
 	
 	$('#formCadastroFisica').validate({
 

@@ -20,7 +20,7 @@ class Crud {
 //			$Fields[] = $res['Field'];
 //		endwhile;
 //		
-echo $sql;
+
 		$query = mysql_query($sql);
 		return $query;
 	}
@@ -30,8 +30,19 @@ echo $sql;
 		else:
 			$sql = "SELECT * FROM ".$table;
 		endif;
+		//echo $sql;
 		$query = mysql_query($sql);
 		return $query;
+	}
+	function _order($table, $orderby, $order, $limit, $params=NULL){
+		if(isset($params)):
+			$sql = "SELECT * FROM ".$table." WHERE ".$this->serial($params)." ORDER BY ".$orderby." ".$order." LIMIT ".$limit." ";	
+		else:
+			$sql = "SELECT * FROM ".$table." ORDER BY ".$orderby." ".$order." LIMIT ".$limit;
+		endif;
+		
+		$query = mysql_query($sql);
+		return $query;	
 	}
 	function _update($table, $params=NULL){
 		if(isset($params)):
@@ -51,6 +62,16 @@ echo $sql;
 		$query = mysql_query($sql);
 		return $query;
 	}
+	function _counter($table, $params=NULL){
+		if(isset($params)):
+			$sql = "SELECT * FROM ".$table." WHERE ".$this->serial($params)." ";	
+		else:
+			$sql = "SELECT  * FROM ".$table;
+		endif;
+		$query = mysql_query($sql);
+		$num = mysql_num_rows($query);
+		return $num;
+		}
 	function serial($arr, $char=NULL){
 		if(isset($char)):
 		$r = implode($char,$arr);

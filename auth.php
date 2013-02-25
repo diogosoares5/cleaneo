@@ -1,12 +1,15 @@
 <?php 
 include('view/template.php');
-//$_SESSION['success'] = 'dwedwewef@wewef.weffw';
+include_once("components/crud.php");
 if(isset($_SESSION['success'])):
 	$page = 1;
 	Head('Cadastro','','etapa3');
 elseif(isset($_GET['u'])):
 	$uid = substr($_GET['u'],0,32);
 	$hash  = substr($_GET['u'],32);
+	$q = mysql_query('SELECT * FROM customers WHERE MD5(id)="'.$uid.'" and hash = "'.$hash.'" and valido = "1"');
+	$u = mysql_fetch_object($q);
+	if(isset($u->id)): $_SESSION['warn'] = 'Sua ativa&ccedil;&atilde;o j&aacute; foi feita, favor logar na &aacute;rea de usu&aacute;rio'; header('Location:'.ROOT);  endif;
 	$page = 2;
 	Head('Cadastro','','etapa4');
 else:
@@ -110,8 +113,11 @@ endif;
 			</div>	
 
 			<div class="confir">
-				<form>
-					<input type="check" value=" " name="" id="" class="" /> Li e aceito as condições do Regulamento.	
+				<form method="post" id="authForm" action="<?php echo ROOT; ?>/verify_1">
+					<input type="checkbox" name="" id="checkIn" /> Li e aceito as condições do Regulamento.
+                    <input type="hidden" value="<?php echo $uid; ?>" name="uid" />
+                    <input type="hidden" value="<?php echo $hash; ?>" name="hash" />
+                    <input type="submit" value="Continuar" />	
 				</form>
 			</div>
             <?php endif; ?>

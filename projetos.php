@@ -1,6 +1,7 @@
 <?php 
 include('view/template.php'); 
 require_once("controller/customerController.php");
+require_once("controller/projectController.php");
 Head('Projetos','','upload');
 $customer = new Customer();
 $checked = $customer->checkAuth();
@@ -13,6 +14,10 @@ $customer->set($checked);
 				<span>Ol&aacute; <?php echo $customer->nome; ?> |</span> <span>Meus Projetos |</span> <a href="#">Meu Cadastro |</a> <a href="<?php echo ROOT; ?>/login?out=1"> Logout</a>
 			</div>
 			<span class="infoBar">Voc&ecirc; esta concorrendo na categoria:<b><?php echo $customer->getCategory($customer->category); ?>.</b></span>
+            <?php if(isset($_SESSION['flash'])): 
+            echo '<span class="infoBar2">'.$_SESSION['flash'].'</span>';
+			//unset($_SESSION['flash']);
+			endif; ?>
 			<hr class="bdr1" />
             <div class="Boxer">
             	<h2 class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_atencao.png" alt="" title="" width="123" height="34" /></h2>
@@ -27,7 +32,50 @@ $customer->set($checked);
             	<a href="#" class="link"><img src="<?php echo ROOT; ?>/assets/images/btVerreg.png" alt="" title="" width="195" height="30" /></a>
             </div> 
             <img src="<?php echo ROOT; ?>/assets/images/txt_upload.png" alt="" title="" width="551" height="16" />  
+            <?php 
+				$projeto = new Projeto(); 
+				if($projeto->counter($customer->id) >= 1):
+				//lista os projetos
+				$pr = $projeto->Show(array("id_customer = '".$customer->id."'"));
+				$cont = 0;
+					foreach($pr as $p):
+						$cont++;
+			?>
+            <div class="Boxer2 Proj1">
+					<h2 class="title">
+					<?php 
+						if($cont == '1'): $cont_text = NULL; else: $cont_text = $cont; endif;
+					?>
+					<img src="<?php echo ROOT; ?>/assets/images/txt_projeto<?php echo $cont_text; ?>.png" alt="" title="" width="130" height="31" /></h2>
+					<div class="concluido">
+                    <?php 
+						$image = $projeto->getThumb($p['id']);
+					?>
+						<img src="<?php echo ROOT; ?>/archives/thumbs/<?php echo $image['data']; ?>" alt="" title="" class="lf" />
+						<div class="info">
+							<h3 class="title2"><?php echo $p['nome']; ?></h3>
+							<h4 class="SubTitle2 none"><?php echo $p['id']; ?></h4>
+							<span class="clr2"></span>
+							<div class="links">
+								<a href="#"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" />editar</a> |
+								<a href="#"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" />excluir projeto</a>
+								<input type="submit" value=" " name="" id="" class="btEnviarP rt" />	
+							</div>	
+						</div>
+					</div>										
+				</div>
+				
+				<a href="#" class="add"><img src="<?php echo ROOT; ?>/assets/images/btAddP.png" alt="" title="" width="200" height="30" /></a>
+            <?php 
+					endforeach;	
+				
+				else:
+				//primeiro projeto
+			?>
 			<form action="<?php echo ROOT; ?>/projeto" method="post" class="form" id="projectForm" enctype="multipart/form-data">
+            	<input type="hidden" name="id_customer" value="<?php echo $customer->id; ?>">
+                <input type="hidden" name="id_category" value="<?php echo $customer->category; ?>">
+                <input type="hidden" name="id_pessoa" value="<?php echo $customer->pessoa; ?>">
 				<div class="Boxer2">
 					<h2 class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_projeto.png" alt="" title="" width="130" height="31" /></h2>	
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico1.png" alt="" title="" width="" height="" /> <span class="txt">Fa&ccedil;a o download do <b>Modelo de Autoriza&ccedil;&atilde;o</b></span> <a href="<?php echo ROOT; ?>/download"><img src="<?php echo ROOT; ?>/assets/images/btDonwload.png" alt="" title="" width="134" height="30"></a></span>
@@ -36,48 +84,48 @@ $customer->set($checked);
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico2.png" alt="" title="" width="" height="" /> <span class="txt">Preencha os dados da obra</span> </span>
 					<span class="lbl2">
 						<label>Nome do im&oacute;vel:* </label>
-						<input type="text" value=" "  id="" class="inpt04" />
+						<input type="text" value="" name="nome"  id="nome" class="inpt04" />
 						
 					</span>	
 					<span class="lbl2">
 						<label>CEP: </label>
-						<input type="text" value=" "  id="" class="inpt03" />
+						<input type="text" value=" " name="cep"  id="cep" class="inpt03" />
 						<span class="link_ipt"><a href="#"><img src="<?php echo ROOT; ?>/assets/images/seta1.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span>
 						
 					</span>
 					<span class="lbl2">
 						<label>Endere&ccedil;o Comercial:* </label>
-						<input type="text" value=" "  id="" class="inpt05" />
+						<input type="text" value=" " name="endereco"  id="enderco" class="inpt05" />
 						
 					</span>	
 					<span class="lb2l">
 						<label>Bairro: </label>
-						<input type="text" value=" "  id="" class="inpt04" />
+						<input type="text" value=" " name="bairro"  id="bairro" class="inpt04" />
 						
 					</span>			
 					<span class="lbl2">
 						<label>Cidade: </label>
-						<input type="text" value=" "  id="" class="inpt04" />
+						<input type="text" value=" " name="cidade"  id="cidade" class="inpt04" />
 						
 					</span>	
 					<span class="lbl2">
 						<label>Estado: </label>
 						<div class="styled-select">
-							<select class="inpt04Slc">
-								<option>Rio de Janeiro</option>
-								<option>Rio de Janeiro</option>
-								<option>Rio de Janeiro</option>
+							<select class="inpt04Slc" name="estado" id="estado">
+								<option value="">Selecione</option>
+								<option value="RJ">Rio de Janeiro</option>
+								<option value="SP">Rio de Janeiro</option>
 							</select>
 						</div>
 						
 					</span>	
 					<span class="lbl2">
 						<label>Telefone Fixo: </label>
-						<input type="text" value=" "  id="" class="inpt01" /><input type="text" value=" "  id="" class="inpt02" />
+						<input type="text" value=" " name="ddd"  id="ddd" class="inpt01" /><input type="text" value=" " name="tel"  id="tel" class="inpt02" />
 					</span>	
 					<span class="lbl2">
 						<label>Nome da pessoa de contato:* </label>
-						<input type="text" value=" "  id="" class="inpt04" />
+						<input type="text" value=" " name="contato" id="contato" class="inpt04" />
 						
 					</span>	
 					<span class="info1">* Todos os campos s&atilde;o de preenchimento obrigat&oacute;rio.</span>																			
@@ -141,4 +189,5 @@ $customer->set($checked);
 					</span>										
 				</div>
 			</form>
+            <?php endif; ?>
 <?php Footer(); ?>

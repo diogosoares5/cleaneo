@@ -22,6 +22,17 @@
 				return false;
 			endif;
 		}
+		function authUserHash($id,$hash){
+			$q = Crud::_read('customers',array('MD5(id)="'.$id.'" and hash = "'.$hash.'" and valido = "0" '));
+			$u = mysql_fetch_object($q);
+			if(isset($u->id)):
+				Crud::_update('customers',array('valido = "1"'));
+				$_SESSION['customer'] = $u->id;
+				Site::redirect('projetos');
+			else:
+				Site::redirect('');
+			endif;
+		}
 		//function getByID($id){}
 		function login($email, $pass){
 			
