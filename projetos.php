@@ -90,7 +90,7 @@ $projeto = new Projeto();
 								<?php 
 									if($projeto->status($p['id'],2) != true):
 								?>
-                                <a href="#"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" />editar</a> |
+                                <a class="editProject"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" />editar</a> |
                                 <?php endif; ?>
 								<a href="<?php echo ROOT; ?>/projeto_fin?pid=<?php echo $p['id']; ?>"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" />excluir projeto</a>
 								<?php 
@@ -109,7 +109,8 @@ $projeto = new Projeto();
                                 <?php endif; ?>
 							</div>	
 						</div>
-					</div>										
+					</div>	
+                    <div class="editar"></div>									
 				</div>
 				
 				

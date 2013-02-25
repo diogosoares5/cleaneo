@@ -238,11 +238,14 @@ $(document).ready(function(){
 		}			 
 	});
 	$('#addProjeto').toggle(function(){
-		$('#projectForm').slideDown();								 
-	},function(){
+			$('#projectForm').slideDown();								 
+		},function(){
 			 $('#projectForm').slideUp();  
-			   }
+		}
 	);
+	$('.editProject').click(function(){
+										 
+	});
 	$('#authForm').validate({
 		rules:{
 			checkIn:{
