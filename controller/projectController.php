@@ -12,11 +12,14 @@
 		}
 		function Show($params=NULL){
 			$c = Crud::_read("projects",$params);
-			$projects[] = mysql_fetch_array($c);
+			while( $res = mysql_fetch_array($c)){
+				$projects[] = $res;	
+			}
 			return $projects;
 		}
-		function edit(){
-			//$e = Crud::_update("projects",array)
+		function edit($params=NULL){
+			$e = Crud::_update("projects",$params);
+			if($e): return true; else: return false; endif;
 		}
 		function Delete(){
 			
@@ -26,15 +29,25 @@
 			$res = mysql_fetch_object($v);
 			return $res;
 		}
-		function counter($id){
-			$n = Crud::_counter("projects",array('id_customer = "'.$id.'"'));
+		function counter($id,$status=NULL){
+			if(isset($status)):
+			$n = Crud::_counter("projects",array('id_customer = "'.$id.'" and status = "'.$status.'" and status <> "3"'));
+			else:
+			$n = Crud::_counter("projects",array('id_customer = "'.$id.'" and status <> "3"'));
+			endif;
 			return $n;
+		}
+		function status($id, $status=NULL){
+			$n = Crud::_read("projects",array('id = "'.$id.'" and status = "'.$status.'"'));
+			$res = mysql_fetch_object($n);
+			if(isset($res->id)): return true; else: return false; endif;
 		}
 		function getThumb($id){
 			$q = Crud::_read("archives",array('id_project = "'.$id.'" ORDER BY id DESC LIMIT 1'));
 			$t = mysql_fetch_array($q);
 			return $t;
 		}
+		
 		function serial($arr, $char=NULL){
 		if(isset($char)):
 		$r = implode($char,$arr);

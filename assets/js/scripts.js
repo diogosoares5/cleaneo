@@ -237,6 +237,12 @@ $(document).ready(function(){
 			$('#box_cadastro_fisica').hide();
 		}			 
 	});
+	$('#addProjeto').toggle(function(){
+		$('#projectForm').slideDown();								 
+	},function(){
+			 $('#projectForm').slideUp();  
+			   }
+	);
 	$('#authForm').validate({
 		rules:{
 			checkIn:{
