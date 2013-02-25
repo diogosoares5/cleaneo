@@ -64,9 +64,10 @@ label.error b{font-weight: bold !important;}
 .Home .Boxer{width:551px;height:auto;padding:20px;background:#CEE5ED;margin-top:40px;margin-bottom:30px;min-height:80px;}
 .Home .Boxer .title{margin-bottom: -20px;position: relative;top: -42px;}
 .Home .form .Boxer .lbl label{width:auto;}
-.Home .form .Boxer .lbl .link_ipt{display:block;position:absolute;right:68px;}
+.Home .form .Boxer .lbl .link_ipt{display:block;position:absolute;right:82px;}
 .Home .form .Boxer .lbl .link_ipt a{text-decoration: underline}
-.Home .form .inpt04{width:190px;}
+.Home .form .inpt04{width:175px;margin:0;}
+.Home .linksPreFooter .link{display:none;}
 
 .form{position:relative;overflow:hidden;}
 .form input{background:url(../assets/images/bgInput.png) repeat-x;color:#231f20;font-size:12px;font-family: arial;height:26px;border:1px solid #84b8d0;padding-left: 3px;margin-right:10px;}
@@ -112,7 +113,7 @@ label.error b{font-weight: bold !important;}
 .etapa1 .Boxer b{font-weight: bold;}
 .etapa1 .Boxer .b1{font-weight: bold;color:#00ADEF;}
 .etapa1 .Boxer .link img{margin:0 auto;display:block;}
-.etapa1 .linksPreFooter{position:relative;}
+.etapa1 .linksPreFooter{position:relative;display:none}
 
 .etapa3 p{margin-top:30px;color:#000;font-size:18px;line-height: 19px;text-align:center;}
 .etapa3 p a{color:#719eb3;}
