@@ -111,7 +111,37 @@ endif;
 <span class="lbl">
 <?php HForm::Label('Estado:','estado'); ?>
 <div class="styled-select">
-<?php HForm::Select('estado',array("RJ"=>"Rio de Janeiro","SP"=>"S&atilde;o Paulo"),'Selecione Estado','','inpt04Slc'); ?>
+<select name="estado" id="estado" class="inpt04Slc">
+	<option value="">Escolha o Estado</option>
+	<option value="AC">Acre</option>
+	<option value="AL">Alagoas</option>
+	<option value="AP">Amapá</option>
+	<option value="AM">Amazonas</option>
+	<option value="BA">Bahia</option>
+	<option value="CE">Ceará</option>
+	<option value="DF">Distrito Federal</option>
+	<option value="ES">Espirito Santo</option>
+	<option value="GO">Goiás</option>
+	<option value="MA">Maranhão</option>
+	<option value="MT">Mato Grosso</option>
+	<option value="MS">Mato Grosso do Sul</option>
+	<option value="MG">Minas Gerais</option>
+	<option value="PA">Pará</option>
+	<option value="PB">Paraiba</option>
+	<option value="PR">Paraná</option>
+	<option value="PE">Pernambuco</option>
+	<option value="PI">Piauí</option>
+	<option value="RJ">Rio de Janeiro</option>
+	<option value="RN">Rio Grande do Norte</option>
+	<option value="RS">Rio Grande do Sul</option>
+	<option value="RO">Rondônia</option>
+	<option value="RR">Roraima</option>
+	<option value="SC">Santa Catarina</option>
+	<option value="SP">São Paulo</option>
+	<option value="SE">Sergipe</option>
+	<option value="TO">Tocantis</option>
+</select>
+<?php //HForm::Select('estado',array("RJ"=>"Rio de Janeiro","SP"=>"S&atilde;o Paulo"),'Selecione Estado','','inpt04Slc'); ?>
 </div>
 </span>
 <span class="lbl">
@@ -185,7 +215,37 @@ endif;
 <span class="lbl">
 <?php HForm::Label('Estado','estado'); ?>
 <div class="styled-select">
-<?php HForm::Select('estado',array("Rio de Janeiro"=>"Rio de janeiro","S&atilde;o Paulo"=>"S&atilde;o Paulo"),'Selecione Estado','','inpt04Slc'); ?>
+<select name="estado" id="estado" class="inpt04Slc">
+	<option value="">Escolha o Estado</option>
+	<option value="AC">Acre</option>
+	<option value="AL">Alagoas</option>
+	<option value="AP">Amapá</option>
+	<option value="AM">Amazonas</option>
+	<option value="BA">Bahia</option>
+	<option value="CE">Ceará</option>
+	<option value="DF">Distrito Federal</option>
+	<option value="ES">Espirito Santo</option>
+	<option value="GO">Goiás</option>
+	<option value="MA">Maranhão</option>
+	<option value="MT">Mato Grosso</option>
+	<option value="MS">Mato Grosso do Sul</option>
+	<option value="MG">Minas Gerais</option>
+	<option value="PA">Pará</option>
+	<option value="PB">Paraiba</option>
+	<option value="PR">Paraná</option>
+	<option value="PE">Pernambuco</option>
+	<option value="PI">Piauí</option>
+	<option value="RJ">Rio de Janeiro</option>
+	<option value="RN">Rio Grande do Norte</option>
+	<option value="RS">Rio Grande do Sul</option>
+	<option value="RO">Rondônia</option>
+	<option value="RR">Roraima</option>
+	<option value="SC">Santa Catarina</option>
+	<option value="SP">São Paulo</option>
+	<option value="SE">Sergipe</option>
+	<option value="TO">Tocantis</option>
+</select>
+<?php //::Select('estado',array("Rio de Janeiro"=>"Rio de janeiro","S&atilde;o Paulo"=>"S&atilde;o Paulo"),'Selecione Estado','','inpt04Sl'); ?>
 </div>
 </span>
 <span class="lbl">

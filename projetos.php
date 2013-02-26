@@ -203,7 +203,7 @@ $projeto = new Projeto();
 									<label class="lbl3">
 								        <div id="div-input-file">
 								            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso1').value = this.value;"/>
-								            <div id="div-input-falso"><input name="file-falso1" type="text" class="file-falso1" /></div>
+								            <div id="div-input-falso"><input name="file-falso1" type="text" id="file-falso1" /></div>
 								        </div>
 									</label>							
 								</li>
@@ -219,7 +219,7 @@ $projeto = new Projeto();
 									<label class="lbl3">
 								        <div id="div-input-file">
 								            <input name="fileOriginal3" type="file" size="30" id="fileOriginal3" onchange="document.getElementById('file-falso3').value = this.value;"/>
-								            <div id="div-input-falso"><input name="file-falso3" type="text" id="file-falso3" /></div>
+								            <div id="div-input-falso"><input name="file-falso3 type="text" id="file-falso3" /></div>
 								        </div>
 									</label>							
 								</li>	
@@ -237,7 +237,7 @@ $projeto = new Projeto();
 									<label class="lbl3">
 								        <div id="div-input-file">
 								            <input name="fileOriginal2" type="file" size="30" id="fileOriginal2" onchange="document.getElementById('file-falso5').value = this.value;"/>
-								            <div id="div-input-falso"><input name="file-falso5 type="text" id="file-falso5" /></div>
+								            <div id="div-input-falso"><input name="file-falso6" type="text" id="file-falso5" /></div>
 								        </div>
 									</label>							
 								</li>
@@ -497,13 +497,13 @@ $projeto = new Projeto();
 					<!-- Fim step 2 -->						
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico3.png" alt="" title="" width="" height="" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span>									
 					<span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Cada fotografia deve possuir o tamanho de <b>1 MB</b> (um megabyte), em <b>formato &ldquo;jpeg&rdquo;</b> com resolu&ccedil;&atilde;o de <b>300</b> dpi.</span>
-<<<<<<< HEAD
+
 					<span class="lbl2 rt">
 						<ul id="list_" class="list">
-=======
-					<span class="lbl3 rt">
+
+						<span class="lbl3 rt">
 						<ul class="list">
->>>>>>> dd811d3c622b410486b41204636de72fbb0059e1
+
 							<li class="block">
 								<label class="lbl3 file">
 							        <div id="div-input-file">
