@@ -43,10 +43,7 @@ else:
             </div> 			
 <?php
 endif;
-if(isset($_SESSION['warn'])):
-	echo $_SESSION['warn'];
-	unset($_SESSION['warn']);
-endif;
+
 ?>
 <div id="box_cadastro_fisica" style="display:none;">
 
@@ -55,7 +52,16 @@ endif;
 <?php HForm::Input('pessoa','hidden','','',1); ?>
 <span class="clr"></span>
 <hr class="bdr1" />
-<span class="infoBar">Todos os campos são de preenchimento obrigatório.</span>
+<span class="infoBar">
+<?php
+if(isset($_SESSION['warn'])):
+	echo $_SESSION['warn'];
+	unset($_SESSION['warn']);
+else:
+echo 'Todos os campos são de preenchimento obrigatório.';
+endif;
+?>
+</span>
 				
 <span class="lbl">
 <?php HForm::Label('E-mail:','email'); ?>
