@@ -1,6 +1,6 @@
 <?php 
 include('view/template.php'); 
-Head();
+Head('Fale Conosco','','faleConosco');
 ?>
 			<div class="top"><img src="<?php echo ROOT; ?>/assets/images/topBar.png" alt="" title="" width="551" height="23" /></div>
 			<div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_faleC.png" width="222" height="19" alt="" title="" /></div>
