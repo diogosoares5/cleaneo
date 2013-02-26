@@ -178,6 +178,51 @@ jQuery.validator.addMethod("nomeCompleto", function(nome, element){
 jQuery.validator.addMethod('validateCheckbox', function(value, element) {
   return ($('#checkIn:checked').length > 0);
 });
+$.validator.addMethod('filesize', function(value, element, param) {
+    // param = size (en bytes) 
+    // element = element to validate (<input>)
+    // value = value of the element (file name)
+    return this.optional(element) || (element.files[0].size <= param) 
+});
+// Accept a value from a file input based on a required mimetype
+jQuery.validator.addMethod("accept", function(value, element, param) {
+	// Split mime on commas in case we have multiple types we can accept
+	var typeParam = typeof param === "string" ? param.replace(/\s/g, '').replace(/,/g, '|') : "image/*",
+	optionalValue = this.optional(element),
+	i, file;
+
+	// Element is optional
+	if (optionalValue) {
+		return optionalValue;
+	}
+
+	if ($(element).attr("type") === "file") {
+		// If we are using a wildcard, make it regex friendly
+		typeParam = typeParam.replace(/\*/g, ".*");
+
+		// Check if the element has a FileList before checking each file
+		if (element.files && element.files.length) {
+			for (i = 0; i < element.files.length; i++) {
+				file = element.files[i];
+
+				// Grab the mimtype from the loaded file, verify it matches
+				if (!file.type.match(new RegExp( ".?(" + typeParam + ")$", "i"))) {
+					return false;
+				}
+			}
+		}
+	}
+
+	// Either return true because we've validated each file, or because the
+	// browser does not support element.files and the FileList feature
+	return true;
+}, jQuery.format("Please enter a value with a valid mimetype."));
+
+// Older "accept" file extension method. Old docs: http://docs.jquery.com/Plugins/Validation/Methods/accept
+jQuery.validator.addMethod("extension", function(value, element, param) {
+	param = typeof param === "string" ? param.replace(/,/g, '|') : "png|jpe?g|gif";
+	return this.optional(element) || value.match(new RegExp(".(" + param + ")$", "i"));
+}, jQuery.format("Please enter a value with a valid extension."));
 $(document).ready(function(){
 						     
 	$('.radio').click(function(){  
@@ -303,7 +348,12 @@ $(document).ready(function(){
 			cidade:{required:true},
 			estado:{required:true},
 			tel:{required:true},
-			contato:{required:true}
+			contato:{required:true},
+			fileOriginal1:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal2:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal3:{ extension: "jpe?g", filesize: 1048576}
+//			fileOriginal4:{ accept: "application/pdf"}
+//			fileOriginal5:{ accept: "doc|docx"}
 		},
 		messages:{
 			nome:{required:"Preencha o campo Nome"},
@@ -313,7 +363,14 @@ $(document).ready(function(){
 			cidade:{required:"Preencha o campo Cidade"},
 			estado:{required:"Preencha o campo Estado"},
 			tel:{required:"Preencha o campo Tel"},
-			contato:{required:"Preencha o campo Contato"}
+			contato:{required:"Preencha o campo Contato"},
+			fileOriginal1:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal2:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal3:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"}
+//			fileOriginal2:{ accept: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+//			fileOriginal3:{ accept: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+//			fileOriginal4:{ accept: "Somente formato PDF ou CAD"}
+//			fileOriginal5:{ accept: "Somente formato DOC ou DOCx"}
 		}						   
 	});
 	

@@ -462,7 +462,7 @@ $projeto = new Projeto();
 							<li class="block">
 								<label class="lbl3 file">
 							        <div id="div-input-file">
-							            <input type="file" size="400" class="file-original" id="file-original1" name="fileOriginal1">
+							            <input type="file" size="400" class="file-original" id="fileOriginal1" name="fileOriginal1">
 							        </div>
 								</label>		
                                		
@@ -470,14 +470,14 @@ $projeto = new Projeto();
 							<li class="none">
 								<label class="lbl3 file">
 							        <div id="div-input-file">
-							            <input type="file" size="400" class="file-original" id="file-original2" name="fileOriginal2">
+							            <input type="file" size="400" class="file-original" id="fileOriginal2" name="fileOriginal2">
 							        </div>
 								</label>							
 							</li>
 							<li class="none">
 								<label class="lbl3 file">
 							        <div id="div-input-file">
-							            <input type="file" size="400" class="file-original" id="file-original3" name="fileOriginal3">
+							            <input type="file" size="400" class="file-original" id="fileOriginal3" name="fileOriginal3">
 							        </div>
 								</label>							
 							</li>															
@@ -492,7 +492,7 @@ $projeto = new Projeto();
 					<span class="lbl2">
 						<label class="lbl3 file">
 					        <div id="div-input-file">
-					            <input type="file" size="400" class="file-original" id="file-original4" name="fileOriginal4">
+					            <input type="file" size="400" class="file-original" id="fileOriginal4" name="fileOriginal4">
 					        </div>
 						</label>							
 					</span>		
@@ -502,7 +502,7 @@ $projeto = new Projeto();
 					<span class="lbl2">
 						<label class="lbl3 file">
 					        <div id="div-input-file">
-					            <input type="file" size="400" class="file-original" id="file-original5" name="fileOriginal5">
+					            <input type="file" size="400" class="file-original" id="fileOriginal5" name="fileOriginal5">
 					        </div>
 						</label>							
 					</span>	
