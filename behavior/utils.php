@@ -9,7 +9,7 @@
 			echo '<form action='.$action.' method='.$method.' '.$enc.' id="'.$id.'" class="'.$class.'">';
 		}
 		function Label($text,$for=NULL, $id = NULL, $class = NULL){
-			echo '<label for="'.$for.'" id="'.$id.'" class="'.$id.'">'.$text.'</label>';	
+			echo '<label for="'.$for.'" id="'.$id.'" class="'.$class.'">'.$text.'</label>';	
 		}
 		function Input($name, $type, $id = NULL, $class = NULL, $value = NULL){
 			echo '<input name="'.$name.'" type="'.$type.'" id="'.$id.'" value="'.$value.'" class="'.$class.'"   />';
