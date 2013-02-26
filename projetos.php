@@ -80,8 +80,9 @@ $projeto = new Projeto();
 					<div class="concluido">
                     <?php 
 						$image = $projeto->getThumb($p['id']);
+						$project_thumbnail = isset($image['data']) ? $image['data'] :  'defaults.jpg';
 					?>
-						<img src="<?php echo ROOT; ?>/archives/thumbs/<?php echo $image['data']; ?>" alt="" title="" class="lf" />
+						<img src="<?php echo ROOT; ?>/archives/thumbs/<?php echo $project_thumbnail; ?>" alt="" title="" class="lf" />
 						<div class="info">
 							<h3 class="title2"><?php echo $p['nome']; ?></h3>
 							<h4 class="SubTitle2 none"><?php echo $p['id']; ?></h4>
@@ -110,12 +111,18 @@ $projeto = new Projeto();
 							</div>	
 						</div>
 					</div>
-                    <div style="display:none;" id="editar_<?php echo $p['id']; ?>" class="editar">	
+                    <div style="display:none;" id="editar_<?php echo $p['id']; ?>" class="editar">
+                    	
 						<hr class="bdr2" />
 						<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico1.png" alt="" title="" width="" height="" /> <span class="txt">Faça o download do <b>Modelo de Autorização</b></span> <a href="<?php echo ROOT; ?>/download"><img src="<?php echo ROOT; ?>/assets/images/btDonwload.png" alt="" title="" width="134" height="30"></a></span>
 						<hr class="bdr1" />
 						<!-- Fim step 1 -->
 						<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico2.png" alt="" title="" width="" height="" /> <span class="txt">Preencha os dados da obra</span> </span>
+                        <form action="<?php echo ROOT; ?>/projeto" method="post" class="form projectForm" enctype="multipart/form-data"> 
+                            <input type="hidden" name="id_customer" value="<?php echo $customer->id; ?>">
+                            <input type="hidden" name="id_category" value="<?php echo $customer->category; ?>">
+                            <input type="hidden" name="id_pessoa" value="<?php echo $customer->pessoa; ?>">
+                            <input type="hidden" name="id_project" value="<?php echo $p['id']; ?>">
 						<span class="lbl2">
 							<label>Nome do imóvel:* </label>
 							<input type="text" value="<?php echo $p['nome']; ?>"  id="nome" class="inpt04" />
@@ -173,6 +180,7 @@ $projeto = new Projeto();
                             <?php
 								$t = $projeto->getThumbs($p['id']);
 								$cont_t = 0;
+								if(isset($t)):
 								foreach($t as $thumb):
 								$cont_t++;
 							?>
@@ -181,7 +189,8 @@ $projeto = new Projeto();
 									<a style="cursor:pointer;" href="delete_image.php?tid=<?php echo $thumb['id']; ?>" class="link delImage"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
 								</li>
                                <?php endforeach; ?>
-								<li id="msgImage"></li>														
+								<li id="msgImage"></li>
+                                <?php endif; ?>														
 							</ul>
                             <?php if($cont_t < 3): ?>
 							<ul class="list clr">
@@ -242,6 +251,7 @@ $projeto = new Projeto();
 						<hr class="bdr1 clr" />
 						<span class="lbl2">
 							<input type="submit" value=" " name="" id="" class="btSalvar rt" />	
+                            </form>
 						</span>	
 </div>
 															
@@ -258,8 +268,8 @@ $projeto = new Projeto();
 				<div class="Boxer2">
                <h2 class="title">
 					<?php 
-					
-						$cont_text = $cont_arr[0]+1; 
+						// Contar o proximo projeto para incluir
+						$cont_text = count($cont_arr)+1;
 					?>
 					<img src="<?php echo ROOT; ?>/assets/images/txt_projeto<?php echo $cont_text; ?>.png" alt="" title="" width="130" height="31" /></h2>
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico1.png" alt="" title="" width="" height="" /> <span class="txt">Fa&ccedil;a o download do <b>Modelo de Autoriza&ccedil;&atilde;o</b></span> <a href="<?php echo ROOT; ?>/download"><img src="<?php echo ROOT; ?>/assets/images/btDonwload.png" alt="" title="" width="134" height="30"></a></span>

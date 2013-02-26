@@ -45,9 +45,11 @@
 		function getThumb($id){
 			$q = Crud::_read("archives",array('id_project = "'.$id.'" and id_type = "1" ORDER BY id DESC LIMIT 1'));
 			$t = mysql_fetch_array($q);
+			
 			return $t;
 		}
 		function getThumbs($id){
+			$arr_thumb = NULL;
 			$q = Crud::_read("archives",array('id_project = "'.$id.'" and id_type = "1" '));
 			while($t = mysql_fetch_array($q)):
 				$arr_thumb[] = $t;
