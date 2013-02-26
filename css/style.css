@@ -73,7 +73,7 @@ label.error b{font-weight: bold !important;}
 .form input{background:url(../assets/images/bgInput.png) repeat-x;color:#231f20;font-size:12px;font-family: arial;height:26px;border:1px solid #84b8d0;padding-left: 3px;margin-right:10px;}
 .form select{background:url(../assets/images/bgInput.png) repeat-x;color:#231f20;font-size:13px;font-family: arial;height:26px;border:1px solid #84b8d0;}
 .form label{float:left;width:210px;color:#231f20;font-size:14px;font-family: arial;font-weight: bold;position:relative;top:9px;display:inline-block;vertical-align: top;text-align: right;margin-right:10px;}
-.form textarea{color:#231f20;font-size:12px;font-family: arial;border:1px solid #84b8d0;margin-left:10px;padding-left: 3px;}
+.form textarea{color:#231f20;font-size:12px;font-family: arial;border:1px solid #84b8d0;padding-left: 3px;}
 .form .lbl{display:block;margin-bottom:15px;}
 .form .input {width:140px;margin-left: 15px;position:relative;left:5px;}
 .form .input span {float: left;height: 30px;width: 20px;text-indent: -9999px;margin-right: 5px;background: url(../assets/images/radio.png) top no-repeat;cursor:pointer;position:relative;top:-8px;}
@@ -220,9 +220,10 @@ label.error b{font-weight: bold !important;}
 .upload .Boxer2 .list{margin-bottom: 10px;}
 .upload .Boxer2 .list li{float:right;}
 .upload .Boxer2 #div-input-file{background:url(../assets/images/btSelcArq.png) no-repeat 100% 1px;height:40px;width:440px;margin:0px;}
-.upload .Boxer2 #div-input-file #file-original{opacity: 0.0;-moz-opacity: 0.0;filter: alpha(opacity=00);font-size:14px;background:none !important;border:none !important;}
-.upload .Boxer2 #div-input-falso{margin-top:-28px;width:190px;overflow:hidden;}
-.upload .Boxer2 #div-input-falso #file-falso,.upload .Boxer2 #div-input-falso #file-falso2{width:440px;height:30px;font-size:14px;font-family: Verdana;background:none !important;border:none !important;}
+.upload .Boxer2 #div-input-file #file-original,.upload .Boxer2 #div-input-file #file-original1,.upload .Boxer2 #div-input-file #file-original2,.upload .Boxer2 #div-input-file #file-original3,.upload .Boxer2 #div-input-file #file-original4,.upload .Boxer2 #div-input-file #file-original5{opacity: 0.0;-moz-opacity: 0.0;filter: alpha(opacity=00);font-size:14px;background:none !important;border:none !important;}
+.upload .Boxer2 #div-input-falso{margin-top:-28px;width:190px;overflow:hidden;text-align:left;padding:5px 0 0 7px}
+.upload .Boxer2 #div-input-falso input{border:none !important;background:none;}
+.upload .Boxer2 #div-input-falso #file-falso,.upload .Boxer2 #div-input-falso #file-falso2{width:440px;height:30px;font-size:12px;font-family: Verdana;background:none !important;border:none !important;}
 
 .upload .Boxer2 .list{overflow:hidden;}
 .upload .Boxer2.block,.upload .Boxer2 .list .block{display:block !important;}
