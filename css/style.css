@@ -84,7 +84,7 @@ label.error b{font-weight: bold !important;}
 
 .form .styled-select {width: 200px;height:auto;background: url(../assets/images/bgSelect.png) no-repeat;overflow: hidden;display:inline-block;}
 .form .styled-select select {background:transparent !important;cursor: pointer;padding:5px 5px;border:none;-webkit-appearance: none;}
-.form .styled-select label.error{margin:0;}
+.form .styled-select label.error{margin:0 !important;}
 .form .clr{display:block;}
 .form .bdr1{margin-bottom: 20px}
 .form .link{position:relative;top:10px;text-decoration: underline}
