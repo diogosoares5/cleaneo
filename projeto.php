@@ -41,7 +41,7 @@ session_start();
 	
 	if(isset($id_project) and $projeto->check($id_project)==true):
 		//edita
-		$save = $projeto->edit($id_customer, $id_category, $id_pessoa,NULL,$cep,$endereco,$bairro,$cidade,$estado,$tel,$contato,'1');
+		$save = $projeto->edit(array("id_costumer = '$id_customer', id_category = '$id_category', id_pessoa = '$id_pessoa',nome = '$nome', cep = '$cep',endereco='$endereco',bairro = '$bairro',cidade='$cidade',estado='$estado',tel = '$tel',contato='$contato','1'"));
 		
 		//$save_files = $arquivos->edit("archives",array($img1,$img2,$img3,$desc,$auto),$projeto->id);
 //		$save_img1 = $arquivos->edit('1',$id_costumer,$projeto->id,$img1,time());

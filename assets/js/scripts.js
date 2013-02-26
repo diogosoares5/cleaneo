@@ -388,6 +388,42 @@ $(document).ready(function(){
 		}						   
 	});
 	
+		//$('#editForm_1 input, #editForm_2 input, #editForm_3 input').keypress(function(){ var valor = $(this).val(); $(this).val(valor);});
+	
+		$('#editForm_1, #editForm_2, #editForm_3').validate({
+				rules:{
+			nome:{required:true},
+			cep:{required:true},
+			endereco:{required:true},
+			bairro:{required:true},
+			cidade:{required:true},
+			estado:{required:true},
+			tel:{required:true},
+			contato:{required:true},
+			fileOriginal1:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal2:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal3:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal4:{ accept: "application/pdf,application/acad,application/dxf"},
+			fileOriginal5:{ accept: "application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+		},
+		messages:{
+			nome:{required:"Preencha o campo Nome"},
+			cep:{required:"Preencha o campo CEP"},
+			endereco:{required:"Preencha o campo Endere&ccedil;o"},
+			bairro:{required:"Preencha o campo Bairro"},
+			cidade:{required:"Preencha o campo Cidade"},
+			estado:{required:"Preencha o campo Estado"},
+			tel:{required:"Preencha o campo Tel"},
+			contato:{required:"Preencha o campo Contato"},
+			fileOriginal1:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal2:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal3:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal4:{ accept: "Somente formato PDF ou CAD"},
+			fileOriginal5:{ accept: "Somente formato DOC (Word)"}
+		}						   						 
+		});	
+	
+	
 	$('#formCadastroFisica').validate({
 
 		rules: {
