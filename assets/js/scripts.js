@@ -277,6 +277,22 @@ $(document).ready(function(){
 			}	
 		}						
 	});
+	$('#contactForm').validate({
+		rules:{
+			nome:{required:true},
+			email:{
+				required: true,
+      		 	email: true
+				},
+			tel:{required:true},
+			msg:{required:true}
+		},messages:{
+			nome:{required:"Preencher o campo Nome"},
+			email:{required:"Preencher o campo E-mail",email:"E-mail v&aacute;lido."},
+			tel:{required:"Preencher o campo Celular"},
+			msg:{required:"Preencher o campo Mensagem"}
+		}						   
+	});
 	
 	$('#projectForm').validate({
 		rules:{
