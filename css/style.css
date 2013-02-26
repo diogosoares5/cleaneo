@@ -38,7 +38,8 @@ body{background:#daecf2 url(../assets/images/bg1.jpg) center top  no-repeat;font
 .infoBar{background:#00aeef;width:531px;color:#fff;font-weight: bold;display:block;padding:10px;margin:20px 0;text-align: center;}
 .info1{color:#000;font-size: 11px;}
 input.error{border:1px solid red !important;border-top:2px solid red !important;color:red !important;background:url(../assets/images/bgInputEr.png) repeat-x !important;}
-/* .error{color:red;display:block;margin-right:-51px;margin-top:2px;text-align: center;} */
+select.error{color:red !important;background:url(../assets/images/bgInputEr.png) repeat-x !important;}
+/* .error{color:red;display:block;margin-right:-51px;margin-top:2px;text-align: center;text-algin:;} */
 .error b{font-weight: bold;}
 
 label.error{color: red !important;
@@ -81,8 +82,9 @@ label.error b{font-weight: bold !important;}
 .form .input p{color: #000;display: inline;float: left;font-size: 14px;line-height: normal;margin: -2px 0;}
 
 
-.form .styled-select {width: 200px;height:26px;background: url(../assets/images/bgSelect.png) no-repeat;overflow: hidden;display:inline-block;}
+.form .styled-select {width: 200px;height:auto;background: url(../assets/images/bgSelect.png) no-repeat;overflow: hidden;display:inline-block;}
 .form .styled-select select {background:transparent !important;cursor: pointer;padding:5px 5px;border:none;-webkit-appearance: none;}
+.form .styled-select label.error{margin:0;}
 .form .clr{display:block;}
 .form .bdr1{margin-bottom: 20px}
 .form .link{position:relative;top:10px;text-decoration: underline}
