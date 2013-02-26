@@ -20,8 +20,8 @@ echo $category;
 ?>
 <div class="escolha">
 Selecione o tipo de cadastro:
-<input type="radio" class="signSel" name="signSel" value="1" id="signSel1" /><label for="signSel1">Pessoa Fisica</label>
-<input type="radio" class="signSel" name="signSel" value="2" id="signSel2" /><label for="signSel2">Pessoa Juridica</label>
+<input type="radio" class="signSel" name="signSel" value="1" id="signSel1" /><label for="signSel1">Pessoa Física</label>
+<input type="radio" class="signSel" name="signSel" value="2" id="signSel2" /><label for="signSel2">Pessoa Jurídica</label>
 </div>
 </div>
 <?php
@@ -90,7 +90,7 @@ endif;
 <span class="lbl">
 <?php HForm::Label('CEP:','cep'); ?>
 <?php HForm::Input('cep','text','cep','inpt03'); ?>
-<span class="link_ipt"><a href="#"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
+<span class="link_ipt"><a target="_blank" href="http://www.buscacep.correios.com.br/"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
 </span>
 <span class="lbl">
 <?php HForm::Label('Endere&ccedil;o:','endereco'); ?>
@@ -111,7 +111,7 @@ endif;
 <span class="lbl">
 <?php HForm::Label('Estado:','estado'); ?>
 <div class="styled-select">
-<?php HForm::Select('estado',array("RJ"=>"Rio de janeiro","SP"=>"S&atilde;o Paulo"),'Selecione Estado','','inpt04Slc'); ?>
+<?php HForm::Select('estado',array("RJ"=>"Rio de Janeiro","SP"=>"S&atilde;o Paulo"),'Selecione Estado','','inpt04Slc'); ?>
 </div>
 </span>
 <span class="lbl">
@@ -164,7 +164,7 @@ endif;
 <span class="lbl">
 <?php HForm::Label('CEP','cep'); ?>
 <?php HForm::Input('cep','text','cep','inpt03'); ?>
-<span class="link_ipt"><a href="#"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
+<span class="link_ipt"><a target="_blank" href="http://www.buscacep.correios.com.br/"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
 </span>
 <span class="lbl">
 <?php HForm::Label('Endere&ccedil;o Comercial','endereco'); ?>
@@ -185,7 +185,7 @@ endif;
 <span class="lbl">
 <?php HForm::Label('Estado','estado'); ?>
 <div class="styled-select">
-<?php HForm::Select('estado',array("Rio de janeiro"=>"Rio de janeiro","S&atilde;o Paulo"=>"S&atilde;o Paulo"),'Selecione Estado','','inpt04Slc'); ?>
+<?php HForm::Select('estado',array("Rio de Janeiro"=>"Rio de janeiro","S&atilde;o Paulo"=>"S&atilde;o Paulo"),'Selecione Estado','','inpt04Slc'); ?>
 </div>
 </span>
 <span class="lbl">
