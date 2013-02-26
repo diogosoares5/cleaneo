@@ -20,8 +20,8 @@ echo $category;
 ?>
 <div class="escolha">
 Selecione o tipo de cadastro:
-<input type="radio" class="signSel" name="signSel" value="1" id="signSel1" /><label for="signSel1">Pessoa Fisica</label>
-<input type="radio" class="signSel" name="signSel" value="2" id="signSel2" /><label for="signSel2">Pessoa Juridica</label>
+<input type="radio" class="signSel" name="signSel" value="1" id="signSel1" /><label for="signSel1">Pessoa Física</label>
+<input type="radio" class="signSel" name="signSel" value="2" id="signSel2" /><label for="signSel2">Pessoa Jurídica</label>
 </div>
 </div>
 <?php

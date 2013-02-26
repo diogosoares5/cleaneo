@@ -26,7 +26,7 @@ if(isset($_SESSION['customer'])): header('Location:'.ROOT.'/projetos'); endif;
 						<input type="text" name="login"  id="" class="inpt04" />
 						<span class="error none"><b>X</b> Favor digitar bla bla bla</span>
 					</span>	
-					<span class="lbl rt">
+					<span class="lbl lf">
 						<label>Senha: </label>
 						<input type="password" name="pass"  id="" class="inpt04" />
                         <input type="submit" class="btEntrar inpt0" value="" />
