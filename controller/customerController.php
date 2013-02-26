@@ -131,7 +131,7 @@ $mail->SetFrom("noreply@outershoes.com.br", "teste");
 				if($enviado): return true; else: return false; endif;
 		}
 		function getCategory($catid){
-			if($catid == '1'):return "Arquiteto"; else: "Instalador"; endif;	
+			if($catid == '1'):return "Arquiteto"; else: return "Instalador"; endif;	
 		}
 		function getField($field){
 			$res = NULL;

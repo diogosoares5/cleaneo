@@ -49,20 +49,13 @@ $projeto = new Projeto();
 <hr class="bdr1" />
 <div class="Boxer">
   <h2 class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_atencao.png" alt="" title="" width="123" height="34" /></h2>
-  <ul class="list">
-    <li>Voc&ecirc; poder&aacute; inscrever at&eacute; 3 projetos que j&aacute; dever&atilde;o estar prontos e ter autoria do escrit&oacute;rio/arquiteto. S&oacute; ser&atilde;o aceitas solu&ccedil;&otilde;es executadas a partir de janeiro de 2010 e integralmente conclu&iacute;das at&eacute; 04 de junho de 2013.
-    <li>
-    <li><b>Todos os campos dever&atilde;o ser preenchidos obrigatoriamente.</b>
-    <li>
-    <li>Poder&atilde;o ser anexadas at&eacute; <b>3 fotografias</b> por projeto no tamanho de 1 MB (um megabyte) por fotografia, em formato &ldquo;jpeg&rdquo; com resolu&ccedil;&atilde;o de 300 dpi, mostrando obrigatoriamente o &ldquo;drywall&rdquo; instalado na obra,
-    <li>
-    <li>Dever&aacute; ser anexado um <b>Descritivo do Projeto</b> por projeto, com descri&ccedil;&otilde;es e defesas sobre os objetivos pretendidos e os resultados alcan&ccedil;ados (baseados nos crit&eacute;rios do item 6.2.2 do Regulamento). Ser&atilde;o aceitos somente projetos em arquivos com extens&atilde;o &ldquo;<b>.cad</b> e &ldquo;<b>.pdf</b>&rdquo;.
-    <li>
-    <li>Dever&aacute; ser anexado o <b>Modelo de Autoriza&ccedil;&atilde;o</b> preenchido para divulga&ccedil;&atilde;o do projeto.
-    <li>
-    <li><b class="b1">O resultado ser&aacute; divulgado no site no dia 15 de agosto de 2013.</b>
-    <li>
-  </ul>
+ 	<?php 
+	if($customer->category == 1):
+		include("view/warn-arquiteto.php"); 
+	else:
+		include("view/warn-instalador.php");
+	endif;
+	?>
   <a href="<?php echo ROOT; ?>/regulamento" class="link"><img src="<?php echo ROOT; ?>/assets/images/btVerreg.png" alt="" title="" width="195" height="30" /></a> </div>
 <img src="<?php echo ROOT; ?>/assets/images/txt_upload.png" alt="" title="" width="551" height="16" />
 <?php 
@@ -123,7 +116,7 @@ $projeto = new Projeto();
     <hr class="bdr1" />
     <!-- Fim step 1 -->
     <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico2.png" alt="" title="" width="" height="" /> <span class="txt">Preencha os dados da obra</span> </span>
-    <form action="<?php echo ROOT; ?>/projeto" method="post" class="form projectForm" enctype="multipart/form-data">
+    <form action="<?php echo ROOT; ?>/projeto" method="post" class="form editForm" id="editForm_<?php echo $cont; ?>" formID="<?php echo $p['id']; ?>" enctype="multipart/form-data">
       <input type="hidden" name="id_customer" value="<?php echo $customer->id; ?>">
       <input type="hidden" name="id_category" value="<?php echo $customer->category; ?>">
       <input type="hidden" name="id_pessoa" value="<?php echo $customer->pessoa; ?>">

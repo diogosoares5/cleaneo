@@ -50,6 +50,7 @@ class Crud {
 		else:
 			return false;
 		endif;
+		echo $sql;
 		$query = mysql_query($sql);
 		return $query;
 	}	
