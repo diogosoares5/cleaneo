@@ -73,7 +73,7 @@
 			$senha = md5($senha);
 			$hash = uniqid(rand());
 			
-			$create = Crud::_create("customers","'NULL','$categoria','$pessoa','$email','$cpf','$senha','$nome','$cep','$endereco','$complemento','$bairro','$cidade','$estado','$tel','$cel','$razao','$fantasia','$cnpj','$hash','0'");
+			$create = Crud::_create("customers","'NULL','$categoria','$pessoa','$email','$profissao','$cpf','$senha','$nome','$cep','$endereco','$complemento','$bairro','$cidade','$estado','$tel','$cel','$razao','$fantasia','$cnpj','$hash','0'");
 			if($create):
 				return true;
 			else:
@@ -132,6 +132,12 @@ $mail->SetFrom("noreply@outershoes.com.br", "teste");
 		}
 		function getCategory($catid){
 			if($catid == '1'):return "Arquiteto"; else: "Instalador"; endif;	
+		}
+		function getField($field){
+			$res = NULL;
+			$q = Crud::_read('customers',array('id = "'.$this->id.'" '));
+			$res = mysql_fetch_object($q);
+			return $res->$field;
 		}
 	}
 ?>

@@ -232,13 +232,29 @@ $(document).ready(function(){
      });
 	
 	$('.linkAdd').click(function(){
-		var q = $('.list li.none').length;
 		
-		if(q > 1){
-			$('.list li.none:eq(0)').removeClass('none').addClass('block');
-		}else if(q == 1){
-			$('.list li.none:eq(0)').removeClass('none').addClass('block');
-			$(this).hide();
+		var ID = $(this).attr('thisID');
+		if(ID){
+			var q = $('#list_'+ID+' li.none').length;
+			
+			
+			if(q > 1){
+				$('#list_'+ID+' li.none:eq(0)').removeClass('none').addClass('block');
+			}else if(q == 1){
+				$('#list_'+ID+' li.none:eq(0)').removeClass('none').addClass('block');
+				$(this).hide();
+			}
+		}else{
+			var q = $('#list_ li.none').length;
+			
+			
+			if(q > 1){
+				$('#list_ li.none:eq(0)').removeClass('none').addClass('block');
+			}else if(q == 1){
+				$('#list_ li.none:eq(0)').removeClass('none').addClass('block');
+				$(this).hide();
+			}
+
 		}
 									  
 	});
@@ -351,9 +367,9 @@ $(document).ready(function(){
 			contato:{required:true},
 			fileOriginal1:{ extension: "jpe?g", filesize: 1048576},
 			fileOriginal2:{ extension: "jpe?g", filesize: 1048576},
-			fileOriginal3:{ extension: "jpe?g", filesize: 1048576}
-//			fileOriginal4:{ accept: "application/pdf"}
-//			fileOriginal5:{ accept: "doc|docx"}
+			fileOriginal3:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal4:{ accept: "application/pdf,application/acad,application/dxf"},
+			fileOriginal5:{ accept: "application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
 		},
 		messages:{
 			nome:{required:"Preencha o campo Nome"},
@@ -366,11 +382,9 @@ $(document).ready(function(){
 			contato:{required:"Preencha o campo Contato"},
 			fileOriginal1:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
 			fileOriginal2:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
-			fileOriginal3:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"}
-//			fileOriginal2:{ accept: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
-//			fileOriginal3:{ accept: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
-//			fileOriginal4:{ accept: "Somente formato PDF ou CAD"}
-//			fileOriginal5:{ accept: "Somente formato DOC ou DOCx"}
+			fileOriginal3:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal4:{ accept: "Somente formato PDF ou CAD"},
+			fileOriginal5:{ accept: "Somente formato DOC (Word)"}
 		}						   
 	});
 	

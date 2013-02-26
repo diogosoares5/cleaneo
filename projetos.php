@@ -14,7 +14,7 @@ $projeto = new Projeto();
 			<div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_meusprojetos.png" width="234" height="26" alt="" title="" /></div>
 			<div class="top"><img src="<?php echo ROOT; ?>/assets/images/bar2.png" alt="" title="" width="551" height="2" /></div>
 		<div class="Bcrumb">
-				<span>Ol&aacute; <?php echo $customer->nome; ?> |</span> <span>Meus Projetos |</span> <a href="#">Meu Cadastro |</a> <a href="<?php echo ROOT; ?>/login?out=1"> Logout</a>
+				<span>Ol&aacute; <?php echo $customer->nome; ?> |</span> <span>Meus Projetos |</span> <a href="<?php echo ROOT; ?>/meu-cadastro">Meu Cadastro |</a> <a href="<?php echo ROOT; ?>/login?out=1"> Logout</a>
 			</div>
 			<span class="infoBar">Voc&ecirc; esta concorrendo na categoria:<b><?php echo $customer->getCategory($customer->category); ?>.</b></span>
             <?php if(isset($_SESSION['flash'])): 
@@ -134,7 +134,7 @@ $projeto = new Projeto();
 						<span class="lbl2">
 							<label>CEP: </label>
 							<input type="text" value="<?php echo $p['cep']; ?>"  id="cep" class="inpt03" />
-							<span class="link_ipt"><a href="#"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span>
+							<span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span>
 							
 						</span>
 						<span class="lbl2">
@@ -192,15 +192,17 @@ $projeto = new Projeto();
 									<a style="cursor:pointer;" href="delete_image.php?tid=<?php echo $thumb['id']; ?>" class="link delImage"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
 								</li>
                                <?php endforeach; ?>
-								<li id="msgImage"></li>
+								
                                 <?php endif; ?>														
 							</ul>
-                            <?php if($cont_t < 3): ?>
-							<ul class="list rt clr">
-								<li class="block">
+                            <span id="msgImage"></span>
+                            <?php if($cont_t < 3):  ?>
+							<ul id="list_<?php echo $p['id']; ?>" class="list rt clr">
+								<?php if($cont_t == 0): ?>
+                                <li class="block">
 									<label class="lbl3">
 								        <div id="div-input-file">
-								            <input name="file-original" type="file" size="30" id="file-original" onchange="document.getElementById('file-falso').value = this.value;"/>
+								            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;"/>
 								            <div id="div-input-falso"><input name="file-falso" type="text" id="file-falso" /></div>
 								        </div>
 									</label>							
@@ -208,7 +210,7 @@ $projeto = new Projeto();
 								<li class="none">
 									<label class="lbl3">
 								        <div id="div-input-file">
-								            <input name="file-original" type="file" size="30" id="file-original" onchange="document.getElementById('file-falso').value = this.value;"/>
+								            <input name="fileOriginal2" type="file" size="30" id="fileOriginal2" onchange="document.getElementById('file-falso').value = this.value;"/>
 								            <div id="div-input-falso"><input name="file-falso" type="text" id="file-falso" /></div>
 								        </div>
 									</label>							
@@ -216,13 +218,47 @@ $projeto = new Projeto();
 								<li class="none">
 									<label class="lbl3">
 								        <div id="div-input-file">
-								            <input name="file-original" type="file" size="30" id="file-original" onchange="document.getElementById('file-falso').value = this.value;"/>
+								            <input name="fileOriginal3" type="file" size="30" id="fileOriginal3" onchange="document.getElementById('file-falso').value = this.value;"/>
 								            <div id="div-input-falso"><input name="file-falso" type="text" id="file-falso" /></div>
 								        </div>
 									</label>							
-								</li>															
+								</li>	
+                                <?php endif; ?>	
+                                <?php if($cont_t == 1): ?>
+                                <li class="block">
+									<label class="lbl3">
+								        <div id="div-input-file">
+								            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;"/>
+								            <div id="div-input-falso"><input name="file-falso" type="text" id="file-falso" /></div>
+								        </div>
+									</label>							
+								</li>
+								<li class="none">
+									<label class="lbl3">
+								        <div id="div-input-file">
+								            <input name="fileOriginal2" type="file" size="30" id="fileOriginal2" onchange="document.getElementById('file-falso').value = this.value;"/>
+								            <div id="div-input-falso"><input name="file-falso" type="text" id="file-falso" /></div>
+								        </div>
+									</label>							
+								</li>
+							
+                                <?php endif; ?>		
+                                  <?php if($cont_t == 2): ?>
+                                <li class="block">
+									<label class="lbl3">
+								        <div id="div-input-file">
+								            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;"/>
+								            <div id="div-input-falso"><input name="file-falso" type="text" id="file-falso" /></div>
+								        </div>
+									</label>							
+								</li>
+							
+							
+                                <?php endif; ?>																
 							</ul>
-							<span class="linkAdd clr"><img src="<?php echo ROOT; ?>/assets/images/icomais.png" alt="" title="" width="" height="" /><a style="cursor:pointer;">Adcionar mais fotografias</a></span>	
+                            <?php if($cont_t <= 1): ?>
+							<span thisID="<?php echo $p['id']; ?>" class="linkAdd clr"><img src="<?php echo ROOT; ?>/assets/images/icomais.png" alt="" title="" width="" height="" /><a style="cursor:pointer;">Adcionar mais fotografias</a></span>	
+                            <?php endif; ?>
                             <?php endif; ?>
 						</span>
 						<hr class="bdr1" />
@@ -232,7 +268,7 @@ $projeto = new Projeto();
 						<span class="lbl2 rt">
 							<label class="lbl3">
 						        <div id="div-input-file">
-						            <input name="file-original" type="file" size="30" id="file-original" onchange="document.getElementById('file-falso').value = this.value;"/>
+						            <input name="fileOriginal4" type="file" size="30" id="fileOriginal4" onchange="document.getElementById('file-falso').value = this.value;"/>
 						            <div id="div-input-falso"><input name="file-falso" type="text" id="file-falso" /></div>
 						        </div>
 						        <a href="#" class="link"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
@@ -244,7 +280,7 @@ $projeto = new Projeto();
 						<span class="lbl2 rt">
 							<label class="lbl3">
 						        <div id="div-input-file">
-						            <input name="file-original" type="file" size="30" id="file-original" onchange="document.getElementById('file-falso').value = this.value;"/>
+						            <input name="fileOriginal5" type="file" size="30" id="fileOriginal5" onchange="document.getElementById('file-falso').value = this.value;"/>
 						            <div id="div-input-falso"><input name="file-falso" type="text" id="file-falso" /></div>
 						        </div>
 						        <a href="#" class="link"><img src="img/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
@@ -288,7 +324,7 @@ $projeto = new Projeto();
 					<span class="lbl2">
 						<label>CEP: </label>
 						<input type="text" value=" " name="cep"  id="cep" class="inpt03" />
-						<span class="link_ipt"><a href="#"><img src="<?php echo ROOT; ?>/assets/images/seta1.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span>
+						<span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img src="<?php echo ROOT; ?>/assets/images/seta1.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span>
 						
 					</span>
 					<span class="lbl2">
@@ -332,7 +368,7 @@ $projeto = new Projeto();
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico3.png" alt="" title="" width="" height="" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span>									
 					<span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Cada fotografia deve possuir o tamanho de <b>1 MB</b> (um megabyte), em <b>formato &ldquo;jpeg&rdquo;</b> com resolu&ccedil;&atilde;o de <b>300</b> dpi.</span>
 					<span class="lbl2 rt">
-						<ul class="list">
+						<ul id="list_" class="list">
 							<li class="block">
 								<label class="lbl3 file">
 							        <div id="div-input-file">
@@ -418,7 +454,7 @@ $projeto = new Projeto();
 					<span class="lbl2">
 						<label>CEP: </label>
 						<input type="text" value=" " name="cep"  id="cep" class="inpt03" />
-						<span class="link_ipt"><a href="#"><img src="<?php echo ROOT; ?>/assets/images/seta1.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span>
+						<span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img src="<?php echo ROOT; ?>/assets/images/seta1.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span>
 						
 					</span>
 					<span class="lbl2">
@@ -462,11 +498,12 @@ $projeto = new Projeto();
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico3.png" alt="" title="" width="" height="" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span>									
 					<span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Cada fotografia deve possuir o tamanho de <b>1 MB</b> (um megabyte), em <b>formato &ldquo;jpeg&rdquo;</b> com resolu&ccedil;&atilde;o de <b>300</b> dpi.</span>
 					<span class="lbl2 rt">
-						<ul class="list">
+						<ul id="list_" class="list">
 							<li class="block">
 								<label class="lbl3 file">
 							        <div id="div-input-file">
-							            <input type="file" size="400" class="file-original" id="fileOriginal1" name="fileOriginal1">
+							            <input type="file" size="400" class="file-original" id="file-original1" name="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;" />
+										<div id="div-input-falso"><input type="text" id="file-falso" name="file-falso"></div>
 							        </div>
 								</label>		
                                		
@@ -474,17 +511,19 @@ $projeto = new Projeto();
 							<li class="none">
 								<label class="lbl3 file">
 							        <div id="div-input-file">
-							            <input type="file" size="400" class="file-original" id="fileOriginal2" name="fileOriginal2">
+							            <input type="file" size="400" class="file-original" id="file-original2" name="fileOriginal2" onchange="document.getElementById('file-falso2').value = this.value;" />
+										<div id="div-input-falso"><input type="text" id="file-falso2" name="file-falso"></div>
 							        </div>
 								</label>							
 							</li>
 							<li class="none">
 								<label class="lbl3 file">
 							        <div id="div-input-file">
-							            <input type="file" size="400" class="file-original" id="fileOriginal3" name="fileOriginal3">
+							            <input type="file" size="400" class="file-original" id="file-original3" name="fileOriginal3" onchange="document.getElementById('file-falso3').value = this.value;" />
+										<div id="div-input-falso"><input type="text" id="file-falso3" name="file-falso"></div>
 							        </div>
 								</label>							
-							</li>															
+							</li>													
 						</ul>
                         <div class="status"></div>
 						<span class="linkAdd clr"><img src="<?php echo ROOT; ?>/assets/images/icomais.png" alt="" title="" width="" height="" /><a style="cursor:pointer;">Adcionar mais fotografias</a></span>	
@@ -496,7 +535,8 @@ $projeto = new Projeto();
 					<span class="lbl2 rt">
 						<label class="lbl3 file">
 					        <div id="div-input-file">
-					            <input type="file" size="400" class="file-original" id="fileOriginal4" name="fileOriginal4">
+					            <input type="file" size="400" class="file-original" id="file-original4" name="fileOriginal4" onchange="document.getElementById('file-falso4').value = this.value;" />
+								<div id="div-input-falso"><input type="text" id="file-falso4" name="file-falso"></div>
 					        </div>
 						</label>							
 					</span>		
@@ -506,7 +546,8 @@ $projeto = new Projeto();
 					<span class="lbl2 rt">
 						<label class="lbl3 file">
 					        <div id="div-input-file">
-					            <input type="file" size="400" class="file-original" id="fileOriginal5" name="fileOriginal5">
+					            <input type="file" size="400" class="file-original" id="file-original5" name="fileOriginal5" onchange="document.getElementById('file-falso5').value = this.value;" />
+								<div id="div-input-falso"><input type="text" id="file-falso5" name="file-falso"></div>
 					        </div>
 						</label>							
 					</span>	
