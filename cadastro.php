@@ -203,7 +203,7 @@ endif;
 <?php HForm::Input('nome','text','nome','inpt05'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('CPF do propiet&aacute;rio','cpf'); ?>
+<?php HForm::Label('CPF do proprietário','cpf'); ?>
 <?php HForm::Input('cpf','text','cpf','inpt05'); ?>
 </p>
 <span class="lbl">

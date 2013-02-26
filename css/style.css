@@ -202,6 +202,7 @@ label.error b{font-weight: bold !important;}
 .upload  .Boxer2 #div-input-falso #file-falso,.upload .form .Boxer2 #div-input-falso #file-falso2{width:440px;height:30px;font-size:12px;font-family: Verdana;background:none !important;border:none !important;}
 
 /* .upload .form .Boxer2 .list{overflow:hidden;} */
+.upload .form{overflow:inherit}
 .upload .form .Boxer2.block,.upload .form .Boxer2 .list .block{display:block !important;}
 .upload .form .Boxer2.none,.upload .form .Boxer2 .list .none{display:none;}
 .upload .form .Boxer2 .list .lbl2.file{margin-bottom:10px;}
@@ -221,14 +222,21 @@ label.error b{font-weight: bold !important;}
 .upload .form .add img{display:block;margin:0 auto;}
 .upload .Boxer2 .lbl2{margin-bottom:15px;display:block;overflow:hidden;}
 .upload .Boxer2 .error{margin-right: -90px;}
+.upload .Boxer2 .link_ipt{position:inherit !;top:-23px !important;important;left:79px !important;margin:0 !important}
+.upload .Boxer2 .error + .link_ipt{position:relative;top:-23px !important;left:79px !important;margin:0 !important}
 
 .upload .Boxer2 label.lbl3{width:auto;float:right;}
 .upload .Boxer2 .list{margin-bottom: 10px;}
 .upload .Boxer2 .list li{float:right;}
 .upload .Boxer2 #div-input-file{background:url(../assets/images/btSelcArq.png) no-repeat 100% 1px;height:40px;width:440px;margin:0px;padding-bottom:13px;}
-.upload .Boxer2 #div-input-file .error{margin-right:76px;padding-top:1px;}
 .upload .Boxer2 #div-input-file #file-original,.upload .Boxer2 #div-input-file #file-original1,.upload .Boxer2 #div-input-file #file-original2,.upload .Boxer2 #div-input-file #file-original3,.upload .Boxer2 #div-input-file #file-original4,.upload .Boxer2 #div-input-file #file-original5{opacity: 0.0;-moz-opacity: 0.0;filter: alpha(opacity=00);font-size:14px;background:none !important;border:none !important;}
-.upload .Boxer2 #div-input-falso{width:190px;overflow:hidden;text-align:left;padding:5px 0 0 7px}
+.upload .Boxer2 #div-input-file .error{margin-bottom: -4px;
+    margin-right: 76px;
+    margin-top: -10px;
+    padding-top: 1px;
+    position: relative;
+    top: 14px !important;}
+.upload .Boxer2 #div-input-falso{width:190px;overflow:hidden;text-align:left;padding:5px 0 0 7px}	
 .upload .Boxer2 #div-input-falso input{border:none !important;background:none;}
 .upload .Boxer2 #div-input-falso #file-falso,.upload .Boxer2 #div-input-falso #file-falso2{width:440px;height:30px;font-size:12px;font-family: Verdana;background:none !important;border:none !important;}
 
