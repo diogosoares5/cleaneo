@@ -3,11 +3,9 @@ include('view/template.php');
 Head('Regulamento','','Regulamento');
 ?>
             <div class="top"><img src="<?php echo ROOT; ?>/assets/images/topBar.png" alt="" title="" width="551" height="23" /></div>
-            <div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_cadastroAtv.png" width="406" height="26" alt="" title="" /></div>
+            <div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_regulamento.png" width="242" height="26" alt="" title="" /></div>
 			<div class="top"><img src="<?php echo ROOT; ?>/assets/images/bar2.png" alt="" title="" width="551" height="2" /></div>
-			
-    <p>Para participar leia atentamente ao <b>Regulamento.</b></p>
-			
+		
 			<div id="scrollbar3" class="contrato">
 				<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>				
 				<div class="viewport">

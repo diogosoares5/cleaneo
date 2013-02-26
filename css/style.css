@@ -265,3 +265,5 @@ label.error b{font-weight: bold !important;}
 .Regulamento .contrato b{font-weight: bold;}
 .Regulamento .linksPreFooter{position:relative;bottom:0;}
 .Regulamento .contrato .viewport{width:auto !important;position:relative;left:-20px;}
+.Regulamento .text {text-align:center;}
+.Regulamento .text b{font-weight:bold;}
