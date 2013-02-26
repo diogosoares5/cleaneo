@@ -8,7 +8,7 @@ if(isset($_SESSION['customer'])): header('Location:'.ROOT.'/projetos'); endif;
 			<div class="top"><img src="<?php echo ROOT; ?>/assets/images/bar2.png" alt="" title="" width="551" height="2" /></div>
 			
 
-			<div class="infoBar">Todos os profissionais que usaram Knauf Cleaneo em seus projetos e obras podem participar. E os vencedores conhecerão a fábrica da Knauf na Alemanha e as maiores inovações no mundo do Drywall.</div>				
+			
 			
 			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_knaufBrasil.png" alt="" title="" width="551" height="85" />
 			<img class="txt" src="<?php echo ROOT; ?>/assets/images/txt_concursoDestinado.png" alt="" title="" width="551" height="93" />
