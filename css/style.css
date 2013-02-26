@@ -146,6 +146,7 @@ label.error b{font-weight: bold !important;}
 .faleConosco .infoBar b{font-weight: bold;}
 .faleConosco .linksPreFooter{bottom:0;position:relative;margin:;}
 .faleConosco .form {padding-bottom:10px;}
+.faleConosco .error{display:block;text-align:center;margin-right:-51px;}
 
 /* upload */
 .upload .Bcrumb{color:#719eb3;}
