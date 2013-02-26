@@ -29,7 +29,7 @@ body{background:#daecf2 url(../assets/images/bg1.jpg) center top  no-repeat;font
 .link_ipt a{color:#719eb3;text-decoration: none;}
 .Bcrumb{color:#879198;font-size:14px;margin: 5px;}
 .Bcrumb a{color:#719eb3;text-decoration: underline;}
-.btEntrar{width:31px;height:30px !important;background:url(../assets/images/seta5.png) no-repeat !important;cursor:pointer;border:none !important;margin:0 !important;padding:0 !important;}
+.btEntrar{width:31px;height:30px !important;background:url(../assets/images/seta5.png) no-repeat !important;cursor:pointer;border:none !important;margin:0 !important;padding:0 !important;vertical-align:top;}
 .btEnviar{width:100px;height:30px !important;background:url(../assets/images/btEnviar.jpg) no-repeat !important;cursor:pointer;border:none;}
 .btEnviarP{width:172px;height:30px !important;background:url(../assets/images/btEnviarP.png) no-repeat !important;cursor:pointer;border:none;}
 .btSalvar{width:170px;height:30px !important;background:url(../assets/images/btSalvar.png) no-repeat !important;cursor:pointer;border:none;}

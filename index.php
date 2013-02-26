@@ -29,7 +29,7 @@ if(isset($_SESSION['customer'])): header('Location:'.ROOT.'/projetos'); endif;
 					<span class="lbl rt">
 						<label>Senha: </label>
 						<input type="password" name="pass"  id="" class="inpt04" />
-                        <input type="submit" class="btEntrar inpt0" value="">
+                        <input type="submit" class="btEntrar inpt0" value="" />
 						<span class="link_ipt"><a href="#"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" /> Esqueci minha senha</a></span>
 						<span class="error none"><b>X</b> Favor digitar bla bla bla.</span>
 					</span>

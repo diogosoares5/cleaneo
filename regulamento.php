@@ -13,10 +13,10 @@ Head('Regulamento','','Regulamento');
 				<div class="viewport">
 					<div class="overview">
 
-							<img src="img/txt_concurso.png" alt="" title="" width="504" />	
+							<img src="<?php echo ROOT; ?>/assets/images/txt_concurso.png" alt="" title="" width="504" />	
 							<p>Knauf do Brasil Ltda., sediada à Rodovia Presidente Dutra, Km 198,5 – Jardim Marajoara – Queimados, Rio de Janeiro, CEP 26.360-720, doravante denominada simplesmente Knauf, lança, por meio deste instrumento, o Concurso Nacional Knauf Cleaneo Acústico, denominado simplesmente Concurso, e seu respectivo Regulamento.</p>
 
-							<img src="img/icoJ1.png" alt="" title="" />	
+							<img src="<?php echo ROOT; ?>/assets/images/icoJ1.png" alt="" title="" />	
 							<p>1.1.	Premiar as melhores soluções especificadas e integralmente executadas exclusivamente com o sistema Knauf Cleaneo Acústico.1.1.1 As soluções acima mencionadas serão àquelas executadas a partir de janeiro de 2010 e integralmente executadas até 04 de junho de 2013.</p>
 
 							<p>2.1. O concurso destina-se a pessoas físicas ou jurídicas, atuantes em duas categorias de profissionais:<br />
@@ -35,7 +35,7 @@ Head('Regulamento','','Regulamento');
 							2.5. O participante à época da viagem deverá ter passaporte válido, emitido às suas exclusivas expensas.<br /><br />
 							</p>	
 
-							<img src="img/icoJ3.png" alt="" title="" />	
+							<img src="<?php echo ROOT; ?>/assets/images/icoJ3.png" alt="" title="" />	
 							<p>3.1. As inscrições serão feitas exclusivamente por meio de cadastro no site do concurso www.knauf.com.br/concursocleaneo, no período de 1º de março a 30 de junho de 2013.<br /><br />
 
 							3.2. Para inscrever-se, o interessado deverá acessar o site do concurso e efetuar um cadastro. Em seguida o participante deverá ativar seu cadastro através de um e-mail enviado para sua caixa eletrônica. Após a ativação, o participante deverá acessar novamente o site do Concurso e preencher a ficha de inscrição. Após preencher os dados solicitados na ficha de inscrição, o participante deverá ler e aceitar o regulamento que rege o Concurso e assim ter acesso à página de “upload” e descritivo do projeto. Serão aceitos somente projetos em arquivos com extensão “.cad” e “.pdf”. <br /><br />
@@ -60,7 +60,7 @@ Head('Regulamento','','Regulamento');
 
 							3.11. A Knauf não aceitará projetos integralmente concluídos após a data prevista no item 1.1 do presente Regulamento.<br /><br />
 
-							<img src="img/icoJ4.png" alt="" title="" />	
+							<img src="<?php echo ROOT; ?>/assets/images/icoJ4.png" alt="" title="" />	
 							</p>4.1. Os escritórios de arquitetura ou arquitetos poderão inscrever até 3 (três) projetos de sua autoria que deverão estar integralmente concluídos até 4 de junho de 2013, conforme previsão do item 1.1 do presente Regulamento.  <br /><br />
 
 								4.1.2. Os campos obrigatórios do site do concurso deverão ser preenchidos com as seguintes informações: <br /><br />
@@ -80,7 +80,7 @@ Head('Regulamento','','Regulamento');
 								4.3. Somente serão aceitos projetos e obras com os sistemas Knauf Cleaneo Acústico. Produtos similares serão desclassificados. <br />
 
 								4.4. Caso algum tipo de fraude seja comprovada, o candidato será imediatamente eliminado do Concurso além de  responder por crime de falsidade ideológica ou documental. <br /><br />
-							<img src="img/icoJ5.png" alt="" title="" />	
+							<img src="<?php echo ROOT; ?>/assets/images/icoJ5.png" alt="" title="" />	
 							<p>
 								5.1. As inscrições feitas pelo site do concurso serão avaliadas no período de 1º de julho  a 12 de agosto de 2013, por uma Comissão Julgadora composta por profissionais da Gerência Técnica da Knauf do Brasil, profissionais renomados da área de arquitetura ou da construção civil, todos indicados pela Knauf. <br /><br />
 
@@ -105,7 +105,7 @@ Head('Regulamento','','Regulamento');
 
 								5.6. O resultado será divulgado no site do concurso www.knauf.com.br/concursocleaneo, no dia 15 de agosto de2013. 
 							</p>
-							<img src="img/icoJ6.png" alt="" title="" />									
+							<img src="<?php echo ROOT; ?>/assets/images/icoJ6.png" alt="" title="" />									
 							<p>
 								6.1. Do 1º ao 4º colocados da categoria arquitetos e do 1º ao 4º colocados na categoria instaladores: viagem de 7 (sete) dias para a Alemanha, com visita à fábrica da Knauf.  <br /><br />
 
@@ -123,7 +123,7 @@ Head('Regulamento','','Regulamento');
 
 								6.5. O candidato será automaticamente desclassificado, em caso de perda do vôo, não incidindo, nessa hipótese, a reclassificação estabelecida neste Regulamento e nem tampouco qualquer compensação financeira em razão desse fato.<br /><br />
 							</p>	
-							<img src="img/icoJ7.png" alt="" title="" />								
+							<img src="<?php echo ROOT; ?>/assets/images/icoJ7.png" alt="" title="" />								
 							<p>
 								7.2. O prêmio é pessoal e intransferível e não será admitida em nenhuma hipótese sua transferência para terceiros ou convertido em dinheiro. Caso algum vencedor não possa efetuar a viagem, a Knauf não se obriga a qualquer tipo de compensação ou ressarcimento. <br /><br />
 
