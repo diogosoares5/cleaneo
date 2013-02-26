@@ -111,6 +111,9 @@ $projeto = new Projeto();
 							</div>	
 						</div>
 					</div>
+                    <?php 
+						if($projeto->status($p['id'],2) != true):
+					?>
                     <div style="display:none;" id="editar_<?php echo $p['id']; ?>" class="editar">
                     	
 						<hr class="bdr2" />
@@ -254,6 +257,7 @@ $projeto = new Projeto();
                             </form>
 						</span>	
 </div>
+<?php endif; //se o projeto ainda nao foi incluido ?>
 															
 				</div>
 				

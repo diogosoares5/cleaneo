@@ -31,6 +31,7 @@ $customer = new Customer();
 
 if($customer->authUser($email,$pass)):
 	$_SESSION['warn'] = "Este usu&aacute;rio j&aacute; se encontra cadastrado neste concurso";
+	header('Location: '.ROOT.'/cadastro');
 else:
 //criando usuario
 $createCustomer = $customer->sign($categoria, $pessoa, $email, $pass, $nome, $cpf, $profissao, $cep, $endereco, $complemento, $bairro, $cidade, $estado, $tel, $cel, $razao, $fantasia, $cnpj);
