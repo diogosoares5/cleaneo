@@ -8,7 +8,7 @@ $category = '';
 			<div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_facaseucadastro.png" width="295" height="26" alt="" title="" /></div>
 			<div class="top"><img src="<?php echo ROOT; ?>/assets/images/bar2.png" alt="" title="" width="551" height="2" /></div>
 			
-			
+<div class="Bcrumb">			
 <?php 
 if(isset($_GET['c'])):
 	$category = $_GET['c'];
@@ -20,7 +20,7 @@ echo $category;
 Selecione o tipo de cadastro:
 <input type="radio" class="signSel" name="signSel" value="1" id="signSel1" /><label for="signSel1">Pessoa Fisica</label>
 <input type="radio" class="signSel" name="signSel" value="2" id="signSel2" /><label for="signSel2">Pessoa Juridica</label>
-
+</div>
 <?php
 else:
 ?>
@@ -80,6 +80,7 @@ endif;
 <span class="lbl">
 <?php HForm::Label('CEP:','cep'); ?>
 <?php HForm::Input('cep','text','cep','inpt03'); ?>
+<span class="link_ipt"><a href="#"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
 </span>
 <span class="lbl">
 <?php HForm::Label('Endere&ccedil;o:','endereco'); ?>
@@ -153,6 +154,7 @@ endif;
 <span class="lbl">
 <?php HForm::Label('CEP','cep'); ?>
 <?php HForm::Input('cep','text','cep','inpt03'); ?>
+<span class="link_ipt"><a href="#"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
 </span>
 <span class="lbl">
 <?php HForm::Label('Endere&ccedil;o Comercial','endereco'); ?>
