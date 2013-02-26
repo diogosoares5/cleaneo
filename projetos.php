@@ -193,7 +193,7 @@ $projeto = new Projeto();
                                 <?php endif; ?>														
 							</ul>
                             <?php if($cont_t < 3): ?>
-							<ul class="list clr">
+							<ul class="list rt clr">
 								<li class="block">
 									<label class="lbl3">
 								        <div id="div-input-file">
@@ -226,7 +226,7 @@ $projeto = new Projeto();
 						<!-- Fim step 3 -->
 						<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="" height="" /> <span class="txt">Selecione o <b>Descritivo do Projeto: </b></span> </span>			
 						<span class="infoBar"><b>Atenção:</b> Serão aceitos somente projetos em arquivos com extensão  <b>“.cad” e “.pdf”.</b></span>
-						<span class="lbl2">
+						<span class="lbl2 rt">
 							<label class="lbl3">
 						        <div id="div-input-file">
 						            <input name="file-original" type="file" size="30" id="file-original" onchange="document.getElementById('file-falso').value = this.value;"/>
@@ -238,7 +238,7 @@ $projeto = new Projeto();
 						<!-- Fim step 4 -->
 						<hr class="bdr1 clr" />
 						<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico5.png" alt="" title="" width="" height="" /> <span class="txt">Faça o upload do <b>Modelo de Autorização</b> preenchido:</span></span>			
-						<span class="lbl2">
+						<span class="lbl2 rt">
 							<label class="lbl3">
 						        <div id="div-input-file">
 						            <input name="file-original" type="file" size="30" id="file-original" onchange="document.getElementById('file-falso').value = this.value;"/>
@@ -327,7 +327,7 @@ $projeto = new Projeto();
 					<!-- Fim step 2 -->						
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico3.png" alt="" title="" width="" height="" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span>									
 					<span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Cada fotografia deve possuir o tamanho de <b>1 MB</b> (um megabyte), em <b>formato &ldquo;jpeg&rdquo;</b> com resolu&ccedil;&atilde;o de <b>300</b> dpi.</span>
-					<span class="lbl2">
+					<span class="lbl2 rt">
 						<ul class="list">
 							<li class="block">
 								<label class="lbl3 file">
@@ -362,7 +362,7 @@ $projeto = new Projeto();
 					<!-- Fim step 3 -->
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="" height="" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span>			
 					<span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Ser&atilde;o aceitos somente projetos em arquivos com extens&atilde;o  <b>&ldquo;.cad&rdquo; e &ldquo;.pdf&rdquo;.</b></span>
-					<span class="lbl2">
+					<span class="lbl2 rt">
 						<label class="lbl3 file">
 					        <div id="div-input-file">
 					            <input type="file" size="400" class="file-original" id="file-original4" name="fileOriginal4" onchange="document.getElementById('file-falso4').value = this.value;" />
@@ -373,7 +373,7 @@ $projeto = new Projeto();
 					<!-- Fim step 4 -->
 					<hr class="bdr1 clr" />
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico5.png" alt="" title="" width="" height="" /> <span class="txt">Fa&ccedil;a o upload do <b>Modelo de Autoriza&ccedil;&atilde;o</b> preenchido:</span></span>			
-					<span class="lbl2">
+					<span class="lbl2 rt">
 						<label class="lbl3 file">
 					        <div id="div-input-file">
 					            <input type="file" size="400" class="file-original" id="file-original5" name="fileOriginal5" onchange="document.getElementById('file-falso5').value = this.value;" />
@@ -457,7 +457,7 @@ $projeto = new Projeto();
 					<!-- Fim step 2 -->						
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico3.png" alt="" title="" width="" height="" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span>									
 					<span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Cada fotografia deve possuir o tamanho de <b>1 MB</b> (um megabyte), em <b>formato &ldquo;jpeg&rdquo;</b> com resolu&ccedil;&atilde;o de <b>300</b> dpi.</span>
-					<span class="lbl2">
+					<span class="lbl2 rt">
 						<ul class="list">
 							<li class="block">
 								<label class="lbl3 file">
@@ -489,7 +489,7 @@ $projeto = new Projeto();
 					<!-- Fim step 3 -->
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="" height="" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span>			
 					<span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Ser&atilde;o aceitos somente projetos em arquivos com extens&atilde;o  <b>&ldquo;.cad&rdquo; e &ldquo;.pdf&rdquo;.</b></span>
-					<span class="lbl2">
+					<span class="lbl2 rt">
 						<label class="lbl3 file">
 					        <div id="div-input-file">
 					            <input type="file" size="400" class="file-original" id="file-original4" name="fileOriginal4">
@@ -499,7 +499,7 @@ $projeto = new Projeto();
 					<!-- Fim step 4 -->
 					<hr class="bdr1 clr" />
 					<span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico5.png" alt="" title="" width="" height="" /> <span class="txt">Fa&ccedil;a o upload do <b>Modelo de Autoriza&ccedil;&atilde;o</b> preenchido:</span></span>			
-					<span class="lbl2">
+					<span class="lbl2 rt">
 						<label class="lbl3 file">
 					        <div id="div-input-file">
 					            <input type="file" size="400" class="file-original" id="file-original5" name="fileOriginal5">

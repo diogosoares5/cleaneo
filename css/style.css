@@ -39,7 +39,7 @@ body{background:#daecf2 url(../assets/images/bg1.jpg) center top  no-repeat;font
 .info1{color:#000;font-size: 11px;}
 input.error{border:1px solid red !important;border-top:2px solid red !important;color:red !important;background:url(../assets/images/bgInputEr.png) repeat-x !important;}
 select.error{color:red !important;background:url(../assets/images/bgInputEr.png) repeat-x !important;}
-/* .error{color:red;display:block;margin-right:-51px;margin-top:2px;text-align: center;} */
+/* .error{color:red;display:block;margin-right:-51px;margin-top:2px;text-align: center;text-algin:;} */
 .error b{font-weight: bold;}
 
 label.error{color: red !important;
