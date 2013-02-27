@@ -146,7 +146,7 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone Fixo:','tel'); ?>
-<?php HForm::Input('ddd_tel','text','dddt_el','inpt01'); ?>
+<?php HForm::Input('ddd_tel','text','ddd_tel','inpt01'); ?>
 <?php HForm::Input('tel','text','tel','inpt02'); ?>
 </span>
 <span class="lbl">

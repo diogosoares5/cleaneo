@@ -648,15 +648,14 @@ $(document).ready(function(){
 		errorPlacement: function(error, element) {
 		   if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel"){ 
 			error.insertAfter("#formCadastroFisica #tel");
-		   }else {
+		   }
+		   else if(element.attr("name") == "ddd_cel" || element.attr("name") == "cel"){
+			   error.insertAfter("#formCadastroFisica #cel");
+			}
+		   else {
         	error.insertAfter(element);
 		   }
-			
-			if(element.attr("name") == "ddd_cel" || element.attr("name") == "cel"){
-				error.insertAfter("#formCadastroFisica #cel");
-		   }else {
-        	error.insertAfter(element);
-		   }
+		
    		},
    messages:{
 	  nome:{ required:"Preencher campo nome", nomeCompleto:"Nome completo"},
@@ -738,15 +737,13 @@ $(document).ready(function(){
 		errorPlacement: function(error, element) {
 		   if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel"){ 
 			error.insertAfter("#formCadastroJuridica #tel");
-		   }else {
+		   }else if(element.attr("name") == "ddd_cel" || element.attr("name") == "cel"){
+			   error.insertAfter("#formCadastroJuridica #cel");
+			}
+		   else {
         	error.insertAfter(element);
 		   }
 			
-			if(element.attr("name") == "ddd_cel" || element.attr("name") == "cel"){
-				error.insertAfter("#formCadastroJuridica #cel");
-		   }else {
-        	error.insertAfter(element);
-		   }
    		},
    messages:{
 	 nome:{ required:"Preencher campo nome", nomeCompleto:"Nome completo"},
