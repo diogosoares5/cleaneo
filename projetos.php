@@ -291,7 +291,7 @@ $projeto = new Projeto();
           <input name="file-falso8" type="text" id="file-falso8" />
         </div>
       </div>
-      <a href="#" class="link"><img src="img/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
+      <a href="#" class="link"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
       </label>
       </span>
       <!-- Fim step 5 -->
