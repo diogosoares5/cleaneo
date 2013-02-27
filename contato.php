@@ -24,6 +24,6 @@ Head('Fale Conosco','','faleConosco');
 					<textarea class="inpt05tArea" type="text" name="msg" id="msg" title="Mensagem" ></textarea>
 				</span>					
 				<input type="submit" value=" " name="" id="" class="btEnviar rt" />	
-				<a href="mailto:sac@knauf.com.br"><img src="<?php echo ROOT; ?>/assets/images/img_sac.png" alt="" title="" width="551" height="118" /></a>
+				<a href="mailto:sak@knauf.com.br"><img src="<?php echo ROOT; ?>/assets/images/img_sac.png" alt="" title="" width="551" height="118" /></a>
 			</form>
 <?php Footer(); ?>
