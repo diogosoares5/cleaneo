@@ -35,6 +35,28 @@
 		function End(){
 			echo '</form>';	
 		}
+		function ComboEstados($marcado = false){
+    $resultArray = NULL;
+	$montarArray = array(""=>"Selecione seu Estado","AC"=>"Acre", "AL"=>"Alagoas", "AM"=>"Amazonas", "AP"=>"Amapá",  "BA"=>"Bahia", "CE"=>"Ceará", "DF"=>"Distrito Federal", "ES"=>"Espírito Santo", "GO"=>"Goiás", "MA"=>"Maranhão", "MG"=>"Minas Gerais", "MS"=>"Mato Grosso do Sul", "MT"=>"Mato Grosso", "PA"=>"Pará", "PB"=>"Paraíba", "PE"=>"Pernambuco", "PI"=>"Piauí", "PR"=>"Paraná", "RJ"=>"Rio de Janeiro", "RN"=>"Rio Grande do Norte", "RO"=>"Rondônia", "RR"=>"Roraima", "RS"=>"Rio Grande do Sul", "SC"=>"Santa Catarina", "SE"=>"Sergipe", "SP"=>"São Paulo", "TO"=>"Tocantins");
+ 
+    if ($marcado == ""){
+        foreach ($montarArray as $k => $v){
+            $resultArray .= "<option value=\"{$k}\">{$v}</option>";
+        }
+        echo $resultArray;
+    }
+    else {
+        foreach ($montarArray as $k => $v){
+            if ($marcado == $k){
+                $resultArray .= "<option value=\"{$k}\" selected=\"selected\">{$v}</option>";
+            }
+            else {
+                $resultArray .= "<option value=\"{$k}\">{$v}</option>";
+            }
+        }
+       echo  $resultArray;
+    }
+}
 	}
 	class HGetCss{
 		function getClass($atual_url, $params){
@@ -45,4 +67,5 @@
 			endforeach;
 		}
 	}
+	
 ?>

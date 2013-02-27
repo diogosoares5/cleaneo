@@ -24,6 +24,8 @@ $ddd_cel = $_POST['ddd_cel'];
 $tel = $_POST['tel']; 
 $cel = $_POST['cel']; 
 
+if(isset($_POST['id_costumer'])): $id_customer = $_POST['id_costumer']; else: $id_costumer = NULL; endif;
+
 //juridica
 if(isset($_POST['razao'])): $razao = $_POST['razao']; else: $razao = NULL; endif; 
 if(isset($_POST['fantasia'])): $fantasia = $_POST['fantasia']; else: $fantasia = NULL; endif; 

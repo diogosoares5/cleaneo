@@ -3,10 +3,43 @@ include('view/template.php');
 require_once("controller/customerController.php");
 
 Head('Meu cadastro','','etapa1');
+
+
 //cliente
 $customer = new Customer();
 $checked = $customer->checkAuth();
 $customer->set($checked);
+
+if(isset($_POST['id_customer'])): 
+$id_customer = $_POST['id_customer']; 
+//customers params
+$email = $_POST['email']; 
+$nome = $_POST['nome']; 
+$cpf = $_POST['cpf']; 
+if(isset($_POST['profissao'])): $profissao = $_POST['profissao']; else: $profissao =  NULL; endif;  //só existe em fisica
+$cep = $_POST['cep']; 
+$endereco = $_POST['endereco']; 
+$complemento = $_POST['complemento']; 
+$bairro = $_POST['bairro']; 
+$cidade = $_POST['cidade']; 
+$estado = $_POST['estado']; 
+$ddd_tel = $_POST['ddd_tel'];
+$ddd_cel = $_POST['ddd_cel'];
+$tel = $_POST['tel']; 
+$cel = $_POST['cel']; 
+
+$edit = $customer->Edit(array('nome="'.$nome.'", email="'.$email.'", cpf="'.$cpf.'", profissao="'.$profissao.'", cep="'.$cep.'", endereco="'.$endereco.'", complemento="'.$complemento.'", bairro="'.$bairro.'", cidade="'.$cidade.'", estado="'.$estado.'", ddd_cel="'.$ddd_cel.'", cel="'.$cel.'", ddd_tel="'.$ddd_tel.'", tel="'.$tel.'" WHERE id="'.$id_customer.'" '));
+if($edit==true):
+	$_SESSION['warn'] = "Editado com sucesso";
+else:
+	$_SESSION['warn'] = "Erro ao editar";
+endif;
+
+else: 
+
+$id_customer = NULL;
+
+endif;
 
 ?><div class="top"><img src="<?php echo ROOT; ?>/assets/images/topBar.png" alt="" title="" width="551" height="23" /></div>
 			<div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_facaseucadastro.png" width="295" height="26" alt="" title="" /></div>
@@ -17,8 +50,8 @@ $customer->set($checked);
 			</div>
 <div id="box_cadastro_fisica">
 
-<?php HForm::Init(ROOT.'/verify','post','formCadastroFisica','form'); ?>
-
+<?php HForm::Init(ROOT.'/meu-cadastro','post','formMeuCadastro','form'); ?>
+<?php HForm::Input('id_customer','hidden','id_customer','',$customer->id); ?>
 <span class="clr"></span>
 <hr class="bdr1" />
 <span class="infoBar">
@@ -73,18 +106,20 @@ endif;
 <span class="lbl">
 <?php HForm::Label('Estado:','estado'); ?>
 <div class="styled-select">
-<?php HForm::Select('estado',array("RJ"=>"Rio de janeiro","SP"=>"S&atilde;o Paulo"),'Selecione Estado','','inpt04Slc'); ?>
+<select name="estado" id="estado" class="inpt04Slc">
+<?php HForm::ComboEstados($customer->getField('estado')); ?>
+</select>
 </div>
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone Fixo:','tel'); ?>
-<?php HForm::Input('dddtel','text','dddtel','inpt01'); ?>
-<?php HForm::Input('tel','text','tel','inpt02'); ?>
+<?php HForm::Input('ddd_tel','text','ddd_tel','inpt01',$customer->getField('ddd_tel')); ?>
+<?php HForm::Input('tel','text','tel','inpt02',$customer->getField('tel')); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone Celular:','cel'); ?>
-<?php HForm::Input('dddcel','text','dddcel','inpt01'); ?>
-<?php HForm::Input('cel','text','cel','inpt02'); ?>
+<?php HForm::Input('ddd_cel','text','ddd_cel','inpt01',$customer->getField('ddd_cel')); ?>
+<?php HForm::Input('cel','text','cel','inpt02',$customer->getField('cel')); ?>
 </span>
 <span class="lbl">
 <?php HForm::Button('submit','','','btEnviar rt'); ?>

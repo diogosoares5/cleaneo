@@ -42,7 +42,7 @@ class Crud {
 		else:
 			return false;
 		endif;
-		echo $sql;
+		//echo $sql;
 		$query = mysql_query($sql);
 		return $query;
 	}	

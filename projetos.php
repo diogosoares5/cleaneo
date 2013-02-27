@@ -140,7 +140,7 @@ $projeto = new Projeto();
       <label>Estado: </label>
       <div class="styled-select">
         <select name="estado" id="estado" class="inpt04Slc">
-			<?php echo $projeto->comboEstados($p['estado']); ?>
+			<?php HForm::ComboEstados($p['estado']); ?>
         </select>
       </div>
       </span> <span class="lbl2">
@@ -324,7 +324,7 @@ $projeto = new Projeto();
     <label>Estado: </label>
     <div class="styled-select">
     <select name="estado" id="estado" class="inpt04Slc">
-		<?php echo $projeto->comboEstados(); ?>
+		<?php HForm::ComboEstados(); ?>
 	</select>
     </div>
     </span> <span class="lbl2">
@@ -438,7 +438,7 @@ $projeto = new Projeto();
   <label>Estado: </label>
   <div class="styled-select">
   <select name="estado" id="estado" class="inpt04Slc">
-		<?php echo $projeto->comboEstados(); ?>
+		<?php HForm::ComboEstados(); ?>
 	</select>
   </div>
   </span> <span class="lbl2">

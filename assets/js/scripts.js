@@ -519,6 +519,93 @@ $(document).ready(function(){
 		}						   						 
 		});	
 	
+	$('#formMeuCadastro').validate({
+								   
+		rules: {
+     
+      nome:{ required:true, nomeCompleto:true},
+     // compound rule
+     email: {
+       required: true,
+       email: true
+     },
+	 pass:{
+		required:true,
+		minlength:4
+	},
+	repass:{
+		required:true,
+		equalTo:"#pass"
+	},
+	cpf:{
+		required:true,
+		cpf:true
+	},
+	profissao:"required",
+	cep:"required",
+	endereco:"required",
+	complemento:"required",
+	bairro:"required",
+	cidade:"required",
+	estado:"required",
+	ddd_tel:"required",
+	ddd_cel:"required",
+	tel:"required",
+	cel:"required",
+	
+   },
+    groups:{
+			telNumber: 'ddd_tel tel',
+			celNumber: 'ddd_cel cel'
+		},
+		errorPlacement: function(error, element) {
+		   if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel"){ 
+			error.insertAfter("#formMeuCadastro #tel");
+		   }else {
+        	error.insertAfter(element);
+		   }
+			
+			if(element.attr("name") == "ddd_cel" || element.attr("name") == "cel"){
+				error.insertAfter("#formMeuCadastro #cel");
+		   }else {
+        	error.insertAfter(element);
+		   }
+   		},
+   messages:{
+	 nome:{ required:"Preencher campo nome", nomeCompleto:"Nome completo"},
+	  
+	  email:{
+		 required:"Preencher campo Email",
+		 email:"Email valido"
+		},
+	  pass:{
+		required:"Preencher senha",
+		minlength:"M&iacute;nimo de 4 caracteres"
+	},
+	repass:{
+		required:"Preencher conrfima&ccedil;&atilde;o de senha",
+		equalTo:"Mesmo valor que o campo senha"
+	},
+	cpf:{
+		required:"Preencher CPF",
+		cpf:"CPF valido"
+	},
+	profissao:"Preencher profissao",
+	cep:"Preencher CEP",
+	endereco:"Preencher endereco",
+	complemento:"Preencher complemento",
+	bairro:"Preencher bairro",
+	cidade:"Preencher cidade",
+	estado:"Preencher estado",
+	ddd_tel:"Preencher telefone",
+	ddd_cel:"Preencher celular",
+	tel:"Preencher telefone",
+	cel:"Preencher celular",
+	
+	
+   }
+								
+	});
 	$('#formCadastroFisica').validate({
 
 		rules: {

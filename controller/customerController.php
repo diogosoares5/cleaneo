@@ -80,6 +80,10 @@
 				return false;
 			endif;
 		}
+		function Edit($params){
+			$edit = Crud::_update("customers",$params);
+			if($edit): return true; else: return false; endif;
+		}
 		function show($params){
 			$read = Crud::_read("customers",$params);
 			$user = mysql_fetch_array($read);
