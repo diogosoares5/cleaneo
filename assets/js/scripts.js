@@ -559,15 +559,13 @@ $(document).ready(function(){
 			celNumber: 'ddd_cel cel'
 		},
 		errorPlacement: function(error, element) {
-		   if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel"){ 
-			error.insertAfter("#formMeuCadastro #tel");
-		   }else {
-        	error.insertAfter(element);
+		  if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel"){ 
+			error.insertAfter("#formCadastroFisica #tel");
 		   }
-			
-			if(element.attr("name") == "ddd_cel" || element.attr("name") == "cel"){
-				error.insertAfter("#formMeuCadastro #cel");
-		   }else {
+		   else if(element.attr("name") == "ddd_cel" || element.attr("name") == "cel"){
+			   error.insertAfter("#formCadastroFisica #cel");
+			}
+		   else {
         	error.insertAfter(element);
 		   }
    		},
