@@ -321,11 +321,23 @@ $(document).ready(function(){
 				required: true,
       		 	email: true
 				},
+			ddd_tel:{required:true},	
 			tel:{required:true},
 			msg:{required:true}
-		},messages:{
+		},
+		groups:{
+			telNumber: 'ddd_tel tel'	
+		},
+		errorPlacement: function(error, element) {
+		   if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel") 
+			error.insertAfter("#tel");
+		   else 
+        	error.insertAfter(element);
+   		},
+		messages:{
 			nome:{required:"Preencher o campo Nome"},
 			email:{required:"Preencher o campo E-mail",email:"E-mail v&aacute;lido."},
+			ddd_tel:{required:"Preencher o campo Celular"},
 			tel:{required:"Preencher o campo Celular"},
 			msg:{required:"Preencher o campo Mensagem"}
 		}						   
@@ -536,10 +548,29 @@ $(document).ready(function(){
 	bairro:"required",
 	cidade:"required",
 	estado:"required",
+	ddd_tel:"required",
+	ddd_cel:"required",
 	tel:"required",
 	cel:"required"
 	
    },
+   groups:{
+			telNumber: 'ddd_tel tel',
+			celNumber: 'ddd_cel cel'
+		},
+		errorPlacement: function(error, element) {
+		   if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel"){ 
+			error.insertAfter("#formCadastroFisica #tel");
+		   }else {
+        	error.insertAfter(element);
+		   }
+			
+			if(element.attr("name") == "ddd_cel" || element.attr("name") == "cel"){
+				error.insertAfter("#formCadastroFisica #cel");
+		   }else {
+        	error.insertAfter(element);
+		   }
+   		},
    messages:{
 	  nome:{ required:"Preencher campo nome", nomeCompleto:"Nome completo"},
 	  email:{
@@ -565,8 +596,10 @@ $(document).ready(function(){
 	bairro:"Preencher bairro",
 	cidade:"Preencher cidade",
 	estado:"Preencher estado",
-	tel:"Preencher tel",
-	cel:"Preencher cel"
+	ddd_tel:"Preencher telefone",
+	ddd_cel:"Preencher celular",
+	tel:"Preencher telefone",
+	cel:"Preencher celular"
    }
 								
 	});
@@ -599,6 +632,8 @@ $(document).ready(function(){
 	bairro:"required",
 	cidade:"required",
 	estado:"required",
+	ddd_tel:"required",
+	ddd_cel:"required",
 	tel:"required",
 	cel:"required",
 	cnpj:{
@@ -609,6 +644,23 @@ $(document).ready(function(){
 	razao:"required"
 	
    },
+    groups:{
+			telNumber: 'ddd_tel tel',
+			celNumber: 'ddd_cel cel'
+		},
+		errorPlacement: function(error, element) {
+		   if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel"){ 
+			error.insertAfter("#formCadastroJuridica #tel");
+		   }else {
+        	error.insertAfter(element);
+		   }
+			
+			if(element.attr("name") == "ddd_cel" || element.attr("name") == "cel"){
+				error.insertAfter("#formCadastroJuridica #cel");
+		   }else {
+        	error.insertAfter(element);
+		   }
+   		},
    messages:{
 	 nome:{ required:"Preencher campo nome", nomeCompleto:"Nome completo"},
 	  
@@ -635,8 +687,10 @@ $(document).ready(function(){
 	bairro:"Preencher bairro",
 	cidade:"Preencher cidade",
 	estado:"Preencher estado",
-	tel:"Preencher tel",
-	cel:"Preencher cel",
+	ddd_tel:"Preencher telefone",
+	ddd_cel:"Preencher celular",
+	tel:"Preencher telefone",
+	cel:"Preencher celular",
 	cnpj:{
 		required:"Preencher CNPJ",
 		cnpj:"CNPJ valido"

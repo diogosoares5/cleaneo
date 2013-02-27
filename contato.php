@@ -17,7 +17,7 @@ Head('Fale Conosco','','faleConosco');
 				</span>
 				<span class="lbl">
 					<label>Telefone celular: </label>
-					<input type="text" title="ddd" name="ddd" id="ddd"  class="inpt01" /><input type="text" name="tel" id="tel" title="Telefone celular:"  class="inpt02" />
+					<input type="text" title="ddd" name="ddd_tel" id="ddd_tel"  class="inpt01" /><input type="text" name="tel" id="tel" title="Telefone celular:"  class="inpt02" />
 				</span>	
 				<span class="lbl">
 					<label>Mensagem: </label>

@@ -69,11 +69,11 @@
 			$this->category = $u->id_category;
 			$this->pessoa = $u->id_pessoa;
 		}
-		function sign($categoria, $pessoa, $email, $senha, $nome, $cpf, $profissao, $cep, $endereco, $complemento, $bairro, $cidade, $estado, $tel, $cel, $razao, $fantasia, $cnpj){
+		function sign($categoria, $pessoa, $email, $senha, $nome, $cpf, $profissao, $cep, $endereco, $complemento, $bairro, $cidade, $estado, $ddd_tel, $tel, $ddd_cel,$cel, $razao, $fantasia, $cnpj){
 			$senha = md5($senha);
 			$hash = uniqid(rand());
 			
-			$create = Crud::_create("customers","'NULL','$categoria','$pessoa','$email','$profissao','$cpf','$senha','$nome','$cep','$endereco','$complemento','$bairro','$cidade','$estado','$tel','$cel','$razao','$fantasia','$cnpj','$hash','0'");
+			$create = Crud::_create("customers","'NULL','$categoria','$pessoa','$email','$profissao','$cpf','$senha','$nome','$cep','$endereco','$complemento','$bairro','$cidade','$estado','$ddd_tel','$tel','$ddd_cel','$cel','$razao','$fantasia','$cnpj','$hash','0'");
 			if($create):
 				return true;
 			else:

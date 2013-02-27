@@ -146,12 +146,12 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone Fixo:','tel'); ?>
-<?php HForm::Input('dddtel','text','dddtel','inpt01'); ?>
+<?php HForm::Input('ddd_tel','text','dddt_el','inpt01'); ?>
 <?php HForm::Input('tel','text','tel','inpt02'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone Celular:','cel'); ?>
-<?php HForm::Input('dddcel','text','dddcel','inpt01'); ?>
+<?php HForm::Input('ddd_cel','text','ddd_cel','inpt01'); ?>
 <?php HForm::Input('cel','text','cel','inpt02'); ?>
 </span>
 <span class="lbl">
@@ -250,12 +250,12 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone Fixo','tel'); ?>
-<?php HForm::Input('dddtel','text','dddtel','inpt01'); ?>
+<?php HForm::Input('ddd_tel','text','ddd_tel','inpt01'); ?>
 <?php HForm::Input('tel','text','tel','inpt02'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone celular','cel'); ?>
-<?php HForm::Input('dddcel','text','dddcel','inpt01'); ?>
+<?php HForm::Input('ddd_cel','text','ddd_cel','inpt01'); ?>
 <?php HForm::Input('cel','text','cel','inpt02'); ?>
 </span>
 <span class="lbl">

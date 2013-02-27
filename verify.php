@@ -19,6 +19,8 @@ $complemento = $_POST['complemento'];
 $bairro = $_POST['bairro']; 
 $cidade = $_POST['cidade']; 
 $estado = $_POST['estado']; 
+$ddd_tel = $_POST['ddd_tel'];
+$ddd_cel = $_POST['ddd_cel'];
 $tel = $_POST['tel']; 
 $cel = $_POST['cel']; 
 
@@ -34,7 +36,7 @@ if($customer->authUser($email,$pass)):
 	header('Location: '.ROOT.'/cadastro');
 else:
 //criando usuario
-$createCustomer = $customer->sign($categoria, $pessoa, $email, $pass, $nome, $cpf, $profissao, $cep, $endereco, $complemento, $bairro, $cidade, $estado, $tel, $cel, $razao, $fantasia, $cnpj);
+$createCustomer = $customer->sign($categoria, $pessoa, $email, $pass, $nome, $cpf, $profissao, $cep, $endereco, $complemento, $bairro, $cidade, $estado,$ddd_tel, $tel, $ddd_cel, $cel, $razao, $fantasia, $cnpj);
 	if($createCustomer == true):
 		$lastUser = $customer->show(array("email = '".$email."'"));
 		
