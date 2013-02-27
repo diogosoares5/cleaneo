@@ -85,7 +85,7 @@ endif;
 <span class="lbl">
 <?php HForm::Label('CEP:','cep'); ?>
 <?php HForm::Input('cep','text','cep','inpt03',$customer->getField('cep')); ?>
-<span class="link_ipt"><a href="#"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
+<span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
 </span>
 <span class="lbl">
 <?php HForm::Label('Endere&ccedil;o:','endereco'); ?>
