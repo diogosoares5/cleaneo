@@ -140,39 +140,12 @@ $projeto = new Projeto();
       <label>Estado: </label>
       <div class="styled-select">
         <select name="estado" id="estado" class="inpt04Slc">
-          <option value="">Escolha o Estado</option>
-          <option value="AC">Acre</option>
-          <option value="AL">Alagoas</option>
-          <option value="AP">Amapá</option>
-          <option value="AM">Amazonas</option>
-          <option value="BA">Bahia</option>
-          <option value="CE">Ceará</option>
-          <option value="DF">Distrito Federal</option>
-          <option value="ES">Espirito Santo</option>
-          <option value="GO">Goiás</option>
-          <option value="MA">Maranhão</option>
-          <option value="MT">Mato Grosso</option>
-          <option value="MS">Mato Grosso do Sul</option>
-          <option value="MG">Minas Gerais</option>
-          <option value="PA">Pará</option>
-          <option value="PB">Paraiba</option>
-          <option value="PR">Paraná</option>
-          <option value="PE">Pernambuco</option>
-          <option value="PI">Piauí</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="RN">Rio Grande do Norte</option>
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="RO">Rondônia</option>
-          <option value="RR">Roraima</option>
-          <option value="SC">Santa Catarina</option>
-          <option value="SP">São Paulo</option>
-          <option value="SE">Sergipe</option>
-          <option value="TO">Tocantis</option>
+			<?php echo $projeto->comboEstados($p['estado']); ?>
         </select>
       </div>
       </span> <span class="lbl2">
       <label>Telefone Fixo: </label>
-      <?php HForm::Input('ddd','text','ddd_tel','inpt01',$p['ddd_tel']); ?>
+      <?php HForm::Input('ddd_tel','text','ddd_tel','inpt01',$p['ddd_tel']); ?>
       <?php HForm::Input('tel','text','tel','inpt02',$p['tel']); ?>
       </span> <span class="lbl2">
       <label>Nome da pessoa de contato:* </label>
@@ -338,35 +311,8 @@ $projeto = new Projeto();
     <label>Estado: </label>
     <div class="styled-select">
     <select name="estado" id="estado" class="inpt04Slc">
-	<option value="">Escolha o Estado</option>
-	<option value="AC">Acre</option>
-	<option value="AL">Alagoas</option>
-	<option value="AP">Amapá</option>
-	<option value="AM">Amazonas</option>
-	<option value="BA">Bahia</option>
-	<option value="CE">Ceará</option>
-	<option value="DF">Distrito Federal</option>
-	<option value="ES">Espirito Santo</option>
-	<option value="GO">Goiás</option>
-	<option value="MA">Maranhão</option>
-	<option value="MT">Mato Grosso</option>
-	<option value="MS">Mato Grosso do Sul</option>
-	<option value="MG">Minas Gerais</option>
-	<option value="PA">Pará</option>
-	<option value="PB">Paraiba</option>
-	<option value="PR">Paraná</option>
-	<option value="PE">Pernambuco</option>
-	<option value="PI">Piauí</option>
-	<option value="RJ">Rio de Janeiro</option>
-	<option value="RN">Rio Grande do Norte</option>
-	<option value="RS">Rio Grande do Sul</option>
-	<option value="RO">Rondônia</option>
-	<option value="RR">Roraima</option>
-	<option value="SC">Santa Catarina</option>
-	<option value="SP">São Paulo</option>
-	<option value="SE">Sergipe</option>
-	<option value="TO">Tocantis</option>
-</select>
+		<?php echo $projeto->comboEstados(); ?>
+	</select>
     </div>
     </span> <span class="lbl2">
     <label>Telefone Fixo: </label>
@@ -479,35 +425,8 @@ $projeto = new Projeto();
   <label>Estado: </label>
   <div class="styled-select">
   <select name="estado" id="estado" class="inpt04Slc">
-	<option value="">Escolha o Estado</option>
-	<option value="AC">Acre</option>
-	<option value="AL">Alagoas</option>
-	<option value="AP">Amapá</option>
-	<option value="AM">Amazonas</option>
-	<option value="BA">Bahia</option>
-	<option value="CE">Ceará</option>
-	<option value="DF">Distrito Federal</option>
-	<option value="ES">Espirito Santo</option>
-	<option value="GO">Goiás</option>
-	<option value="MA">Maranhão</option>
-	<option value="MT">Mato Grosso</option>
-	<option value="MS">Mato Grosso do Sul</option>
-	<option value="MG">Minas Gerais</option>
-	<option value="PA">Pará</option>
-	<option value="PB">Paraiba</option>
-	<option value="PR">Paraná</option>
-	<option value="PE">Pernambuco</option>
-	<option value="PI">Piauí</option>
-	<option value="RJ">Rio de Janeiro</option>
-	<option value="RN">Rio Grande do Norte</option>
-	<option value="RS">Rio Grande do Sul</option>
-	<option value="RO">Rondônia</option>
-	<option value="RR">Roraima</option>
-	<option value="SC">Santa Catarina</option>
-	<option value="SP">São Paulo</option>
-	<option value="SE">Sergipe</option>
-	<option value="TO">Tocantis</option>
-</select>
+		<?php echo $projeto->comboEstados(); ?>
+	</select>
   </div>
   </span> <span class="lbl2">
   <label>Telefone Fixo: </label>
