@@ -60,8 +60,9 @@
 				Site::redirect(''); 
 			endif;
 		}	
-		function set($id){
-			$q = Crud::_read('customers',array('id="'.$id.'"'));
+		function set($session){
+			
+			$q = Crud::_read('customers',array('id="'.$session.'"'));
 			$u = mysql_fetch_object($q);
 			$this->id = $u->id;
 			$this->nome = $u->nome;

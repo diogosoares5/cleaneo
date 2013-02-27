@@ -1,4 +1,6 @@
 <?php
+session_destroy();
+echo phpinfo();
 include('view/template.php'); 
 Head('Bem vindo','','Home');
 if(isset($_SESSION['customer'])): header('Location:'.ROOT.'/projetos'); endif;

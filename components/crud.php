@@ -22,7 +22,7 @@ class Crud {
 		else:
 			$sql = "SELECT * FROM ".$table;
 		endif;
-		//echo $sql;
+		echo $sql;
 		$query = mysql_query($sql);
 		return $query;
 	}

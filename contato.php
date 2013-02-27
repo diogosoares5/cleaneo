@@ -6,7 +6,15 @@ Head('Fale Conosco','','faleConosco');
 			<div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_faleC.png" width="222" height="19" alt="" title="" /></div>
 			<div class="top"><img src="<?php echo ROOT; ?>/assets/images/bar2.png" alt="" title="" width="551" height="2" /></div>
 			<form action="<?php echo ROOT; ?>/response" id="contactForm" method="post" class="form">
-				<span class="infoBar"><b>Tem alguma dúvida?</b> Entre em contato.</span>
+				<span class="infoBar">
+                	<?php
+if(isset($_SESSION['warn'])):
+	echo $_SESSION['warn'];
+	unset($_SESSION['warn']);
+else:
+?>
+                <b>Tem alguma dúvida?</b> Entre em contato.
+                <?php endif; ?></span>
 				<span class="lbl">
 					<label>Nome completo:</label>
 					<input type="text" title="Nome completo:" id="nome" name="nome"  class="inpt05" />
