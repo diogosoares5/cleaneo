@@ -53,7 +53,7 @@
 	
 	//pdf
 		if(strpos($desc['name'],'.pdf')):
-			$move = move_uploaded_file($desc['tmp_name'], 'archives/'.$desc['name']);		
+			$move = move_uploaded_file($desc['tmp_name'], 'archives/pdf/'.$desc['name']);		
 			if($move):
 				$msg .= 'Descritivo incluido com sucesso';
 			else:
@@ -64,7 +64,7 @@
 		endif;
 	//doc
 	if(strpos($auto['name'],'.doc') or strpos($auto['name'],'.docx')):
-			$move = move_uploaded_file($auto['tmp_name'], 'archives/'.$auto['name']);		
+			$move = move_uploaded_file($auto['tmp_name'], 'archives/doc/'.$auto['name']);		
 			if($move):
 				$msg .= 'Modelo incluido com sucesso';
 			else:

@@ -259,30 +259,6 @@ $(document).ready(function(){
 									  
 	});
 	   
-//$(function() {
-//    
-//var bar = $('.bar');
-//var percent = $('.percent');
-//var status = $('#status');
-//   
-//$('').ajaxForm({
-//    beforeSend: function() {
-//        status.empty();
-//        var percentVal = '0%';
-//        bar.width(percentVal)
-//        percent.html(percentVal);
-//    },
-//    uploadProgress: function(event, position, total, percentComplete) {
-//        var percentVal = percentComplete + '%';
-//        bar.width(percentVal)
-//        percent.html(percentVal);
-//    },
-//	complete: function(xhr) {
-//		status.html(xhr.responseText);
-//	}
-//}); 
-//
-//});      
 
 	$('#scrollbar3').tinyscrollbar({ size: 480 });
 	
@@ -363,6 +339,7 @@ $(document).ready(function(){
 			bairro:{required:true},
 			cidade:{required:true},
 			estado:{required:true},
+			ddd_tel:{required:true},
 			tel:{required:true},
 			contato:{required:true},
 			fileOriginal1:{ extension: "jpe?g", filesize: 1048576},
@@ -371,6 +348,15 @@ $(document).ready(function(){
 			fileOriginal4:{ accept: "application/pdf,application/acad,application/dxf"},
 			fileOriginal5:{ accept: "application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
 		},
+		groups:{
+			telNumber: 'ddd_tel tel'	
+		},
+		errorPlacement: function(error, element) {
+		   if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel") 
+			error.insertAfter("#projectForm #tel");
+		   else 
+        	error.insertAfter(element);
+   		},
 		messages:{
 			nome:{required:"Preencha o campo Nome"},
 			cep:{required:"Preencha o campo CEP"},
@@ -378,7 +364,8 @@ $(document).ready(function(){
 			bairro:{required:"Preencha o campo Bairro"},
 			cidade:{required:"Preencha o campo Cidade"},
 			estado:{required:"Preencha o campo Estado"},
-			tel:{required:"Preencha o campo Tel"},
+			ddd_tel:{required:"Preencha o campo Telefone"},
+			tel:{required:"Preencha o campo Telefone"},
 			contato:{required:"Preencha o campo Contato"},
 			fileOriginal1:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
 			fileOriginal2:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
@@ -390,7 +377,7 @@ $(document).ready(function(){
 	
 		//$('#editForm_1 input, #editForm_2 input, #editForm_3 input').keypress(function(){ var valor = $(this).val(); $(this).val(valor);});
 	
-		$('#editForm_1, #editForm_2, #editForm_3').validate({
+		$('#editForm_1').validate({
 				rules:{
 			nome:{required:true},
 			cep:{required:true},
@@ -398,6 +385,7 @@ $(document).ready(function(){
 			bairro:{required:true},
 			cidade:{required:true},
 			estado:{required:true},
+			ddd_tel:{required:true},
 			tel:{required:true},
 			contato:{required:true},
 			fileOriginal1:{ extension: "jpe?g", filesize: 1048576},
@@ -406,6 +394,15 @@ $(document).ready(function(){
 			fileOriginal4:{ accept: "application/pdf,application/acad,application/dxf"},
 			fileOriginal5:{ accept: "application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
 		},
+		groups:{
+			telNumber: 'ddd_tel tel'	
+		},
+		errorPlacement: function(error, element) {
+		   if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel") 
+			error.insertAfter("#editForm_1 #tel");
+		   else 
+        	error.insertAfter(element);
+   		},
 		messages:{
 			nome:{required:"Preencha o campo Nome"},
 			cep:{required:"Preencha o campo CEP"},
@@ -422,7 +419,90 @@ $(document).ready(function(){
 			fileOriginal5:{ accept: "Somente formato DOC (Word)"}
 		}						   						 
 		});	
-	
+			$('#editForm_2').validate({
+				rules:{
+			nome:{required:true},
+			cep:{required:true},
+			endereco:{required:true},
+			bairro:{required:true},
+			cidade:{required:true},
+			estado:{required:true},
+			ddd_tel:{required:true},
+			tel:{required:true},
+			contato:{required:true},
+			fileOriginal1:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal2:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal3:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal4:{ accept: "application/pdf,application/acad,application/dxf"},
+			fileOriginal5:{ accept: "application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+		},
+		groups:{
+			telNumber: 'ddd_tel tel'	
+		},
+		errorPlacement: function(error, element) {
+		   if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel") 
+			error.insertAfter("#editForm_2 #tel");
+		   else 
+        	error.insertAfter(element);
+   		},
+		messages:{
+			nome:{required:"Preencha o campo Nome"},
+			cep:{required:"Preencha o campo CEP"},
+			endereco:{required:"Preencha o campo Endere&ccedil;o"},
+			bairro:{required:"Preencha o campo Bairro"},
+			cidade:{required:"Preencha o campo Cidade"},
+			estado:{required:"Preencha o campo Estado"},
+			tel:{required:"Preencha o campo Tel"},
+			contato:{required:"Preencha o campo Contato"},
+			fileOriginal1:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal2:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal3:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal4:{ accept: "Somente formato PDF ou CAD"},
+			fileOriginal5:{ accept: "Somente formato DOC (Word)"}
+		}						   						 
+		});	
+		$('#editForm_3').validate({
+				rules:{
+			nome:{required:true},
+			cep:{required:true},
+			endereco:{required:true},
+			bairro:{required:true},
+			cidade:{required:true},
+			estado:{required:true},
+			ddd_tel:{required:true},
+			tel:{required:true},
+			contato:{required:true},
+			fileOriginal1:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal2:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal3:{ extension: "jpe?g", filesize: 1048576},
+			fileOriginal4:{ accept: "application/pdf,application/acad,application/dxf"},
+			fileOriginal5:{ accept: "application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+		},
+		groups:{
+			telNumber: 'ddd_tel tel'	
+		},
+		errorPlacement: function(error, element) {
+		   if (element.attr("name") == "ddd_tel" || element.attr("name") == "tel") 
+			error.insertAfter("#editForm_3 #tel");
+		   else 
+        	error.insertAfter(element);
+   		},
+		messages:{
+			nome:{required:"Preencha o campo Nome"},
+			cep:{required:"Preencha o campo CEP"},
+			endereco:{required:"Preencha o campo Endere&ccedil;o"},
+			bairro:{required:"Preencha o campo Bairro"},
+			cidade:{required:"Preencha o campo Cidade"},
+			estado:{required:"Preencha o campo Estado"},
+			tel:{required:"Preencha o campo Tel"},
+			contato:{required:"Preencha o campo Contato"},
+			fileOriginal1:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal2:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal3:{ extension: "Somente formato JPG", filesize: "Tamanho Excede 1MB"},
+			fileOriginal4:{ accept: "Somente formato PDF ou CAD"},
+			fileOriginal5:{ accept: "Somente formato DOC (Word)"}
+		}						   						 
+		});	
 	
 	$('#formCadastroFisica').validate({
 

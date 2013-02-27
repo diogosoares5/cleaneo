@@ -123,19 +123,19 @@ $projeto = new Projeto();
       <input type="hidden" name="id_project" value="<?php echo $p['id']; ?>">
       <span class="lbl2">
       <label>Nome do imóvel:* </label>
-      <input type="text" value="<?php echo $p['nome']; ?>"  id="nome" class="inpt04" />
+      <?php HForm::Input('nome','text','nome','inpt04',$p['nome']); ?>
       </span> <span class="lbl2">
       <label>CEP: </label>
-      <input type="text" value="<?php echo $p['cep']; ?>"  id="cep" class="inpt03" />
+      <?php HForm::Input('cep','text','cep','inpt03',$p['cep']); ?>
       <span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span> </span> <span class="lbl2">
       <label>Endereço Comercial:* </label>
-      <input type="text" value="<?php echo $p['endereco']; ?>"  id="endereco" class="inpt05" />
+      <?php HForm::Input('endereco','text','endereco','inpt05',$p['endereco']); ?>
       </span> <span class="lbl2">
       <label>Bairro: </label>
-      <input type="text" value="<?php echo $p['bairro']; ?>"  id="bairro" class="inpt04" />
+      <?php HForm::Input('bairro','text','bairro','inpt04',$p['bairro']); ?>
       </span> <span class="lbl2">
       <label>Cidade: </label>
-      <input type="text" value="<?php echo $p['cidade']; ?>"  id="cidade" class="inpt04" />
+      <?php HForm::Input('cidade','text','cidade','inpt04',$p['cidade']); ?>
       </span> <span class="lbl2">
       <label>Estado: </label>
       <div class="styled-select">
@@ -172,11 +172,11 @@ $projeto = new Projeto();
       </div>
       </span> <span class="lbl2">
       <label>Telefone Fixo: </label>
-      <input type="text" value="<?php echo $p['tel']; ?>"  id="ddd" class="inpt01" />
-      <input type="text" value="<?php echo $p['tel']; ?>"  id="tel" class="inpt02" />
+      <?php HForm::Input('ddd','text','ddd_tel','inpt01',$p['ddd_tel']); ?>
+      <?php HForm::Input('tel','text','tel','inpt02',$p['tel']); ?>
       </span> <span class="lbl2">
       <label>Nome da pessoa de contato:* </label>
-      <input type="text" value="<?php echo $p['contato']; ?>"  id="contato" class="inpt04" />
+      <?php HForm::Input('contato','text','contato','inpt04',$p['cep']); ?>
       </span> <span class="info1">* Todos os campos são de preenchimento obrigatório.</span>
       <hr class="bdr1" />
       <!-- Fim step 2 -->
@@ -370,7 +370,7 @@ $projeto = new Projeto();
     </div>
     </span> <span class="lbl2">
     <label>Telefone Fixo: </label>
-    <input type="text" value=" " name="ddd"  id="ddd" class="inpt01" />
+    <input type="text" value=" " name="ddd_tel"  id="ddd_tel" class="inpt01" />
     <input type="text" value=" " name="tel"  id="tel" class="inpt02" />
     </span> <span class="lbl2">
     <label>Nome da pessoa de contato:* </label>
@@ -511,7 +511,7 @@ $projeto = new Projeto();
   </div>
   </span> <span class="lbl2">
   <label>Telefone Fixo: </label>
-  <input type="text" value=" " name="ddd"  id="ddd" class="inpt01" />
+  <input type="text" value=" " name="ddd_tel"  id="ddd_tel" class="inpt01" />
   <input type="text" value=" " name="tel"  id="tel" class="inpt02" />
   </span> <span class="lbl2">
   <label>Nome da pessoa de contato:* </label>

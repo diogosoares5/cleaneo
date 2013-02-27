@@ -13,14 +13,6 @@ class Crud {
 		$sql .= " (".$fields.") VALUES ";
 		
 			$sql .= "(".$params.")";	
-	
-		//$d = "DESCRIBE ".$table;
-//		$desc = mysql_query($d);
-		//while($res = mysql_fetch_array($desc)):
-//			$Fields[] = $res['Field'];
-//		endwhile;
-//		
-
 		$query = mysql_query($sql);
 		return $query;
 	}

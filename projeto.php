@@ -10,6 +10,7 @@ session_start();
 	$bairro = $_POST['bairro'];
 	$cidade = $_POST['cidade'];
 	$estado = $_POST['estado'];
+	$ddd_tel = $_POST['ddd_tel'];
 	$tel = $_POST['tel'];
 	$contato = $_POST['contato'];
 	
@@ -41,14 +42,22 @@ session_start();
 	
 	if(isset($id_project) and $projeto->check($id_project)==true):
 		//edita
-		$save = $projeto->edit(array("id_costumer = '$id_customer', id_category = '$id_category', id_pessoa = '$id_pessoa',nome = '$nome', cep = '$cep',endereco='$endereco',bairro = '$bairro',cidade='$cidade',estado='$estado',tel = '$tel',contato='$contato','1'"));
+		$save = $projeto->edit(array("nome = '$nome', cep = '$cep',endereco='$endereco',bairro = '$bairro',cidade='$cidade',estado='$estado',ddd_tel = '$ddd_tel',tel = '$tel',contato='$contato' WHERE id='$id_project'"));
 		
-		//$save_files = $arquivos->edit("archives",array($img1,$img2,$img3,$desc,$auto),$projeto->id);
-//		$save_img1 = $arquivos->edit('1',$id_costumer,$projeto->id,$img1,time());
-//		$save_img2 = $arquivos->edit('1',$id_costumer,$projeto->id,$img2,time());
-//		$save_img3 = $arquivos->edit('1',$id_costumer,$projeto->id,$img3,time());
-//		$save_desc = $arquivos->edit('2',$id_costumer,$projeto->id,$desc,time());
-//		$save_auto = $arquivos->edit('3',$id_costumer,$projeto->id,$auto,time());
+		include_once("vendors/uploads/class.upload.php");
+		$error1 = "";
+		$error2 = "";
+		$error3 = "";
+		$error4 = "";
+		$error5 = "";
+		$msg = "";
+		include_once("vendors/uploads/upload.php");
+		
+		if(!$error1): $save_img1 = $arquivos->create('1',$id_customer,$id_project,$image1->file_src_name,time()); endif;
+		if(!$error2): $save_img2 = $arquivos->create('1',$id_customer,$id_project,$image2->file_src_name,time()); endif;
+		if(!$error3): $save_img3 = $arquivos->create('1',$id_customer,$id_project,$image3->file_src_name,time()); endif;
+		if(!$error4): $save_desc = $arquivos->create('2',$id_customer,$id_project,$desc['name'],time()); endif;
+		if(!$error5): $save_auto = $arquivos->create('3',$id_customer,$id_project,$auto['name'],time()); endif;
 	else:
 		//cadastra
 
@@ -76,8 +85,8 @@ session_start();
 			if($c=='1'): $_SESSION['flash'] .=' Voc&ecirc; ainda pode adicionar mais 2 projetos!'; endif;
 			if($c=='2'): $_SESSION['flash'] .=' Voc&ecirc; ainda pode adicionar mais 1 projeto!'; endif;
 	else:
-			$_SESSION['flash'] = "Falha ao criar projeto favor tente mais tarde";
+			$_SESSION['flash'] = "Falha ao criar/editar projeto favor tente mais tarde";
 	endif;
-
+	//echo $_SESSION['flash'];
 	Site::redirect('projetos');
 ?>
