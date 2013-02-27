@@ -378,7 +378,7 @@ $projeto = new Projeto();
     </span> <span class="info1">* Todos os campos s&atilde;o de preenchimento obrigat&oacute;rio.</span>
     <hr class="bdr1" />
     <!-- Fim step 2 -->
-    <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico3.png" alt="" title="" width="29" height="29" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span> <span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Cada fotografia deve possuir o tamanho de <b>1 MB</b> (um megabyte), em <b>formato &ldquo;jpeg&rdquo;</b> com resolu&ccedil;&atilde;o de <b>300</b> dpi.</span> <span class="lbl2 rt">
+    <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico3.png" alt="" title="" width="29" height="29" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span> <span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Cada fotografia deve possuir o tamanho de <b>1 MB</b> (um megabyte), em <b>formato &ldquo;jpeg&rdquo;</b> com resolu&ccedil;&atilde;o de <b>300</b> dpi.</span> <span class="lbl2">
     <ul id="list_" class="list">
       <li class="block">
         <label class="lbl3 file">
@@ -520,7 +520,7 @@ $projeto = new Projeto();
   <hr class="bdr1" />
   <!-- Fim step 2 -->
   <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico3.png" alt="" title="" width="29" height="29" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span> <span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Cada fotografia deve possuir o tamanho de <b>1 MB</b> (um megabyte), em <b>formato &ldquo;jpeg&rdquo;</b> com resolu&ccedil;&atilde;o de <b>300</b> dpi.</span> 
-  <span class="lbl3 rt">
+  <span class="lbl3">
   <ul id="list_" class="list">
     
     <li class="block">
