@@ -168,52 +168,52 @@ endif;
 <span class="infoBar">Todos os campos são de preenchimento obrigatório.</span>
 				
 <span class="lbl">
-<?php HForm::Label('Email','email'); ?>
+<?php HForm::Label('Email:','email'); ?>
 <?php HForm::Input('email','text','email','inpt04'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Senha','pass'); ?>
+<?php HForm::Label('Senha:','pass'); ?>
 <?php HForm::Input('pass','password','pass','inpt04'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Confirmação de senha','repass'); ?>
+<?php HForm::Label('Confirmação de senha:','repass'); ?>
 <?php HForm::Input('repass','password','repass','inpt04'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Raz&atilde;o Social','razao'); ?>
+<?php HForm::Label('Raz&atilde;o Social:','razao'); ?>
 <?php HForm::Input('razao','text','razao','inpt05'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Nome Fantasia','fantasia'); ?>
+<?php HForm::Label('Nome Fantasia:','fantasia'); ?>
 <?php HForm::Input('fantasia','text','fantasia','inpt05'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('CNPJ','cnpj'); ?>
+<?php HForm::Label('CNPJ:','cnpj'); ?>
 <?php HForm::Input('cnpj','text','cnpj','inpt04'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('CEP','cep'); ?>
+<?php HForm::Label('CEP:','cep'); ?>
 <?php HForm::Input('cep','text','cep','inpt03'); ?>
 <span class="link_ipt"><a target="_blank" href="http://www.buscacep.correios.com.br/"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
 </span>
 <span class="lbl">
-<?php HForm::Label('Endere&ccedil;o Comercial','endereco'); ?>
+<?php HForm::Label('Endere&ccedil;o Comercial:','endereco'); ?>
 <?php HForm::Input('endereco','text','endereco','inpt05'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Complemento','complemento'); ?>
+<?php HForm::Label('Complemento:','complemento'); ?>
 <?php HForm::Input('complemento','text','complemento','inpt04'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Bairro','bairro'); ?>
+<?php HForm::Label('Bairro:','bairro'); ?>
 <?php HForm::Input('bairro','text','bairro','inpt04'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Cidade','cidade'); ?>
+<?php HForm::Label('Cidade:','cidade'); ?>
 <?php HForm::Input('cidade','text','cidade','inpt04'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Estado','estado'); ?>
+<?php HForm::Label('Estado:','estado'); ?>
 <div class="styled-select">
 <select name="estado" id="estado" class="inpt04Slc">
 	<option value="">Escolha o Estado</option>
@@ -249,21 +249,21 @@ endif;
 </div>
 </span>
 <span class="lbl">
-<?php HForm::Label('Telefone Fixo','tel'); ?>
+<?php HForm::Label('Telefone Fixo:','tel'); ?>
 <?php HForm::Input('ddd_tel','text','ddd_tel','inpt01'); ?>
 <?php HForm::Input('tel','text','tel','inpt02'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Telefone celular','cel'); ?>
+<?php HForm::Label('Telefone celular:','cel'); ?>
 <?php HForm::Input('ddd_cel','text','ddd_cel','inpt01'); ?>
 <?php HForm::Input('cel','text','cel','inpt02'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('Nome completo do proprietário da empresa','nome','','lbl2'); ?>
+<?php HForm::Label('Nome completo do proprietário da empresa:','nome','','lbl2'); ?>
 <?php HForm::Input('nome','text','nome','inpt05'); ?>
 </span>
 <span class="lbl">
-<?php HForm::Label('CPF do proprietário','cpf'); ?>
+<?php HForm::Label('CPF do proprietário:','cpf'); ?>
 <?php HForm::Input('cpf','text','cpf','inpt05'); ?>
 </p>
 <span class="lbl">
