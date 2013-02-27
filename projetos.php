@@ -244,27 +244,40 @@ $projeto = new Projeto();
       <hr class="bdr1" />
       <!-- Fim step 3 -->
       <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="29" height="29" /> <span class="txt">Selecione o <b>Descritivo do Projeto: </b></span> </span> <span class="infoBar"><b>Atenção:</b> Serão aceitos somente projetos em arquivos com extensão <b>“.cad” e “.pdf”.</b></span> <span class="lbl2 rt">
+      
       <label class="lbl3">
+	  <?php $desc = $projeto->getFile($p['id'],2); 
+	  	if(!isset($desc['data'])):
+	  ?>
       <div id="div-input-file">
         <input name="fileOriginal4" type="file" size="30" class="file-original" id="fileOriginal4" onchange="document.getElementById('file-falso4-editform-<?php echo $p['id']; ?>').value = this.value;"/>
         <div id="div-input-falso">
           <input name="file-falso" type="text" id="file-falso4-editform-<?php echo $p['id']; ?>" />
         </div>
       </div>
-      <a href="#" class="link"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
+      <?php else: ?>
+      <?php echo $desc['data']; ?>
+      <a style="cursor:pointer;" href="delete_image.php?tid=<?php echo $desc['id']; ?>" class="link"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
+      <?php endif; ?>
       </label>
       </span>
       <!-- Fim step 4 -->
       <hr class="bdr1 clr" />
       <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico5.png" alt="" title="" width="29" height="29" /> <span class="txt">Faça o upload do <b>Modelo de Autorização</b> preenchido:</span></span> <span class="lbl2 rt">
       <label class="lbl3">
+      <?php $auto = $projeto->getFile($p['id'],3); 
+	  	if(!isset($auto['data'])):
+	  ?>
       <div id="div-input-file">
         <input name="fileOriginal5" type="file" size="30" class="file-original" id="fileOriginal5" onchange="document.getElementById('file-falso5-editform-<?php echo $p['id']; ?>').value = this.value;"/>
         <div id="div-input-falso">
           <input name="file-falso" type="text" id="file-falso5-editform-<?php echo $p['id']; ?>" />
         </div>
       </div>
-      <a href="#" class="link"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
+      <?php else: ?>
+      <?php echo $auto['data']; ?>
+      <a style="cursor:pointer;" href="delete_image.php?tid=<?php echo $auto['id']; ?>" class="link"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
+      <?php endif; ?>
       </label>
       </span>
       <!-- Fim step 5 -->
