@@ -180,7 +180,7 @@ $projeto = new Projeto();
       </span> <span class="info1">* Todos os campos são de preenchimento obrigatório.</span>
       <hr class="bdr1" />
       <!-- Fim step 2 -->
-      <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico3.png" alt="" title="29" width="" height="29" /> <span class="txt">Selecione até <b>3 fotografias</b> desse projeto:</span> </span> <span class="infoBar"><b>Atenção:</b> Cada fotografia deve possuir o tamanho de <b>1 MB</b> (um megabyte), em <b>formato “jpeg”</b> com resolução de <b>300</b> dpi.</span> <span class="lbl2">
+      <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico3.png" alt="" title="" width="29" height="29" /> <span class="txt">Selecione até <b>3 fotografias</b> desse projeto:</span> </span> <span class="infoBar"><b>Atenção:</b> Cada fotografia deve possuir o tamanho de <b>1 MB</b> (um megabyte), em <b>formato “jpeg”</b> com resolução de <b>300</b> dpi.</span> <span class="lbl2">
       <ul class="listThumb">
         <?php
 								$t = $projeto->getThumbs($p['id']);
