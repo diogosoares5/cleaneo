@@ -231,7 +231,7 @@ label.error b{font-weight: bold !important;}
 .upload .Boxer2 #div-input-file{background:url(../assets/images/btSelcArq.png) no-repeat 100% 1px;height:40px;width:440px;margin:0px;padding-bottom:13px;}
 .upload .Boxer2 #div-input-file #file-original,.upload .Boxer2 #div-input-file #file-original1,.upload .Boxer2 #div-input-file #file-original2,.upload .Boxer2 #div-input-file #file-original3,.upload .Boxer2 #div-input-file #file-original4,.upload .Boxer2 #div-input-file #file-original5,.upload .Boxer2 #div-input-file #fileOriginal1,.upload .Boxer2 #div-input-file #fileOriginal2,.upload .Boxer2 #div-input-file #fileOriginal3,.upload .Boxer2 #div-input-file #fileOriginal4,.upload .Boxer2 #div-input-file #fileOriginal5{opacity: 0.0;-moz-opacity: 0.0;filter: alpha(opacity=00);font-size:14px;background:none !important;border:none !important;}
 .upload .Boxer2 #div-input-file .error{margin-bottom: -4px;
-    margin-right: 54px;
+    margin-right: 18px;
     margin-top: -10px;
     padding-top: 1px;
     position: relative;
