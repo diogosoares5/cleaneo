@@ -224,6 +224,7 @@ label.error b{font-weight: bold !important;}
 .upload .Boxer2 .error{margin-right: -90px;}
 .upload .Boxer2 .link_ipt{position:inherit !;top:-23px !important;important;left:79px !important;margin:0 !important}
 .upload .Boxer2 .error + .link_ipt{position:relative;top:-23px !important;left:79px !important;margin:0 !important}
+.upload .Boxer2 #ddd_tel.error{margin-right:0 !important}
 
 .upload .Boxer2 label.lbl3{width:auto;float:right;}
 .upload .Boxer2 .list{margin-bottom: 10px;}
@@ -267,7 +268,7 @@ label.error b{font-weight: bold !important;}
 .editar .listThumb img,.editar .listThumb a{display:block;}
 .editar .listThumb .link {margin:5px 0!important}
 .editar .listThumb .link img{display:inline-block;}
-.editar label.lbl3 .link{margin:151px !important;top:0 !important;}
+.editar label.lbl3 .link{/* margin:151px !important; */top:0 !important;}
 .editar label.lbl3{top:0;}
 
 /* Regulamento*/
