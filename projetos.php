@@ -200,9 +200,9 @@ $projeto = new Projeto();
         <li class="block">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso1-editform-<?php echo $p['id']; ?> ').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso" type="text" id="file-falso1-editform-<?php echo $p['id']; ?>" />
             </div>
           </div>
           </label>
@@ -210,9 +210,9 @@ $projeto = new Projeto();
         <li class="none">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal2" type="file" size="30" id="fileOriginal2" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal2" type="file" size="30" id="fileOriginal2" onchange="document.getElementById('file-falso2-editform-<?php echo $p['id']; ?>').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso" type="text" id="file-falso2-editform-<?php echo $p['id']; ?>" />
             </div>
           </div>
           </label>
@@ -220,9 +220,9 @@ $projeto = new Projeto();
         <li class="none">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal3" type="file" size="30" id="fileOriginal3" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal3" type="file" size="30" id="fileOriginal3" onchange="document.getElementById('file-falso3-editform-<?php echo $p['id']; ?>').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso" type="text" id="file-falso3-editform-<?php echo $p['id']; ?>" />
             </div>
           </div>
           </label>
@@ -232,9 +232,9 @@ $projeto = new Projeto();
         <li class="block">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso1-editform-<?php echo $p['id']; ?>').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso" type="text" id="file-falso1-editform-<?php echo $p['id']; ?>" />
             </div>
           </div>
           </label>
@@ -242,9 +242,9 @@ $projeto = new Projeto();
         <li class="none">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal2" type="file" size="30" id="fileOriginal2" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal2" type="file" size="30" id="fileOriginal2" onchange="document.getElementById('file-falso2-editform-<?php echo $p['id']; ?>').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso" type="text" id="file-falso2-editform-<?php echo $p['id']; ?>" />
             </div>
           </div>
           </label>
@@ -254,9 +254,9 @@ $projeto = new Projeto();
         <li class="block">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso1-editform-<?php echo $p['id']; ?>').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso" type="text" id="file-falso1-editform-<?php echo $p['id']; ?>" />
             </div>
           </div>
           </label>
@@ -273,9 +273,9 @@ $projeto = new Projeto();
       <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="" height="" /> <span class="txt">Selecione o <b>Descritivo do Projeto: </b></span> </span> <span class="infoBar"><b>Atenção:</b> Serão aceitos somente projetos em arquivos com extensão <b>“.cad” e “.pdf”.</b></span> <span class="lbl2 rt">
       <label class="lbl3">
       <div id="div-input-file">
-        <input name="fileOriginal4" type="file" size="30" id="fileOriginal4" onchange="document.getElementById('file-falso').value = this.value;"/>
+        <input name="fileOriginal4" type="file" size="30" id="fileOriginal4" onchange="document.getElementById('file-falso4-editform-<?php echo $p['id']; ?>').value = this.value;"/>
         <div id="div-input-falso">
-          <input name="file-falso" type="text" id="file-falso" />
+          <input name="file-falso" type="text" id="file-falso4-editform-<?php echo $p['id']; ?>" />
         </div>
       </div>
       <a href="#" class="link"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
@@ -286,9 +286,9 @@ $projeto = new Projeto();
       <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico5.png" alt="" title="" width="" height="" /> <span class="txt">Faça o upload do <b>Modelo de Autorização</b> preenchido:</span></span> <span class="lbl2 rt">
       <label class="lbl3">
       <div id="div-input-file">
-        <input name="fileOriginal5" type="file" size="30" id="fileOriginal5" onchange="document.getElementById('file-falso').value = this.value;"/>
+        <input name="fileOriginal5" type="file" size="30" id="fileOriginal5" onchange="document.getElementById('file-falso5-editform-<?php echo $p['id']; ?>').value = this.value;"/>
         <div id="div-input-falso">
-          <input name="file-falso" type="text" id="file-falso" />
+          <input name="file-falso" type="text" id="file-falso5-editform-<?php echo $p['id']; ?>" />
         </div>
       </div>
       <a href="#" class="link"><img src="img/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
