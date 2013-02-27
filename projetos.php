@@ -200,9 +200,9 @@ $projeto = new Projeto();
         <li class="block">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso1').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso1" type="text" id="file-falso1" />
             </div>
           </div>
           </label>
@@ -210,9 +210,9 @@ $projeto = new Projeto();
         <li class="none">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal2" type="file" size="30" id="fileOriginal2" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal2" type="file" size="30" id="fileOriginal2" onchange="document.getElementById('file-falso2').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso2" type="text" id="file-falso2" />
             </div>
           </div>
           </label>
@@ -220,9 +220,9 @@ $projeto = new Projeto();
         <li class="none">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal3" type="file" size="30" id="fileOriginal3" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal3" type="file" size="30" id="fileOriginal3" onchange="document.getElementById('file-falso3').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso3" type="text" id="file-falso3" />
             </div>
           </div>
           </label>
@@ -232,9 +232,9 @@ $projeto = new Projeto();
         <li class="block">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso4').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso4" type="text" id="file-falso4" />
             </div>
           </div>
           </label>
@@ -242,9 +242,9 @@ $projeto = new Projeto();
         <li class="none">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal2" type="file" size="30" id="fileOriginal2" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal2" type="file" size="30" id="fileOriginal2" onchange="document.getElementById('file-falso5').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso5" type="text" id="file-falso5" />
             </div>
           </div>
           </label>
@@ -254,9 +254,9 @@ $projeto = new Projeto();
         <li class="block">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;"/>
+            <input name="fileOriginal1" type="file" size="30" id="fileOriginal1" onchange="document.getElementById('file-falso6').value = this.value;"/>
             <div id="div-input-falso">
-              <input name="file-falso" type="text" id="file-falso" />
+              <input name="file-falso6" type="text" id="file-falso6" />
             </div>
           </div>
           </label>
@@ -273,9 +273,9 @@ $projeto = new Projeto();
       <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="" height="" /> <span class="txt">Selecione o <b>Descritivo do Projeto: </b></span> </span> <span class="infoBar"><b>Atenção:</b> Serão aceitos somente projetos em arquivos com extensão <b>“.cad” e “.pdf”.</b></span> <span class="lbl2 rt">
       <label class="lbl3">
       <div id="div-input-file">
-        <input name="fileOriginal4" type="file" size="30" id="fileOriginal4" onchange="document.getElementById('file-falso').value = this.value;"/>
+        <input name="fileOriginal4" type="file" size="30" id="fileOriginal4" onchange="document.getElementById('file-falso7').value = this.value;"/>
         <div id="div-input-falso">
-          <input name="file-falso" type="text" id="file-falso" />
+          <input name="file-falso7" type="text" id="file-falso7" />
         </div>
       </div>
       <a href="#" class="link"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
@@ -286,9 +286,9 @@ $projeto = new Projeto();
       <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico5.png" alt="" title="" width="" height="" /> <span class="txt">Faça o upload do <b>Modelo de Autorização</b> preenchido:</span></span> <span class="lbl2 rt">
       <label class="lbl3">
       <div id="div-input-file">
-        <input name="fileOriginal5" type="file" size="30" id="fileOriginal5" onchange="document.getElementById('file-falso').value = this.value;"/>
+        <input name="fileOriginal5" type="file" size="30" id="fileOriginal5" onchange="document.getElementById('file-falso8').value = this.value;"/>
         <div id="div-input-falso">
-          <input name="file-falso" type="text" id="file-falso" />
+          <input name="file-falso8" type="text" id="file-falso8" />
         </div>
       </div>
       <a href="#" class="link"><img src="img/icoX.png" alt="" title="" width="9" height="10" /> Excluir</a>
@@ -383,9 +383,9 @@ $projeto = new Projeto();
       <li class="block">
         <label class="lbl3 file">
         <div id="div-input-file">
-          <input type="file" size="400" class="file-original" id="file-original1" name="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;" />
+          <input type="file" size="400" class="file-original" id="file-original1" name="fileOriginal1" onchange="document.getElementById('file-falso9').value = this.value;" />
           <div id="div-input-falso">
-            <input type="text" id="file-falso" name="file-falso">
+            <input type="text" id="file-falso9" name="file-falso9">
           </div>
         </div>
         </label>
@@ -393,9 +393,9 @@ $projeto = new Projeto();
       <li class="none">
         <label class="lbl3 file">
         <div id="div-input-file">
-          <input type="file" size="400" class="file-original" id="file-original2" name="fileOriginal2" onchange="document.getElementById('file-falso2').value = this.value;" />
+          <input type="file" size="400" class="file-original" id="file-original2" name="fileOriginal2" onchange="document.getElementById('file-falso10').value = this.value;" />
           <div id="div-input-falso">
-            <input type="text" id="file-falso2" name="file-falso">
+            <input type="text" id="file-falso10" name="file-falso10">
           </div>
         </div>
         </label>
@@ -403,9 +403,9 @@ $projeto = new Projeto();
       <li class="none">
         <label class="lbl3 file">
         <div id="div-input-file">
-          <input type="file" size="400" class="file-original" id="file-original3" name="fileOriginal3" onchange="document.getElementById('file-falso3').value = this.value;" />
+          <input type="file" size="400" class="file-original" id="file-original3" name="fileOriginal3" onchange="document.getElementById('file-falso11').value = this.value;" />
           <div id="div-input-falso">
-            <input type="text" id="file-falso3" name="file-falso">
+            <input type="text" id="file-falso11" name="file-falso11">
           </div>
         </div>
         </label>
@@ -418,9 +418,9 @@ $projeto = new Projeto();
     <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="" height="" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span> <span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Ser&atilde;o aceitos somente projetos em arquivos com extens&atilde;o <b>&ldquo;.cad&rdquo; e &ldquo;.pdf&rdquo;.</b></span> <span class="lbl2 rt">
     <label class="lbl3 file">
     <div id="div-input-file">
-      <input type="file" size="400" class="file-original" id="file-original4" name="fileOriginal4" onchange="document.getElementById('file-falso4').value = this.value;" />
+      <input type="file" size="400" class="file-original" id="file-original4" name="fileOriginal4" onchange="document.getElementById('file-falso12').value = this.value;" />
       <div id="div-input-falso">
-        <input type="text" id="file-falso4" name="file-falso">
+        <input type="text" id="file-falso12" name="file-falso12">
       </div>
     </div>
     </label>
@@ -430,9 +430,9 @@ $projeto = new Projeto();
     <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico5.png" alt="" title="" width="" height="" /> <span class="txt">Fa&ccedil;a o upload do <b>Modelo de Autoriza&ccedil;&atilde;o</b> preenchido:</span></span> <span class="lbl2 rt">
     <label class="lbl3 file">
     <div id="div-input-file">
-      <input type="file" size="400" class="file-original" id="file-original5" name="fileOriginal5" onchange="document.getElementById('file-falso5').value = this.value;" />
+      <input type="file" size="400" class="file-original" id="file-original5" name="fileOriginal5" onchange="document.getElementById('file-falso13').value = this.value;" />
       <div id="div-input-falso">
-        <input type="text" id="file-falso5" name="file-falso">
+        <input type="text" id="file-falso13" name="file-falso13">
       </div>
     </div>
     </label>
@@ -526,9 +526,9 @@ $projeto = new Projeto();
     <li class="block">
       <label class="lbl3 file">
       <div id="div-input-file">
-        <input type="file" size="400" class="file-original" id="file-original1" name="fileOriginal1" onchange="document.getElementById('file-falso').value = this.value;" />
+        <input type="file" size="400" class="file-original" id="file-original1" name="fileOriginal1" onchange="document.getElementById('file-falso14').value = this.value;" />
         <div id="div-input-falso">
-          <input type="text" id="file-falso" name="file-falso">
+          <input type="text" id="file-falso14" name="file-falso14">
         </div>
       </div>
       </label>
@@ -536,9 +536,9 @@ $projeto = new Projeto();
     <li class="none">
       <label class="lbl3 file">
       <div id="div-input-file">
-        <input type="file" size="400" class="file-original" id="file-original2" name="fileOriginal2" onchange="document.getElementById('file-falso2').value = this.value;" />
+        <input type="file" size="400" class="file-original" id="file-original2" name="fileOriginal2" onchange="document.getElementById('file-falso15').value = this.value;" />
         <div id="div-input-falso">
-          <input type="text" id="file-falso2" name="file-falso">
+          <input type="text" id="file-falso15" name="file-falso15">
         </div>
       </div>
       </label>
@@ -546,9 +546,9 @@ $projeto = new Projeto();
     <li class="none">
       <label class="lbl3 file">
       <div id="div-input-file">
-        <input type="file" size="400" class="file-original" id="file-original3" name="fileOriginal3" onchange="document.getElementById('file-falso3').value = this.value;" />
+        <input type="file" size="400" class="file-original" id="file-original3" name="fileOriginal3" onchange="document.getElementById('file-falso16').value = this.value;" />
         <div id="div-input-falso">
-          <input type="text" id="file-falso3" name="file-falso">
+          <input type="text" id="file-falso16" name="file-falso16">
         </div>
       </div>
       </label>
@@ -561,9 +561,9 @@ $projeto = new Projeto();
   <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="" height="" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span> <span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Ser&atilde;o aceitos somente projetos em arquivos com extens&atilde;o <b>&ldquo;.cad&rdquo; e &ldquo;.pdf&rdquo;.</b></span> <span class="lbl2 rt">
   <label class="lbl3 file">
   <div id="div-input-file">
-    <input type="file" size="400" class="file-original" id="file-original4" name="fileOriginal4" onchange="document.getElementById('file-falso4').value = this.value;" />
+    <input type="file" size="400" class="file-original" id="file-original4" name="fileOriginal4" onchange="document.getElementById('file-falso17').value = this.value;" />
     <div id="div-input-falso">
-      <input type="text" id="file-falso4" name="file-falso">
+      <input type="text" id="file-falso17" name="file-falso17">
     </div>
   </div>
   </label>
@@ -573,9 +573,9 @@ $projeto = new Projeto();
   <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico5.png" alt="" title="" width="" height="" /> <span class="txt">Fa&ccedil;a o upload do <b>Modelo de Autoriza&ccedil;&atilde;o</b> preenchido:</span></span> <span class="lbl2 rt">
   <label class="lbl3 file">
   <div id="div-input-file">
-    <input type="file" size="400" class="file-original" id="file-original5" name="fileOriginal5" onchange="document.getElementById('file-falso5').value = this.value;" />
+    <input type="file" size="400" class="file-original" id="file-original5" name="fileOriginal5" onchange="document.getElementById('file-falso18').value = this.value;" />
     <div id="div-input-falso">
-      <input type="text" id="file-falso5" name="file-falso">
+      <input type="text" id="file-falso18" name="file-falso18">
     </div>
   </div>
   </label>
