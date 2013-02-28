@@ -12,6 +12,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^/]*)/?$ $1.php [L]
 RewriteRule ^cadastro/([^/]*)/?$ cadastro.php?c=$1 [L]
 RewriteRule ^auth/([^/]*)/?$ auth.php?u=$1 [L]
+RewriteRule ^esqueci-minha-senha/([^/]*)/?$ esqueci-minha-senha.php?id=$1 [L]
 #RewriteRule ^download-modelo/?$ vendors/downloads/modelo.php [L]
 
 </IfModule>

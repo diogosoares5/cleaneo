@@ -53,9 +53,9 @@ session_start();
 		$msg = "";
 		include_once("vendors/uploads/upload.php");
 		
-		if(!$error1): $save_img1 = $arquivos->create('1',$id_customer,$id_project,$image1->file_src_name,time()); endif;
-		if(!$error2): $save_img2 = $arquivos->create('1',$id_customer,$id_project,$image2->file_src_name,time()); endif;
-		if(!$error3): $save_img3 = $arquivos->create('1',$id_customer,$id_project,$image3->file_src_name,time()); endif;
+		if(!$error1): $save_img1 = $arquivos->create('1',$id_customer,$id_project,$image1->file_dst_name,time()); endif;
+		if(!$error2): $save_img2 = $arquivos->create('1',$id_customer,$id_project,$image2->file_dst_name,time()); endif;
+		if(!$error3): $save_img3 = $arquivos->create('1',$id_customer,$id_project,$image3->file_dst_name,time()); endif;
 		if(!$error4): $save_desc = $arquivos->create('2',$id_customer,$id_project,$desc['name'],time()); endif;
 		if(!$error5): $save_auto = $arquivos->create('3',$id_customer,$id_project,$auto['name'],time()); endif;
 	else:
@@ -73,9 +73,9 @@ session_start();
 		$msg = "";
 		include_once("vendors/uploads/upload.php");
 		
-		if(!$error1): $save_img1 = $arquivos->create('1',$id_customer,$projeto_last->id,$image1->file_src_name,time()); endif;
-		if(!$error2): $save_img2 = $arquivos->create('1',$id_customer,$projeto_last->id,$image2->file_src_name,time()); endif;
-		if(!$error3): $save_img3 = $arquivos->create('1',$id_customer,$projeto_last->id,$image3->file_src_name,time()); endif;
+		if(!$error1): $save_img1 = $arquivos->create('1',$id_customer,$projeto_last->id,$image1->file_dst_name,time()); endif;
+		if(!$error2): $save_img2 = $arquivos->create('1',$id_customer,$projeto_last->id,$image2->file_dst_name,time()); endif;
+		if(!$error3): $save_img3 = $arquivos->create('1',$id_customer,$projeto_last->id,$image3->file_dst_name,time()); endif;
 		if(!$error4): $save_desc = $arquivos->create('2',$id_customer,$projeto_last->id,$desc['name'],time()); endif;
 		if(!$error5): $save_auto = $arquivos->create('3',$id_customer,$projeto_last->id,$auto['name'],time()); endif;
 	endif;

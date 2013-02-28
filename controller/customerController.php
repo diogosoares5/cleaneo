@@ -22,6 +22,17 @@
 				return false;
 			endif;
 		}
+		function forget($email){
+			$q = Crud::_read('customers',array('email="'.mysql_real_escape_string($email).'" and valido="1" '));
+			$u = mysql_fetch_object($q);
+			if(isset($u->id)):
+				$this->id = $u->id;
+				$this->email = $u->email;
+				return true;	
+			else:
+				return false;
+			endif;
+		}
 		function authUserHash($id,$hash){
 			$q = Crud::_read('customers',array('MD5(id)="'.$id.'" and hash = "'.$hash.'" and valido = "0" '));
 			$u = mysql_fetch_object($q);
@@ -100,14 +111,14 @@
 				$mail->IsSMTP(); // telling the class to use SMTP
 				
 				$mail->SMTPAuth   = true;                  // enable SMTP authentication
-				//$mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
-				$mail->Host       = "mail.outershoes.com.br";      // sets GMAIL as the SMTP server
-				$mail->Port       = 587;                   // set the SMTP port for the GMAIL server
-				$mail->Username   = "noreply@outershoes.com.br";  // GMAIL username
-				$mail->Password   = "OutShoes$123";            // GMAIL password
+				$mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
+				$mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
+				$mail->Port       = 465;                   // set the SMTP port for the GMAIL server
+				$mail->Username   = "knaufcleaneo@gmail.com";  // GMAIL username
+				$mail->Password   = "concursocleaneo";            // GMAIL password
 
-#Define o remetente 
-$mail->SetFrom("noreply@outershoes.com.br", "teste");
+				#Define o remetente 
+				$mail->SetFrom("knaufcleaneo@gmail.com", "Knauf");
 
 				
 				$mail->CharSet = 'utf-8';
@@ -116,22 +127,44 @@ $mail->SetFrom("noreply@outershoes.com.br", "teste");
 				
 				
 				
-				# Define os destinat�rio(s) 
+				# Define os destinatário(s) 
 				$mail->AddAddress($user['email'], $user['nome']);
 				
-				# Define os dados t�cnicos da Mensagem 
-				$mail->IsHTML(true); // Define que o e-mail ser� enviado como HTML
+				# Define os dados técnicos da Mensagem 
+				$mail->IsHTML(true); // Define que o e-mail será enviado como HTML
 				
 				
-				echo $user[0]['email'];
 				if($template == 'ativacao'):
 					include("vendors/sendEmail/email_validacao.php");
 					
 					# Texto e Assunto 
-						$mail->Subject  = "Ativacao"; // Assunto da mensagem
+						$mail->Subject  = "Ativacão de Cadastro"; // Assunto da mensagem
 						$mail->Body = $body;
 						
 						$enviado = $mail->Send();
+				elseif($template == 'esqueci-minha-senha'):
+					include("vendors/sendEmail/email_forget.php");
+					# Texto e Assunto 
+						$mail->Subject  = "Recuperação de senha"; // Assunto da mensagem
+						$mail->Body = $body;
+						
+						$enviado = $mail->Send();
+				elseif($template =='envio-projeto'):
+				include("vendors/sendEmail/email_envio.php");
+					# Texto e Assunto 
+						$mail->Subject  = "Envio de projeto sucedido!"; // Assunto da mensagem
+						$mail->Body = $body;
+						
+						$enviado = $mail->Send();
+				elseif($template == 'esc-projeto'):
+				include("vendors/sendEmail/email_esc.php");
+					# Texto e Assunto 
+						$mail->Subject  = "Exclusão de projeto confirmado"; // Assunto da mensagem
+						$mail->Body = $body;
+						
+						$enviado = $mail->Send();
+				else:
+				
 				endif;
 				if($enviado): return true; else: return false; endif;
 		}

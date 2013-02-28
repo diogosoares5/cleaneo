@@ -82,7 +82,7 @@ $projeto = new Projeto();
     <img src="<?php echo ROOT; ?>/archives/thumbs/<?php echo $project_thumbnail; ?>" alt="" title="" class="lf" />
     <div class="info">
       <h3 class="title2"><?php echo $p['nome']; ?></h3>
-      <h4 class="SubTitle2"><?php echo $p['id']; ?></h4>
+      <h4 class="SubTitle2 none"><?php echo $p['id']; ?></h4>
       <span class="clr2"></span>
       <div class="links">
         <?php 
@@ -173,7 +173,7 @@ $projeto = new Projeto();
         <li class="block">
           <label class="lbl3">
           <div id="div-input-file">
-            <input name="fileOriginal1" type="file" size="30" class="file-original" id="fileOriginal1" onchange="document.getElementById('file-falso1-editform-<?php echo $p['id']; ?> ').value = this.value;"/>
+            <input name="fileOriginal1" type="file" size="30" class="file-original" id="fileOriginal1" onchange="document.getElementById('file-falso1-editform-<?php echo $p['id']; ?>').value = this.value;"/>
             <div id="div-input-falso">
               <input name="file-falso" type="text" id="file-falso1-editform-<?php echo $p['id']; ?>" />
             </div>
