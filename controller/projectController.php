@@ -6,8 +6,8 @@
 			$v = Crud::_read("projects",array('id = "'.$id.'"'));
 			if($v): return true; else: return false; endif;
 		}
-		function create($id_costumer,$id_category,$id_pessoa,$nome,$cep,$endereco,$bairro,$cidade,$estado,$tel,$contato,$status){
-			$c = Crud::_create("projects","NULL,'$id_costumer','$id_category','$id_pessoa','$nome','$cep','$endereco','$bairro','$cidade','$estado','$tel','$contato',$status");
+		function create($id_costumer,$id_category,$id_pessoa,$nome,$cep,$endereco,$bairro,$cidade,$estado,$ddd_tel,$tel,$contato,$status){
+			$c = Crud::_create("projects","NULL,'$id_costumer','$id_category','$id_pessoa','$nome','$cep','$endereco','$bairro','$cidade','$estado','$ddd_tel','$tel','$contato',$status");
 			if($c): return true; else: return false; endif;
 		}
 		function Show($params=NULL){

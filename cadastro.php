@@ -81,7 +81,7 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('CPF:','cpf'); ?>
-<?php HForm::Input('cpf','text','cpf','inpt04'); ?>
+<?php HForm::Input('cpf','text','cpf','inpt04 maskCpf'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Profiss&atilde;o:','profissao'); ?>
@@ -89,7 +89,7 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('CEP:','cep'); ?>
-<?php HForm::Input('cep','text','cep','inpt03'); ?>
+<?php HForm::Input('cep','text','cep','inpt03 maskCep'); ?>
 <span class="link_ipt"><a target="_blank" href="http://www.buscacep.correios.com.br/"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
 </span>
 <span class="lbl">
@@ -112,47 +112,20 @@ endif;
 <?php HForm::Label('Estado:','estado'); ?>
 <div class="styled-select">
 <select name="estado" id="estado" class="inpt04Slc">
-	<option value="">Escolha o Estado</option>
-	<option value="AC">Acre</option>
-	<option value="AL">Alagoas</option>
-	<option value="AP">Amapá</option>
-	<option value="AM">Amazonas</option>
-	<option value="BA">Bahia</option>
-	<option value="CE">Ceará</option>
-	<option value="DF">Distrito Federal</option>
-	<option value="ES">Espirito Santo</option>
-	<option value="GO">Goiás</option>
-	<option value="MA">Maranhão</option>
-	<option value="MT">Mato Grosso</option>
-	<option value="MS">Mato Grosso do Sul</option>
-	<option value="MG">Minas Gerais</option>
-	<option value="PA">Pará</option>
-	<option value="PB">Paraiba</option>
-	<option value="PR">Paraná</option>
-	<option value="PE">Pernambuco</option>
-	<option value="PI">Piauí</option>
-	<option value="RJ">Rio de Janeiro</option>
-	<option value="RN">Rio Grande do Norte</option>
-	<option value="RS">Rio Grande do Sul</option>
-	<option value="RO">Rondônia</option>
-	<option value="RR">Roraima</option>
-	<option value="SC">Santa Catarina</option>
-	<option value="SP">São Paulo</option>
-	<option value="SE">Sergipe</option>
-	<option value="TO">Tocantis</option>
+	<?php HForm::ComboEstados(); ?>
 </select>
 <?php //HForm::Select('estado',array("RJ"=>"Rio de Janeiro","SP"=>"S&atilde;o Paulo"),'Selecione Estado','','inpt04Slc'); ?>
 </div>
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone Fixo:','tel'); ?>
-<?php HForm::Input('ddd_tel','text','ddd_tel','inpt01'); ?>
-<?php HForm::Input('tel','text','tel','inpt02'); ?>
+<?php HForm::Input('ddd_tel','text','ddd_tel','inpt01 maskDDD'); ?>
+<?php HForm::Input('tel','text','tel','inpt02 maskTel'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone Celular:','cel'); ?>
-<?php HForm::Input('ddd_cel','text','ddd_cel','inpt01'); ?>
-<?php HForm::Input('cel','text','cel','inpt02'); ?>
+<?php HForm::Input('ddd_cel','text','ddd_cel','inpt01 maskDDD'); ?>
+<?php HForm::Input('cel','text','cel','inpt02 maskTel'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Button('submit','','','btEnviar rt'); ?>
@@ -189,11 +162,11 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('CNPJ:','cnpj'); ?>
-<?php HForm::Input('cnpj','text','cnpj','inpt04'); ?>
+<?php HForm::Input('cnpj','text','cnpj','inpt04 maskCnpj'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('CEP:','cep'); ?>
-<?php HForm::Input('cep','text','cep','inpt03'); ?>
+<?php HForm::Input('cep','text','cep','inpt03 maskCep'); ?>
 <span class="link_ipt"><a target="_blank" href="http://www.buscacep.correios.com.br/"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
 </span>
 <span class="lbl">
@@ -216,34 +189,7 @@ endif;
 <?php HForm::Label('Estado:','estado'); ?>
 <div class="styled-select">
 <select name="estado" id="estado" class="inpt04Slc">
-	<option value="">Escolha o Estado</option>
-	<option value="AC">Acre</option>
-	<option value="AL">Alagoas</option>
-	<option value="AP">Amapá</option>
-	<option value="AM">Amazonas</option>
-	<option value="BA">Bahia</option>
-	<option value="CE">Ceará</option>
-	<option value="DF">Distrito Federal</option>
-	<option value="ES">Espirito Santo</option>
-	<option value="GO">Goiás</option>
-	<option value="MA">Maranhão</option>
-	<option value="MT">Mato Grosso</option>
-	<option value="MS">Mato Grosso do Sul</option>
-	<option value="MG">Minas Gerais</option>
-	<option value="PA">Pará</option>
-	<option value="PB">Paraiba</option>
-	<option value="PR">Paraná</option>
-	<option value="PE">Pernambuco</option>
-	<option value="PI">Piauí</option>
-	<option value="RJ">Rio de Janeiro</option>
-	<option value="RN">Rio Grande do Norte</option>
-	<option value="RS">Rio Grande do Sul</option>
-	<option value="RO">Rondônia</option>
-	<option value="RR">Roraima</option>
-	<option value="SC">Santa Catarina</option>
-	<option value="SP">São Paulo</option>
-	<option value="SE">Sergipe</option>
-	<option value="TO">Tocantis</option>
+	<?php HForm::ComboEstados(); ?>
 </select>
 <?php //::Select('estado',array("Rio de Janeiro"=>"Rio de janeiro","S&atilde;o Paulo"=>"S&atilde;o Paulo"),'Selecione Estado','','inpt04Sl'); ?>
 </div>

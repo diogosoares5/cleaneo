@@ -258,7 +258,12 @@ $(document).ready(function(){
 		}
 									  
 	});
-	   
+	 //masks
+	 $('.maskCep').mask("99999 - 999");
+	 $('.maskDDD').mask("(99)");
+	 $('.maskTel').mask("9999-9999");
+	 $('.maskCpf').mask("999.999.999-99");
+	 $('.maskCnpj').mask("99.999.999/9999-99");
 
 	$('#scrollbar3').tinyscrollbar({ size: 480 });
 	

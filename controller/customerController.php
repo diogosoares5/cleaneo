@@ -27,7 +27,7 @@
 			$u = mysql_fetch_object($q);
 			if(isset($u->id)):
 				Crud::_update('customers',array('valido = "1"'));
-				$_SESSION['customer'] = $u->id;
+				$_SESSION['user_site'] = $u->id;
 				Site::redirect('projetos');
 			else:
 				Site::redirect('');
@@ -39,7 +39,7 @@
 			if($this->authUser($email, $pass, '1') == true):
 				$q = Crud::_read('customers',array('email="'.mysql_real_escape_string($email).'" and senha = "'.md5($pass).'" '));
 				$u = mysql_fetch_object($q);
-				$_SESSION['customer'] = $u->id;
+				$_SESSION['user_site'] = $u->id;
 				Site::redirect('projetos');
 			elseif($this->authUser($email, $pass) == true):
 				$_SESSION['warn'] = "Voce ainda nao ativou seu cadastro por favor ative seu cadastro";
@@ -54,14 +54,14 @@
 			Site::redirect('');
 		}
 		function checkAuth(){
-			if(isset($_SESSION['customer'])):
-				return $_SESSION['customer']; 
+			if(isset($_SESSION['user_site'])):
+				return $_SESSION['user_site'];
 			else: 
 				Site::redirect(''); 
 			endif;
 		}	
-		function set($session){
-			
+		function set($session=NULL){
+			//var_dump($session);
 			$q = Crud::_read('customers',array('id="'.$session.'"'));
 			$u = mysql_fetch_object($q);
 			$this->id = $u->id;

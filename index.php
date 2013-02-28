@@ -1,9 +1,7 @@
 <?php
-session_destroy();
-echo phpinfo();
 include('view/template.php'); 
 Head('Bem vindo','','Home');
-if(isset($_SESSION['customer'])): header('Location:'.ROOT.'/projetos'); endif;
+if(isset($_SESSION['user_site'])): header('Location:'.ROOT.'/projetos'); endif;
 ?>
             <div class="top"><img src="<?php echo ROOT; ?>/assets/images/topBar.png" alt="" title="" width="551" height="23" /></div>
             <div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_escreva.png" width="550" height="82" alt="" title="" /></div>

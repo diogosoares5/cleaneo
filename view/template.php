@@ -15,6 +15,7 @@ $h .='</title>
 <link rel="stylesheet" type="text/css" href="'.ROOT.'/css/reset.css">
 <link rel="stylesheet" type="text/css" href="'.ROOT.'/css/style.css">
 <script type="text/javascript" src="'.ROOT.'/assets/js/jquery.js"></script>
+<script type="text/javascript" src="'.ROOT.'/assets/js/jquery.mask.js"></script>
 <script type="text/javascript" src="'.ROOT.'/assets/js/jquery.tinyscrollbar.min.js"></script>
 <script type="text/javascript" src="'.ROOT.'/assets/js/jquery.validate.js"></script>
 ';

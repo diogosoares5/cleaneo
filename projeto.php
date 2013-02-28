@@ -61,7 +61,7 @@ session_start();
 	else:
 		//cadastra
 
-		$save = $projeto->create($id_customer,$id_category,$id_pessoa,$nome,$cep,$endereco,$bairro,$cidade,$estado,$tel,$contato,'1');
+		$save = $projeto->create($id_customer,$id_category,$id_pessoa,$nome,$cep,$endereco,$bairro,$cidade,$estado,$ddd_tel,$tel,$contato,'1');
 		$projeto_last = $projeto->Last();
 		
 		include_once("vendors/uploads/class.upload.php");
@@ -87,6 +87,6 @@ session_start();
 	else:
 			$_SESSION['flash'] = "Falha ao criar/editar projeto favor tente mais tarde";
 	endif;
-	//echo $_SESSION['flash'];
+	echo $_SESSION['flash'];
 	Site::redirect('projetos');
 ?>
