@@ -125,26 +125,26 @@ $projeto = new Projeto();
       <label>Nome do imóvel:* </label>
       <?php HForm::Input('nome','text','nome','inpt04',$p['nome']); ?>
       </span> <span class="lbl2">
-      <label>CEP: </label>
+      <label>CEP:* </label>
       <?php HForm::Input('cep','text','cep','inpt03',$p['cep']); ?>
       <span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span> </span> <span class="lbl2">
       <label>Endereço Comercial:* </label>
       <?php HForm::Input('endereco','text','endereco','inpt05',$p['endereco']); ?>
       </span> <span class="lbl2">
-      <label>Bairro: </label>
+      <label>Bairro:* </label>
       <?php HForm::Input('bairro','text','bairro','inpt04',$p['bairro']); ?>
       </span> <span class="lbl2">
-      <label>Cidade: </label>
+      <label>Cidade:* </label>
       <?php HForm::Input('cidade','text','cidade','inpt04',$p['cidade']); ?>
       </span> <span class="lbl2">
-      <label>Estado: </label>
+      <label>Estado:* </label>
       <div class="styled-select">
         <select name="estado" id="estado" class="inpt04Slc">
 			<?php HForm::ComboEstados($p['estado']); ?>
         </select>
       </div>
       </span> <span class="lbl2">
-      <label>Telefone Fixo: </label>
+      <label>Telefone Fixo:* </label>
       <?php HForm::Input('ddd_tel','text','ddd_tel','inpt01',$p['ddd_tel']); ?>
       <?php HForm::Input('tel','text','tel','inpt02',$p['tel']); ?>
       </span> <span class="lbl2">
@@ -309,26 +309,26 @@ $projeto = new Projeto();
     <label>Nome do im&oacute;vel:* </label>
     <input type="text" value="" name="nome"  id="nome" class="inpt04" />
     </span> <span class="lbl2">
-    <label>CEP: </label>
+    <label>CEP:* </label>
     <input type="text" value=" " name="cep"  id="cep" class="inpt03" />
     <span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img src="<?php echo ROOT; ?>/assets/images/seta1.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span> </span> <span class="lbl2">
     <label>Endere&ccedil;o Comercial:* </label>
     <input type="text" value=" " name="endereco"  id="enderco" class="inpt05" />
     </span> <span class="lbl2">
-    <label>Bairro: </label>
+    <label>Bairro:* </label>
     <input type="text" value=" " name="bairro"  id="bairro" class="inpt04" />
     </span> <span class="lbl2">
-    <label>Cidade: </label>
+    <label>Cidade:* </label>
     <input type="text" value=" " name="cidade"  id="cidade" class="inpt04" />
     </span> <span class="lbl2">
-    <label>Estado: </label>
+    <label>Estado:* </label>
     <div class="styled-select">
     <select name="estado" id="estado" class="inpt04Slc">
 		<?php HForm::ComboEstados(); ?>
 	</select>
     </div>
     </span> <span class="lbl2">
-    <label>Telefone Fixo: </label>
+    <label>Telefone Fixo:* </label>
     <input type="text" value=" " name="ddd_tel"  id="ddd_tel" class="inpt01" />
     <input type="text" value=" " name="tel"  id="tel" class="inpt02" />
     </span> <span class="lbl2">
@@ -423,26 +423,26 @@ $projeto = new Projeto();
   <label>Nome do im&oacute;vel:* </label>
   <input type="text" value="" name="nome"  id="nome" class="inpt04" />
   </span> <span class="lbl2">
-  <label>CEP: </label>
+  <label>CEP:* </label>
   <input type="text" value=" " name="cep"  id="cep" class="inpt03" />
   <span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img src="<?php echo ROOT; ?>/assets/images/seta1.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span> </span> <span class="lbl2">
   <label>Endere&ccedil;o Comercial:* </label>
   <input type="text" value=" " name="endereco"  id="enderco" class="inpt05" />
   </span> <span class="lbl2">
-  <label>Bairro: </label>
+  <label>Bairro:* </label>
   <input type="text" value=" " name="bairro"  id="bairro" class="inpt04" />
   </span> <span class="lbl2">
-  <label>Cidade: </label>
+  <label>Cidade:* </label>
   <input type="text" value=" " name="cidade"  id="cidade" class="inpt04" />
   </span> <span class="lbl2">
-  <label>Estado: </label>
+  <label>Estado:* </label>
   <div class="styled-select">
   <select name="estado" id="estado" class="inpt04Slc">
 		<?php HForm::ComboEstados(); ?>
 	</select>
   </div>
   </span> <span class="lbl2">
-  <label>Telefone Fixo: </label>
+  <label>Telefone Fixo:* </label>
   <input type="text" value=" " name="ddd_tel"  id="ddd_tel" class="inpt01" />
   <input type="text" value=" " name="tel"  id="tel" class="inpt02" />
   </span> <span class="lbl2">
