@@ -319,6 +319,41 @@ $(document).ready(function(){
 			}	
 		}						
 	});
+	$('#forgetForm').validate({
+		rules:{
+			
+			email:{
+				required: true,
+      		 	email: true
+				}
+		},
+		messages:{
+			email:{required:"Preencher o campo E-mail",email:"E-mail v&aacute;lido."}
+		} 
+		});
+	$('#forgetFormPass').validate({
+		rules:{
+			
+			senha:{
+				required: true,
+      		 	minlength: 4
+				},
+			resenha:{
+				required: true,
+				equalTo:"#senha"
+				}
+		},
+		messages:{
+			senha:{
+				required: "Preencha Senha",
+      		 	minlength: "M&iacute;nimo de 4 caracteres"
+				},
+			resenha:{
+				required: "Preencha confirma&atilde;o de Senha",
+				equalTo:"Valor deve ser igual campo Senha"
+				}
+		} 
+		});
 	$('#contactForm').validate({
 		rules:{
 			nome:{required:true},

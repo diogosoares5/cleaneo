@@ -1,6 +1,9 @@
 <?php
 include('view/template.php'); 
 include("controller/appController.php");
+include("controller/customerController.php");
+$customer = new Customer();
+if(isset($_POST['type']) and $_POST['type'] == 'contact'):
 	$nome = $_POST['nome'];
 	$email = $_POST['email'];
 	$ddd = $_POST['ddd_tel'];
@@ -57,4 +60,32 @@ include("controller/appController.php");
 				endif;
 				
 				Site::redirect('contato');
+endif;
+if(isset($_POST['type']) and $_POST['type'] == 'forget'):
+	$email = $_POST['email'];
+	$check = $customer->forget($email);
+	if($check==true):
+		
+		$send = $customer->sendEmail($customer->id,"esqueci-minha-senha");
+		if($send==true):
+		$_SESSION['warn1'] = "Enviamos sua nova senha em sua caixa de E-mail (".$customer->email."). Favor se necessario, verifique seu spam";
+		else:
+		$_SESSION['warn'] = "Erro ao enviar senha";
+		endif;
+	else:  
+		$_SESSION['warn'] = "E-mail n&atilde;o cadastrado no concurso!";
+	endif;
+	Site::redirect('esqueci-minha-senha');
+endif;
+if(isset($_POST['type']) and $_POST['type'] == 'forget_verify'):
+	 $senha = $_POST['senha'];
+	$id = $_POST['id_user'];
+	$edit = $customer->Edit(array('senha="'.md5($senha).'" WHERE MD5(id) = "'.$id.'" '));
+	if($edit==true):
+		$_SESSION['warn1'] = 'Senha alterada com sucesso! <a href="'.ROOT.'">Ir para area de login.</a>';
+	else:
+		$_SESSION['warn'] = "Erro ao alterar a senha";	
+	endif;
+Site::redirect('esqueci-minha-senha');
+endif;
 ?>

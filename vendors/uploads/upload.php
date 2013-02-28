@@ -2,6 +2,7 @@
 	//image 1
 	$image1 = new Upload($img1);
 	$image1->allowed = array('image/jpeg','image/jpg');
+	$image1->file_safe_name = true;
 	$image1->process('archives');
 	if($image1->processed): 
 		$msg = 'Imagem 1 incluida com sucesso';
@@ -20,6 +21,7 @@
 	//image 2
 	$image2 = new Upload($img2);
 	$image2->allowed = array('image/jpeg','image/jpg');
+	$image2->file_safe_name = true;
 	$image2->process('archives');
 	if($image2->processed): 
 		$msg .= 'Imagem 2 incluida com sucesso';
@@ -37,6 +39,7 @@
 	//image 3
 	$image3 = new Upload($img3);
 	$image3->allowed = array('image/jpeg','image/jpg');
+	$image3->file_safe_name = true;
 	$image3->process('archives');
 	if($image3->processed): 
 		$msg .= 'Imagem 3 incluida com sucesso';

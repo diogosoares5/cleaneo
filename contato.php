@@ -16,6 +16,7 @@ else:
                 <b>Tem alguma dúvida?</b> Entre em contato.
                 <?php endif; ?></span>
 				<span class="lbl">
+                <input type="hidden" name="type" value="contact">
 					<label>Nome completo:</label>
 					<input type="text" title="Nome completo:" id="nome" name="nome"  class="inpt05" />
 				</span>	
