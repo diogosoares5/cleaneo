@@ -153,9 +153,11 @@ label.error b{font-weight: bold !important;}
 .faleConosco .infoBar b{font-weight: bold;}
 .faleConosco .linksPreFooter{bottom:0;position:relative;margin:;}
 .faleConosco .form {padding-bottom:10px;}
-.faleConosco .error{display:block;text-align:center;margin-right:-51px;}
+.faleConosco .error{display:block;text-align:left;margin-right:-51px;}
 .faleConosco #ddd_tel.error,.faleConosco #tel.error{margin-right:10px !important;display:inline-block;}
 .faleConosco .inpt05tArea.error{background:#FFF4F4;}
+.faleConosco #forgetForm  .lbl{margin-left:66px;}
+
 
 /* upload */
 .upload .Bcrumb{color:#719eb3;}
