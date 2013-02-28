@@ -11,7 +11,7 @@
 		$id_customer = $_POST['id_customer'];
 		
 		if($projeto->edit(array("status = '2' WHERE id = '".$pid."'")) == true):
-			$customer->sendEmail($id_customer,'envio-projeto');
+			$projeto->sendEmail($id_customer,$pid,'envio-projeto');
 			$_SESSION['flash'] = "Projeto enviado com sucesso!";
 		else:
 			$_SESSION['flash'] = "Falha ao enviar projeto, tente novamente mais tarde";
@@ -19,7 +19,7 @@
 	elseif(isset($_GET['pid'])):
 		$pid = $_GET['pid'];
 		if($projeto->edit(array("status = '3' WHERE id = '".$pid."'")) == true):
-			$customer->sendEmail($id_customer,'esc-projeto');
+			$projeto->sendEmail($id_customer,$id_project,'esc-projeto');
 			$_SESSION['flash'] = "Projeto exclu&iacute;do com sucesso!";
 		else:
 			$_SESSION['flash'] = "Falha ao enviar projeto, tente novamente mais tarde";

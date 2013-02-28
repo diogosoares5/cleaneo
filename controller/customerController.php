@@ -151,23 +151,7 @@
 						
 						$enviado = $mail->Send();
 				endif;
-			if($template =='envio-projeto'):
-				include("vendors/sendEmail/email_envio.php");
-					# Texto e Assunto 
-						$mail->Subject  = "Envio de projeto sucedido!"; // Assunto da mensagem
-						$mail->Body = $body;
-						
-						$enviado = $mail->Send();
-				endif;
-				if($template == 'esc-projeto'):
-				include("vendors/sendEmail/email_esc.php");
-					# Texto e Assunto 
-						$mail->Subject  = "Exclusão de projeto confirmado"; // Assunto da mensagem
-						$mail->Body = $body;
-						
-						$enviado = $mail->Send();
-				
-				endif;
+			
 				if($enviado): return true; else: return false; endif;
 		}
 		function getCategory($catid){

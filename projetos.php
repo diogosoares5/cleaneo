@@ -14,7 +14,15 @@ $projeto = new Projeto();
 <div class="top"><img src="<?php echo ROOT; ?>/assets/images/topBar.png" alt="" title="" width="551" height="23" /></div>
 <div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_meusprojetos.png" width="234" height="26" alt="" title="" /></div>
 <div class="top"><img src="<?php echo ROOT; ?>/assets/images/bar2.png" alt="" title="" width="551" height="2" /></div>
-<div class="Bcrumb"> <span>Ol&aacute; <?php echo $customer->nome; ?> |</span> <span>Meus Projetos |</span> <a href="<?php echo ROOT; ?>/meu-cadastro">Meu Cadastro |</a> <a href="<?php echo ROOT; ?>/login?out=1"> Logout</a> </div>
+<div class="Bcrumb"> <span>Ol&aacute; <?php echo $customer->nome; ?> |</span> <span>
+<?php 
+	if($customer->category == 1):
+		echo "Meus Projetos"; 
+	else:
+		echo "Minhas Obras";
+	endif;
+	?>
+ |</span> <a href="<?php echo ROOT; ?>/meu-cadastro">Meu Cadastro |</a> <a href="<?php echo ROOT; ?>/login?out=1"> Logout</a> </div>
 <span class="infoBar">Voc&ecirc; esta concorrendo na categoria:<b><?php echo $customer->getCategory($customer->category); ?>.</b></span>
 <?php if(isset($_SESSION['flash'])): 
 				echo '<span class="infoBar2">'.$_SESSION['flash'].'</span>';
