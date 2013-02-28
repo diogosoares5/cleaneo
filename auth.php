@@ -1,21 +1,22 @@
 <?php 
 include('view/template.php');
 include_once("components/crud.php");
-if(isset($_SESSION['success'])):
-	$page = 1;
-	Head('Cadastro','','etapa3');
-elseif(isset($_GET['u'])):
-	$uid = substr($_GET['u'],0,32);
-	$hash  = substr($_GET['u'],32);
-	$q = mysql_query('SELECT * FROM customers WHERE MD5(id)="'.$uid.'" and hash = "'.$hash.'" and valido = "1"');
-	$u = mysql_fetch_object($q);
-	if(isset($u->id)): $_SESSION['warn'] = 'Sua ativa&ccedil;&atilde;o j&aacute; foi feita, favor logar na &aacute;rea de usu&aacute;rio'; header('Location:'.ROOT);  endif;
-	$page = 2;
-	Head('Cadastro','','etapa4');
-else:
-	header('Location:'.ROOT);
-endif;
-
+//if(isset($_SESSION['success'])):
+//	$page = 1;
+//	Head('Cadastro','','etapa3');
+//elseif(isset($_GET['u'])):
+//	$uid = substr($_GET['u'],0,32);
+//	$hash  = substr($_GET['u'],32);
+//	$q = mysql_query('SELECT * FROM customers WHERE MD5(id)="'.$uid.'" and hash = "'.$hash.'" and valido = "1"');
+//	$u = mysql_fetch_object($q);
+//	if(isset($u->id)): $_SESSION['warn'] = 'Sua ativa&ccedil;&atilde;o j&aacute; foi feita, favor logar na &aacute;rea de usu&aacute;rio'; header('Location:'.ROOT);  endif;
+//	$page = 2;
+//	Head('Cadastro','','etapa4');
+//else:
+//	header('Location:'.ROOT);
+//endif;
+$page=2;
+Head('Cadastro','','etapa4');
 ?>
 			<div class="top"><img src="<?php echo ROOT; ?>/assets/images/topBar.png" alt="" title="" width="551" height="23" /></div>
 			<div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_1etapaok.png" width="505" height="27" alt="" title="" /></div>

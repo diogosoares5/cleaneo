@@ -62,7 +62,14 @@
 			return $t;	
 		}
 	
-		
+		function maskNumber($id,$cat){
+				if($cat=='1'){
+					$num = '125.000.000.'.$id;
+				}else{
+					$num = '157.000.000.'.$id;
+				}
+				return $num;
+		}
 		function serial($arr, $char=NULL){
 		if(isset($char)):
 		$r = implode($char,$arr);

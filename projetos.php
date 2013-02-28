@@ -101,6 +101,7 @@ $projeto = new Projeto();
         <form action="<?php echo ROOT; ?>/projeto_fin" method="post">
           <input type="hidden" name="finish" value="1" />
           <input type="hidden" name="id_project" value="<?php echo $p['id']; ?>" />
+          <input type="hidden" name="id_customer" value="<?php echo $customer->id; ?>" />
           <input type="submit" value=" " name="" id="" class="btEnviarP rt" />
         </form>
         <?php endif; ?>

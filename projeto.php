@@ -87,6 +87,6 @@ session_start();
 	else:
 			$_SESSION['flash'] = "Falha ao criar/editar projeto favor tente mais tarde";
 	endif;
-	echo $_SESSION['flash'];
+	//echo $_SESSION['flash'];
 	Site::redirect('projetos');
 ?>
