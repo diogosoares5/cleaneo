@@ -120,7 +120,7 @@ label.error b{font-weight: bold !important;}
 .etapa1 .Bcrumb{margin:5px 0 300px;position:relative;z-index:2;color:#719eb3;}
 .etapa1 .escolha{margin:10px 0 0 60px;color:#000;font-weight:bold;}
 .etapa1 #ddd_tel.error,.etapa1 #tel.error{margin-right:10px !important}
-.etapa1 .Bcrumb:nth-child(3){color:#719EB3;}
+.etapa1 .Bcrumb span + a + span {color:#879198 !important;}
 
 .etapa3 p{margin-top:30px;color:#000;font-size:18px;line-height: 19px;text-align:center;}
 .etapa3 p a{color:#719eb3;}
@@ -259,7 +259,7 @@ label.error b{font-weight: bold !important;}
 .upload .Boxer2 .concluido a{display:inline-block;color:#719eb3;text-decoration:underline;padding-top:12px;}
 .upload .add img{display:block;margin:0 auto;cursor:pointer;}
 .upload .linksPreFooter .link{display:none;}
-.etapa1 .Bcrumb:nth-child(1){color:#719EB3 !important;}
+.upload .Bcrumb span + span {color:#879198 !important;}
 
 /* fim upload*/
 
