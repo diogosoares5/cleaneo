@@ -18,8 +18,9 @@
 		endif;
 	elseif(isset($_GET['pid'])):
 		$pid = $_GET['pid'];
+		$id_customer = $_GET['c'];
 		if($projeto->edit(array("status = '3' WHERE id = '".$pid."'")) == true):
-			$projeto->sendEmail($id_customer,$id_project,'esc-projeto');
+			$projeto->sendEmail($id_customer,$pid,'esc-projeto');
 			$_SESSION['flash'] = "Projeto exclu&iacute;do com sucesso!";
 		else:
 			$_SESSION['flash'] = "Falha ao enviar projeto, tente novamente mais tarde";
