@@ -117,7 +117,7 @@ endif;
 					<input type="checkbox" name="checkIn" id="checkIn" /> Li e aceito as condições do Regulamento.
                     <input type="hidden" value="<?php echo $uid; ?>" name="uid" />
                     <input type="hidden" value="<?php echo $hash; ?>" name="hash" />
-                    <input type="submit" value="Continuar" />	
+                    <input type="submit" id="continuarAuth" value="Continuar" />	
 				</form>
 			</div>
             <?php endif; ?>

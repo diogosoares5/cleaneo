@@ -313,6 +313,12 @@ $(document).ready(function(){
 				validateCheckbox:true
 			}	
 		},
+		errorPlacement: function(error, element) {
+		   if (element.attr("name") == "checkIn") 
+			error.insertAfter("#continuarAuth");
+		   else 
+        	error.insertAfter(element);	
+		},
 		messages:{
 			checkIn:{
 				validateCheckbox:"Por favor marque se concorda com os termos de regulamento"
