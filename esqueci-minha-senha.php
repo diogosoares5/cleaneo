@@ -30,7 +30,7 @@ endif;
 	unset($_SESSION['warn']);
 else:
 ?>
-  <b>Esqueceu sua senha?</b> Não tem problema
+  <b>Esqueceu sua senha?</b> Não tem problema.
   <?php endif; ?>
   </span> <span class="lbl">
   <input type="hidden" name="type" value="forget_verify">

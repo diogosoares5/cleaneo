@@ -24,14 +24,14 @@ if(isset($_POST['type']) and $_POST['type'] == 'contact'):
 				$mail->IsSMTP(); // telling the class to use SMTP
 				
 				$mail->SMTPAuth   = true;                  // enable SMTP authentication
-				//$mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
-				$mail->Host       = "mail.outershoes.com.br";      // sets GMAIL as the SMTP server
-				$mail->Port       = 587;                   // set the SMTP port for the GMAIL server
-				$mail->Username   = "noreply@outershoes.com.br";  // GMAIL username
-				$mail->Password   = "OutShoes$123";            // GMAIL password
+				$mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
+				$mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
+				$mail->Port       = 465;                   // set the SMTP port for the GMAIL server
+				$mail->Username   = "knaufcleaneo@gmail.com";  // GMAIL username
+				$mail->Password   = "concursocleaneo";            // GMAIL password
 
 				#Define o remetente 
-				$mail->SetFrom("noreply@outershoes.com.br", "teste");	
+				$mail->SetFrom("knaufcleaneo@gmail.com", "Knauf");
 
 				
 				$mail->CharSet = 'utf-8';
@@ -41,7 +41,7 @@ if(isset($_POST['type']) and $_POST['type'] == 'contact'):
 				
 				
 				# Define os destinatário(s) 
-				$mail->AddAddress("herculano@dizain.com.br", "Herculano");
+				$mail->AddAddress("sak@knauf.com.br", "SAK Knauf");
 				
 				# Define os dados técnicos da Mensagem 
 				$mail->IsHTML(true); // Define que o e-mail será enviado como HTML
@@ -49,7 +49,7 @@ if(isset($_POST['type']) and $_POST['type'] == 'contact'):
 				
 				
 					# Texto e Assunto 
-						$mail->Subject  = "Knauf Cleaneo"; // Assunto da mensagem
+						$mail->Subject  = "Knauf Cleaneo Mensagem de contato"; // Assunto da mensagem
 						$mail->Body = $body;
 						
 						$enviado = $mail->Send();
@@ -68,7 +68,7 @@ if(isset($_POST['type']) and $_POST['type'] == 'forget'):
 		
 		$send = $customer->sendEmail($customer->id,"esqueci-minha-senha");
 		if($send==true):
-		$_SESSION['warn1'] = "Enviamos sua nova senha em sua caixa de E-mail (".$customer->email."). Favor se necessario, verifique seu spam";
+		$_SESSION['warn1'] = "Enviamos sua nova senha em sua caixa de e-mail (".$customer->email."). Favor se necess&aacute;rio, verifique seu spam.";
 		else:
 		$_SESSION['warn'] = "Erro ao enviar senha";
 		endif;

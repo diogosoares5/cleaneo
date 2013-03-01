@@ -315,7 +315,7 @@ $(document).ready(function(){
 		},
 		errorPlacement: function(error, element) {
 		   if (element.attr("name") == "checkIn") 
-			error.insertAfter("#continuarAuth");
+			error.insertAfter("#authForm #continuarAuth");
 		   else 
         	error.insertAfter(element);	
 		},
