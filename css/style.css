@@ -157,7 +157,7 @@ label.error b{font-weight: bold !important;}
 .faleConosco #ddd_tel.error,.faleConosco #tel.error{margin-right:10px !important;display:inline-block;}
 .faleConosco .inpt05tArea.error{background:#FFF4F4;}
 .faleConosco #forgetForm  .lbl{margin-left:66px;}
-
+.faleConosco #forgetForm  input.inpt05 {margin-right:0 !important;}
 
 /* upload */
 .upload .Bcrumb{color:#719eb3;}
