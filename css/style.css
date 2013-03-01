@@ -138,6 +138,7 @@ label.error b{font-weight: bold !important;}
 .etapa4 .contrato b{font-weight: bold;}
 .etapa4 .linksPreFooter{position:relative;bottom:0;}
 .etapa4 .linksPreFooter .link{display:none;}
+.etapa4 #authForm label.error{font-size:12px;float:left;margin-left:25px !important;display:block;}
 
 /* scroll*/
 #scrollbar3 { width: auto;  margin: 20px 0 10px; }
