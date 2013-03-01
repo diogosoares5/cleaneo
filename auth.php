@@ -114,7 +114,7 @@ endif;
 
 			<div class="confir">
 				<form method="post" id="authForm" action="<?php echo ROOT; ?>/verify_1">
-					<input type="checkbox" name="" id="checkIn" /> Li e aceito as condições do Regulamento.
+					<input type="checkbox" name="checkIn" id="checkIn" /> Li e aceito as condições do Regulamento.
                     <input type="hidden" value="<?php echo $uid; ?>" name="uid" />
                     <input type="hidden" value="<?php echo $hash; ?>" name="hash" />
                     <input type="submit" value="Continuar" />	
