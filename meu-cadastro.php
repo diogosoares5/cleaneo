@@ -76,7 +76,7 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('CPF:','cpf'); ?>
-<?php HForm::Input('cpf','text','cpf','inpt04',$customer->getField('cpf')); ?>
+<?php HForm::Input('cpf','text','cpf','inpt04 maskCpf',$customer->getField('cpf')); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Profiss&atilde;o:','profissao'); ?>
@@ -84,7 +84,7 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('CEP:','cep'); ?>
-<?php HForm::Input('cep','text','cep','inpt03',$customer->getField('cep')); ?>
+<?php HForm::Input('cep','text','cep','inpt03 maskCep',$customer->getField('cep')); ?>
 <span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img width="9" height="11" title="" alt="" src="<?php echo ROOT; ?>/assets/images/seta1.png"> Não sei meu CEP</a></span>
 </span>
 <span class="lbl">
@@ -113,13 +113,13 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone Fixo:','tel'); ?>
-<?php HForm::Input('ddd_tel','text','ddd_tel','inpt01',$customer->getField('ddd_tel')); ?>
-<?php HForm::Input('tel','text','tel','inpt02',$customer->getField('tel')); ?>
+<?php HForm::Input('ddd_tel','text','ddd_tel','inpt01 maskDDD',$customer->getField('ddd_tel')); ?>
+<?php HForm::Input('tel','text','tel','inpt02 maskTel',$customer->getField('tel')); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone Celular:','cel'); ?>
-<?php HForm::Input('ddd_cel','text','ddd_cel','inpt01',$customer->getField('ddd_cel')); ?>
-<?php HForm::Input('cel','text','cel','inpt02',$customer->getField('cel')); ?>
+<?php HForm::Input('ddd_cel','text','ddd_cel','inpt01 maskDDD',$customer->getField('ddd_cel')); ?>
+<?php HForm::Input('cel','text','cel','inpt02 maskTel',$customer->getField('cel')); ?>
 </span>
 <span class="lbl">
 <?php HForm::Button('submit','','','btEnviar rt'); ?>
