@@ -135,7 +135,7 @@ $projeto = new Projeto();
       <?php HForm::Input('nome','text','nome','inpt04',$p['nome']); ?>
       </span> <span class="lbl2">
       <label>CEP:* </label>
-      <?php HForm::Input('cep','text','cep','inpt03',$p['cep']); ?>
+      <?php HForm::Input('cep','text','cep','inpt03 maskCep',$p['cep']); ?>
       <span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span> </span> <span class="lbl2">
       <label>Endereço Comercial:* </label>
       <?php HForm::Input('endereco','text','endereco','inpt05',$p['endereco']); ?>
@@ -154,8 +154,8 @@ $projeto = new Projeto();
       </div>
       </span> <span class="lbl2">
       <label>Telefone Fixo:* </label>
-      <?php HForm::Input('ddd_tel','text','ddd_tel','inpt01',$p['ddd_tel']); ?>
-      <?php HForm::Input('tel','text','tel','inpt02',$p['tel']); ?>
+      <?php HForm::Input('ddd_tel','text','ddd_tel','inpt01 maskDDD',$p['ddd_tel']); ?>
+      <?php HForm::Input('tel','text','tel','inpt02 maskTel',$p['tel']); ?>
       </span> <span class="lbl2">
       <label>Nome da pessoa de contato:* </label>
       <?php HForm::Input('contato','text','contato','inpt04',$p['cep']); ?>
@@ -319,10 +319,10 @@ $projeto = new Projeto();
     <input type="text" value="" name="nome"  id="nome" class="inpt04" />
     </span> <span class="lbl2">
     <label>CEP:* </label>
-    <input type="text" value=" " name="cep"  id="cep" class="inpt03" />
+    <input type="text" value=" " name="cep"  id="cep" class="inpt03 maskCep" />
     <span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img src="<?php echo ROOT; ?>/assets/images/seta1.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span> </span> <span class="lbl2">
     <label>Endere&ccedil;o Comercial:* </label>
-    <input type="text" value=" " name="endereco"  id="enderco" class="inpt05" />
+    <input type="text" value=" " name="endereco"  id="endereco" class="inpt05" />
     </span> <span class="lbl2">
     <label>Bairro:* </label>
     <input type="text" value=" " name="bairro"  id="bairro" class="inpt04" />
@@ -338,8 +338,8 @@ $projeto = new Projeto();
     </div>
     </span> <span class="lbl2">
     <label>Telefone Fixo:* </label>
-    <input type="text" value=" " name="ddd_tel"  id="ddd_tel" class="inpt01" />
-    <input type="text" value=" " name="tel"  id="tel" class="inpt02" />
+    <input type="text" value=" " name="ddd_tel"  id="ddd_tel" class="inpt01 maskDDD" />
+    <input type="text" value=" " name="tel"  id="tel" class="inpt02 maskTel" />
     </span> <span class="lbl2">
     <label>Nome da pessoa de contato:* </label>
     <input type="text" value=" " name="contato" id="contato" class="inpt04" />
@@ -433,7 +433,7 @@ $projeto = new Projeto();
   <input type="text" value="" name="nome"  id="nome" class="inpt04" />
   </span> <span class="lbl2">
   <label>CEP:* </label>
-  <input type="text" value=" " name="cep"  id="cep" class="inpt03" />
+  <input type="text" value=" " name="cep"  id="cep" class="inpt03 maskCep" />
   <span class="link_ipt"><a href="http://www.buscacep.correios.com.br/" target="_blank"><img src="<?php echo ROOT; ?>/assets/images/seta1.png" alt="" title="" width="9" height="11" /> Buscar CEP</a></span> </span> <span class="lbl2">
   <label>Endere&ccedil;o Comercial:* </label>
   <input type="text" value=" " name="endereco"  id="enderco" class="inpt05" />
@@ -452,8 +452,8 @@ $projeto = new Projeto();
   </div>
   </span> <span class="lbl2">
   <label>Telefone Fixo:* </label>
-  <input type="text" value=" " name="ddd_tel"  id="ddd_tel" class="inpt01" />
-  <input type="text" value=" " name="tel"  id="tel" class="inpt02" />
+  <input type="text" value=" " name="ddd_tel"  id="ddd_tel" class="inpt01 maskDDD" />
+  <input type="text" value=" " name="tel"  id="tel" class="inpt02 maskTel" />
   </span> <span class="lbl2">
   <label>Nome da pessoa de contato:* </label>
   <input type="text" value=" " name="contato" id="contato" class="inpt04" />
