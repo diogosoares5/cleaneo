@@ -142,30 +142,16 @@
 						$mail->Body = $body;
 						
 						$enviado = $mail->Send();
-				elseif($template == 'esqueci-minha-senha'):
+				endif;
+				if($template == 'esqueci-minha-senha'):
 					include("vendors/sendEmail/email_forget.php");
 					# Texto e Assunto 
 						$mail->Subject  = "Recuperação de senha"; // Assunto da mensagem
 						$mail->Body = $body;
 						
 						$enviado = $mail->Send();
-				elseif($template =='envio-projeto'):
-				include("vendors/sendEmail/email_envio.php");
-					# Texto e Assunto 
-						$mail->Subject  = "Envio de projeto sucedido!"; // Assunto da mensagem
-						$mail->Body = $body;
-						
-						$enviado = $mail->Send();
-				elseif($template == 'esc-projeto'):
-				include("vendors/sendEmail/email_esc.php");
-					# Texto e Assunto 
-						$mail->Subject  = "Exclusão de projeto confirmado"; // Assunto da mensagem
-						$mail->Body = $body;
-						
-						$enviado = $mail->Send();
-				else:
-				
 				endif;
+			
 				if($enviado): return true; else: return false; endif;
 		}
 		function getCategory($catid){

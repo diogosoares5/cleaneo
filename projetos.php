@@ -14,7 +14,15 @@ $projeto = new Projeto();
 <div class="top"><img src="<?php echo ROOT; ?>/assets/images/topBar.png" alt="" title="" width="551" height="23" /></div>
 <div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_meusprojetos.png" width="234" height="26" alt="" title="" /></div>
 <div class="top"><img src="<?php echo ROOT; ?>/assets/images/bar2.png" alt="" title="" width="551" height="2" /></div>
-<div class="Bcrumb"> <span>Ol&aacute; <?php echo $customer->nome; ?> |</span> <span>Meus Projetos |</span> <a href="<?php echo ROOT; ?>/meu-cadastro">Meu Cadastro |</a> <a href="<?php echo ROOT; ?>/login?out=1"> Logout</a> </div>
+<div class="Bcrumb"> <span>Ol&aacute; <?php echo $customer->nome; ?> |</span> <span>
+<?php 
+	if($customer->category == 1):
+		echo "Meus Projetos"; 
+	else:
+		echo "Minhas Obras";
+	endif;
+	?>
+ |</span> <a href="<?php echo ROOT; ?>/meu-cadastro">Meu Cadastro |</a> <a href="<?php echo ROOT; ?>/login?out=1"> Logout</a> </div>
 <span class="infoBar">Voc&ecirc; esta concorrendo na categoria:<b><?php echo $customer->getCategory($customer->category); ?>.</b></span>
 <?php if(isset($_SESSION['flash'])): 
 				echo '<span class="infoBar2">'.$_SESSION['flash'].'</span>';
@@ -90,7 +98,7 @@ $projeto = new Projeto();
 								?>
         <a href="javaScript:;" projID="<?php echo $p['id']; ?>" class="editProject"><img src="<?php echo ROOT; ?>/assets/images/seta4.png" alt="" title="" width="9" height="11" />editar</a> |
         <?php endif; ?>
-        <a href="<?php echo ROOT; ?>/projeto_fin?pid=<?php echo $p['id']; ?>"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" />excluir projeto</a>
+        <a href="<?php echo ROOT; ?>/projeto_fin?pid=<?php echo $p['id']; ?>&c=<?php echo $customer->id; ?>"><img src="<?php echo ROOT; ?>/assets/images/icoX.png" alt="" title="" width="9" height="10" />excluir projeto</a>
         <?php 
 									if($projeto->status($p['id'],2) == true):
 								?>
@@ -101,6 +109,7 @@ $projeto = new Projeto();
         <form action="<?php echo ROOT; ?>/projeto_fin" method="post">
           <input type="hidden" name="finish" value="1" />
           <input type="hidden" name="id_project" value="<?php echo $p['id']; ?>" />
+          <input type="hidden" name="id_customer" value="<?php echo $customer->id; ?>" />
           <input type="submit" value=" " name="" id="" class="btEnviarP rt" />
         </form>
         <?php endif; ?>

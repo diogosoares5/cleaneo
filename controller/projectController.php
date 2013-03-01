@@ -62,7 +62,68 @@
 			return $t;	
 		}
 	
-		
+		function maskNumber($id,$cat){
+				if($cat=='1'){
+					$num = '125.000.000.'.$id;
+				}else{
+					$num = '157.000.000.'.$id;
+				}
+				return $num;
+		}
+		function sendEmail($uid,$pid,$template=NULL){
+				include_once("vendors/sendEmail/class.phpmailer.php");
+				include_once("vendors/sendEmail/class.smtp.php");
+				$project = $this->show(array("id='".$pid."'"));
+				
+				$u = Crud::_read("customers",array('id = "'.$uid.'" '));
+				$user = mysql_fetch_array($u);
+				
+				$mail = new PHPMailer(true); // the true param means it will throw exceptions on errors, which we need to catch
+
+				$mail->IsSMTP(); // telling the class to use SMTP
+				
+				$mail->SMTPAuth   = true;                  // enable SMTP authentication
+				$mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
+				$mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
+				$mail->Port       = 465;                   // set the SMTP port for the GMAIL server
+				$mail->Username   = "knaufcleaneo@gmail.com";  // GMAIL username
+				$mail->Password   = "concursocleaneo";            // GMAIL password
+
+				#Define o remetente 
+				$mail->SetFrom("knaufcleaneo@gmail.com", "Knauf");
+
+				
+				$mail->CharSet = 'utf-8';
+				
+				#Define o remetente 
+				
+				
+				
+				# Define os destinatário(s) 
+				$mail->AddAddress($user['email'], $user['nome']);
+				
+				# Define os dados técnicos da Mensagem 
+				$mail->IsHTML(true); // Define que o e-mail será enviado como HTML
+				
+			if($template =='envio-projeto'):
+				include("vendors/sendEmail/email_envio.php");
+					# Texto e Assunto 
+						$mail->Subject  = "Envio de projeto sucedido!"; // Assunto da mensagem
+						$mail->Body = $body;
+						
+						$enviado = $mail->Send();
+				endif;
+				if($template == 'esc-projeto'):
+				include("vendors/sendEmail/email_esc.php");
+					# Texto e Assunto 
+						$mail->Subject  = "Exclusão de projeto confirmado"; // Assunto da mensagem
+						$mail->Body = $body;
+						
+						$enviado = $mail->Send();
+				
+				endif;
+				if($enviado): return true; else: return false; endif;
+	}
 		function serial($arr, $char=NULL){
 		if(isset($char)):
 		$r = implode($char,$arr);
