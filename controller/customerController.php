@@ -55,7 +55,7 @@
 			elseif($this->authUser($email, $pass) == true):
 				Site::redirect('not-active?email='.$email);
 			else:
-				$_SESSION['warn'] = "Login ou senha incorretos";
+				$_SESSION['warn'] = "<b>X</b> Login ou senha incorretos.";
 				Site::redirect('#erro');
 			endif;
 		}

@@ -31,6 +31,7 @@ body{background:#daecf2 url(../img/bg1.jpg) center top  no-repeat;font-family: a
 .Bcrumb a{color:#719eb3;text-decoration: underline;}
 .btEntrar{width:31px;height:30px !important;background:url(../img/seta5.png) no-repeat !important;cursor:pointer;border:none !important;margin:0 !important;padding:0 !important;}
 .btEnviar{width:100px;height:30px !important;background:url(../img/btEnviar.jpg) no-repeat !important;cursor:pointer;border:none;}
+.btEnviar2{width:294px;height:30px !important;background:url(../img/btEnviar2.png) no-repeat !important;cursor:pointer;border:none;}
 .btEnviarP{width:172px;height:30px !important;background:url(../img/btEnviarP.png) no-repeat !important;cursor:pointer;border:none;}
 .btSalvar{width:170px;height:30px !important;background:url(../img/btSalvar.png) no-repeat !important;cursor:pointer;border:none;}
 .btProjOk{width:172px;height:30px !important;background:url(../img/btProjOk.png) no-repeat !important;cursor:pointer;border:none;}
@@ -225,3 +226,10 @@ label.error b{font-weight: bold !important;}
 .Regulamento .contrato b{font-weight: bold;}
 .Regulamento .linksPreFooter{position:relative;bottom:0;}
 .Regulamento .contrato .viewport{width:auto !important;position:relative;left:-20px;}
+
+/* reenvio */
+.Reenvio .infoBar{font-weight:normal}
+.Reenvio .infoBar b{font-weight:bold}
+.Reenvio .text{margin:30px auto;text-align:center;font-size:18px}
+.Reenvio .text span{color:#719eb3;}
+.Reenvio .btEnviar2{text-align:center;display:block;margin:0 auto}
