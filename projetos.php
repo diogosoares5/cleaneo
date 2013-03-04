@@ -12,7 +12,13 @@ $projeto = new Projeto();
 ?>
 
 <div class="top"><img src="<?php echo ROOT; ?>/assets/images/topBar.png" alt="" title="" width="551" height="23" /></div>
+<?php 
+	if($customer->category == 1):
+?>
 <div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_meusprojetos.png" width="234" height="26" alt="" title="" /></div>
+<?php else: ?>
+<div class="title"><img src="<?php echo ROOT; ?>/assets/images/txt_obras.png"  alt="" title="" /></div>
+<?php endif; ?>
 <div class="top"><img src="<?php echo ROOT; ?>/assets/images/bar2.png" alt="" title="" width="551" height="2" /></div>
 <div class="Bcrumb"> <span>Ol&aacute; <?php echo $customer->nome; ?> |</span> <span>
 <?php 
