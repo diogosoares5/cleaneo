@@ -71,7 +71,7 @@ $body = '
 												<table width="100%" border="0" cellspacing="0" cellpadding="0">
 													<tr>
 														<td width="81">&nbsp;</td>
-														<td style="font-family:Arial, Helvetica, sans-serif;font-size:16px;color:#6F9FB5;"><a style="font-family:Arial, Helvetica, sans-serif;font-size:16px;color:#6F9FB5;font-weight:bold" href="'.ROOT.'/auth/'.md5($user['id']).$user['hash'].'" target="_blank">'.ROOT.'/auth/'.md5($user['id']).$user['hash'].'</a></td>
+														<td style="font-family:Arial, Helvetica, sans-serif;font-size:16px;color:#6F9FB5;"><a style="font-family:Arial, Helvetica, sans-serif;font-size:16px;color:#6F9FB5;font-weight:bold" href="'.ROOT.'/auth/'.md5($user['id']).$user['hash'].'" target="_blank">Clique aqui para validar o seu cadastro.</a></td>
 													</tr>
 												</table>
 											</td>
