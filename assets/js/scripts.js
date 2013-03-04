@@ -258,6 +258,8 @@ $(document).ready(function(){
 		}
 									  
 	});
+	
+	
 	 //masks
 	 $('.maskCep').mask("99999 - 999");
 	 $('.maskDDD').mask("(99)");
@@ -666,7 +668,7 @@ $(document).ready(function(){
 	},
 	repass:{
 		required:true,
-		equalTo:"#pass"
+		equalTo:"#formCadastroFisica #pass"
 	},
 	cpf:{
 		required:true,
@@ -749,7 +751,7 @@ $(document).ready(function(){
 	},
 	repass:{
 		required:true,
-		equalTo:"#pass"
+		equalTo:"#formCadastroJuridica #pass"
 	},
 	cpf:{
 		required:true,

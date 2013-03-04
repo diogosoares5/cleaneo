@@ -41,7 +41,7 @@ else:
   <label>Confirme sua nova senha:</label>
   <input type="password"  name="resenha"  id="resenha" class="inpt05" />
   </span>
-  <input type="submit" value=" " name="" id="" class="btEnviar rt" />
+  <input type="submit" name="" id="" class="btEnviar rt" />
 </form>
 <?php endif; 
 	
@@ -59,12 +59,12 @@ else:
 	unset($_SESSION['warn']);
 else:
 ?>
-  <b>Esqueceu sua senha?</b> Não tem problema
+  <b>Esqueceu sua senha?</b> Não tem problema.
   <?php endif; ?>
   </span> <span class="lbl">
   <input type="hidden" name="type" value="forget">
   <label>Digite seu e-mail:</label>
-  <input type="text"  value=" " name="email"  id="email" class="inpt05" />
+  <input type="text"  name="email"  id="email" class="inpt05" />
   </span>
   <input type="submit" value=" " name="" id="" class="btEnviar rt" />
 </form>

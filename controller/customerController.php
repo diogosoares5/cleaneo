@@ -53,11 +53,10 @@
 				$_SESSION['user_site'] = $u->id;
 				Site::redirect('projetos');
 			elseif($this->authUser($email, $pass) == true):
-				$_SESSION['warn'] = "Voce ainda nao ativou seu cadastro por favor ative seu cadastro";
-				Site::redirect('');
+				Site::redirect('not-active?email='.$email);
 			else:
 				$_SESSION['warn'] = "Login ou senha incorretos";
-				Site::redirect('');
+				Site::redirect('#erro');
 			endif;
 		}
 		function logout(){

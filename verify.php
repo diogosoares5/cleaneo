@@ -41,7 +41,6 @@ else:
 $createCustomer = $customer->sign($categoria, $pessoa, $email, $pass, $nome, $cpf, $profissao, $cep, $endereco, $complemento, $bairro, $cidade, $estado,$ddd_tel, $tel, $ddd_cel, $cel, $razao, $fantasia, $cnpj);
 	if($createCustomer == true):
 		$lastUser = $customer->show(array("email = '".$email."'"));
-		
 		$send = $customer->sendEmail($lastUser['id'],'ativacao');
 		
 		if($send==true): 
