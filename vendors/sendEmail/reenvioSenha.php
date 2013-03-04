@@ -1,4 +1,5 @@
-
+<?php
+$body = '
 <table align="center" width="550" border="0" cellspacing="0" cellpadding="0">
 	<tr>
 		<td>&nbsp;</td>
@@ -134,4 +135,6 @@
 		</table>
 	</td>
   </tr>
-</table>
+</table>';
+
+?>
