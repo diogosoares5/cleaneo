@@ -82,7 +82,9 @@ if(isset($_POST['type']) and $_POST['type'] == 'forget_verify'):
 	$id = $_POST['id_user'];
 	$edit = $customer->Edit(array('senha="'.md5($senha).'" WHERE MD5(id) = "'.$id.'" '));
 	if($edit==true):
-		$_SESSION['warn1'] = 'Senha alterada com sucesso! <a href="'.ROOT.'">Ir para area de login.</a>';
+		$_SESSION['warn'] = 'Senha alterada com sucesso!';
+		Site::redirect('#erro');
+		exit();
 	else:
 		$_SESSION['warn'] = "Erro ao alterar a senha";	
 	endif;

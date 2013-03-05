@@ -41,7 +41,7 @@ else:
   <label>Confirme sua nova senha:</label>
   <input type="password"  name="resenha"  id="resenha" class="inpt05" />
   </span>
-  <input type="submit" name="" id="" class="btEnviar rt" />
+  <input type="submit" value="" name="" id="" class="btEnviar rt" />
 </form>
 <?php endif; 
 	
@@ -66,7 +66,7 @@ else:
   <label>Digite seu e-mail:</label>
   <input type="text"  name="email"  id="email" class="inpt05" />
   </span>
-  <input type="submit" value=" " name="" id="" class="btEnviar rt" />
+  <input type="submit" value="" name="" id="" class="btEnviar rt" />
 </form>
 <?php endif; endif; ?>
 <?php Footer(); ?>

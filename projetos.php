@@ -389,7 +389,7 @@ $projeto = new Projeto();
     <span class="linkAdd clr"><img src="<?php echo ROOT; ?>/assets/images/icomais.png" alt="" title="" width="" height="" /><a style="cursor:pointer;">Adcionar mais fotografias</a></span> </span>
     <hr class="bdr1" />
     <!-- Fim step 3 -->
-    <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="29" height="29" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span> <span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Ser&atilde;o aceitos somente projetos em arquivos com extens&atilde;o <b>&ldquo;.cad&rdquo; e &ldquo;.pdf&rdquo;.</b></span> <span class="lbl2 rt">
+    <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="29" height="29" />  <span class="txt">Selecione o <b>Descritivo do Projeto: </b></span> </span> <span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Ser&atilde;o aceitos somente projetos em arquivos com extens&atilde;o <b>&ldquo;.cad&rdquo; e &ldquo;.pdf&rdquo;.</b></span> <span class="lbl2 rt">
     <label class="lbl3 file">
     <div id="div-input-file">
       <input type="file" size="30" class="file-original" id="file-original4" name="fileOriginal4" onchange="document.getElementById('file-falso4').value = this.value;" />
@@ -505,7 +505,7 @@ $projeto = new Projeto();
   <span class="linkAdd clr"><img src="<?php echo ROOT; ?>/assets/images/icomais.png" alt="" title="" width="" height="" /><a style="cursor:pointer;">Adcionar mais fotografias</a></span> </span>
   <hr class="bdr1" />
   <!-- Fim step 3 -->
-  <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="29" height="29" /> <span class="txt">Selecione at&eacute; <b>3 fotografias</b> desse projeto:</span> </span> <span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Ser&atilde;o aceitos somente projetos em arquivos com extens&atilde;o <b>&ldquo;.cad&rdquo; e &ldquo;.pdf&rdquo;.</b></span> <span class="lbl2 rt">
+  <span class="step"><img src="<?php echo ROOT; ?>/assets/images/ico4.png" alt="" title="" width="29" height="29" />  <span class="txt">Selecione o <b>Descritivo do Projeto: </b></span> </span> <span class="infoBar"><b>Aten&ccedil;&atilde;o:</b> Ser&atilde;o aceitos somente projetos em arquivos com extens&atilde;o <b>&ldquo;.cad&rdquo; e &ldquo;.pdf&rdquo;.</b></span> <span class="lbl2 rt">
   <label class="lbl3 file">
   <div id="div-input-file">
     <input type="file" size="30" class="file-original" id="file-original4" name="fileOriginal4" onchange="document.getElementById('file-falso4').value = this.value;" />

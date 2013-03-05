@@ -357,7 +357,7 @@ $(document).ready(function(){
       		 	minlength: "M&iacute;nimo de 4 caracteres"
 				},
 			resenha:{
-				required: "Preencha confirma&atilde;o de Senha",
+				required: "Preencha confirma&ccedil;&atilde;o de Senha",
 				equalTo:"Valor deve ser igual campo Senha"
 				}
 		} 

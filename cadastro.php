@@ -196,13 +196,13 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone Fixo:','tel'); ?>
-<?php HForm::Input('ddd_tel','text','ddd_tel','inpt01'); ?>
-<?php HForm::Input('tel','text','tel','inpt02'); ?>
+<?php HForm::Input('ddd_tel','text','ddd_tel','inpt01 maskDDD'); ?>
+<?php HForm::Input('tel','text','tel','inpt02 maskTel'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Telefone celular:','cel'); ?>
-<?php HForm::Input('ddd_cel','text','ddd_cel','inpt01'); ?>
-<?php HForm::Input('cel','text','cel','inpt02'); ?>
+<?php HForm::Input('ddd_cel','text','ddd_cel','inpt01 maskDDD'); ?>
+<?php HForm::Input('cel','text','cel','inpt02 maskTel'); ?>
 </span>
 <span class="lbl">
 <?php HForm::Label('Nome completo do proprietário da empresa:','nome','','lbl2'); ?>
@@ -210,7 +210,7 @@ endif;
 </span>
 <span class="lbl">
 <?php HForm::Label('CPF do proprietário:','cpf'); ?>
-<?php HForm::Input('cpf','text','cpf','inpt05'); ?>
+<?php HForm::Input('cpf','text','cpf','inpt05 maskCpf'); ?>
 </p>
 <span class="lbl">
 <?php HForm::Button('submit','','','btEnviar rt'); ?>
